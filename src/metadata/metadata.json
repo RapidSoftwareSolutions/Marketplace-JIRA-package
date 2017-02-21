@@ -1,0 +1,57 @@
+{
+    "package": "JIRA",
+    "tagline": "Jira is used for issue tracking and project management by over 25,000 customers in 122 countries around the globe.",
+    "description": "Jira is used for issue tracking and project management by over 25,000 customers in 122 countries around the globe.",
+    "image": "https://logo.clearbit.com/jira.atlassian.com?s=128",
+    "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-JIRA-package",
+    "keywords": [
+        "API",
+        "JIRA"
+    ],
+    "accounts": {
+        "domain": "jira.atlassian.com",
+        "credentials": []
+    },
+    "blocks": [
+        {
+            "name": "search",
+            "description": "Search for content within the iTunes Store, App Store, iBooks Store and Mac App Store.",
+            "args": [
+                {
+                    "name": "term",
+                    "type": "String",
+                    "info": "The text string you want to search for.",
+                    "required": true
+                },
+                {
+                    "name": "country",
+                    "type": "String",
+                    "info": "The two-letter country code for the store you want to search.",
+                    "required": true
+                },
+                {
+                    "name": "limit",
+                    "type": "Number",
+                    "info": "The number of search results you want the iTunes Store to return. In range 1 - 200.The default is 50.",
+                    "required": false
+                },
+                {
+                    "name": "lang",
+                    "type": "String",
+                    "info": "The language, English or Japanese, you want to use when returning search results. Specify the language using the five-letter codename. The default is en_us (English).",
+                    "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
+            ]
+        }
+    ]
+}
