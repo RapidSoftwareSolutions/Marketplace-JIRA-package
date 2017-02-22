@@ -301,8 +301,8 @@ return array (
         'args' => array (
             'type' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'System avatar type',
+                'type' => 'string',
+                'info' => 'System avatar type.',
             ),
         ),
     ),
@@ -316,7 +316,7 @@ return array (
         'args' => array (
             'commentId' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Comment identified.',
             ),
         ),
@@ -562,7 +562,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Component identifier.',
             ),
         ),
@@ -577,7 +577,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Component identifier.',
             ),
             'moveIssuesTo' => array (
@@ -637,13 +637,13 @@ return array (
             ),
             'name' => array (
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Implementation name.',
                 'required' => false,
             ),
             'url' => array (
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Implementation Url.',
                 'required' => false,
             ),
@@ -760,7 +760,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Dashboard identifier.',
             ),
         ),
@@ -780,7 +780,7 @@ return array (
             ),
             'itemId' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Item identifier.',
             ),
         ),
@@ -820,17 +820,17 @@ return array (
         'args' => array (
             'dashboardId' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Dashboard identifier.',
             ),
             'itemId' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Item identifier.',
             ),
             'propertyKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Property key.',
             ),
         ),
@@ -917,7 +917,7 @@ return array (
         'args' => array (
             'fieldKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Field key.',
             ),
             'value' => array (
@@ -938,7 +938,7 @@ return array (
         'args' => array (
             'fieldKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Field key.',
             ),
             'startAt' => array (
@@ -1058,12 +1058,12 @@ return array (
         'args' => array (
             'fieldKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Field key.',
             ),
             'optionId' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Option identifier.',
             ),
         ),
@@ -1078,7 +1078,7 @@ return array (
         'args' => array (
             'fieldKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Field key.',
             ),
             'startAt' => array (
@@ -1108,7 +1108,7 @@ return array (
         'args' => array (
             'fieldKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Field key.',
             ),
             'startAt' => array (
@@ -1317,7 +1317,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Filter identifier.',
             ),
             'expand' => array (
@@ -1337,7 +1337,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Filter identifier.',
             ),
         ),
@@ -1352,7 +1352,7 @@ return array (
         'args' => array (
             'id' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Filter identifier.',
             ),
         ),
@@ -1777,7 +1777,7 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Issue identifier or key.',
             ),
             'fields' => array (
@@ -1820,7 +1820,7 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Issue identifier or key.',
             ),
         ),
@@ -1977,7 +1977,7 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Issue identifier or key.',
             ),
             'startAt' => array (
@@ -2260,8 +2260,8 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'applicationType' => array (
                 'type' => 'string',
@@ -2359,13 +2359,13 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'globalId' => array (
                 'type' => 'string',
                 'info' => 'The global id of the remote issue link.',
-                'required' => false,
+                'required' => true,
             ),
         ),
     ),
@@ -2379,13 +2379,13 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key',
             ),
             'linkId' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'LinkId',
+                'type' => 'string',
+                'info' => 'Link identifier.',
             ),
         ),
     ),
@@ -2393,46 +2393,110 @@ return array (
         'name' => 'updateRemoteIssueLink',
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/remotelink/{linkId}',
         'method' => 'PUT',
-        'description' => 'Updates a remote issue link from a JSON representation. Any fields not provided are set to null.',
+        'description' => 'Updates a remote issue link from a JSON representation.',
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'linkId' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'LinkId',
+                'type' => 'string',
+                'info' => 'Link identifier.',
             ),
             'globalId' => array (
                 'example' => '"system=http://www.mycompany.com/support&id=1"',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'GlobalId.',
+                'type' => 'string',
+                'info' => 'Global identifier.',
                 'required' => false,
             ),
-            'application' => array (
-                'type' => 'JSON',
+            'applicationType' => array (
+                'type' => 'string',
                 'example' => '{"type":"com.acme.tracker","name":"My Acme Tracker"}',
                 'schema' => '{"title":"Application","type":"object","properties":{"type":{"type":"string"},"name":{"type":"string"}},"additionalProperties":false}',
-                'info' => 'Application.',
+                'info' => 'Application type.',
+                'required' => false,
+            ),
+            'applicationName' => array (
+                'type' => 'string',
+                'example' => '{"type":"com.acme.tracker","name":"My Acme Tracker"}',
+                'schema' => '{"title":"Application","type":"object","properties":{"type":{"type":"string"},"name":{"type":"string"}},"additionalProperties":false}',
+                'info' => 'Application name.',
                 'required' => false,
             ),
             'relationship' => array (
                 'example' => '"causes"',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
+                'type' => 'string',
                 'info' => 'Relationship.',
                 'required' => false,
             ),
-            'object' => array (
-                'type' => 'JSON',
-                'example' => '{"url":"http://www.mycompany.com/support?id=1","title":"TSTSUP-111","summary":"Crazy customer support issue","icon":{"url16x16":"http://www.mycompany.com/support/ticket.png","title":"Support Ticket"},"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+            'issueLinkUrl' => array (
+                'type' => 'string',
+                'example' => '{"title":"TSTSUP-111","summary":"Crazy customer support issue","icon":{"url16x16":"http://www.mycompany.com/support/ticket.png","title":"Support Ticket"},"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
                 'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
-                'info' => 'Object.',
+                'info' => 'Remote issue link Url.',
+                'required' => false,
+            ),
+            'issueLinkTitle' => array (
+                'type' => 'string',
+                'example' => '{"summary":"Crazy customer support issue","icon":{"url16x16":"http://www.mycompany.com/support/ticket.png","title":"Support Ticket"},"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link title.',
+                'required' => false,
+            ),
+            'issueLinkSummary' => array (
+                'type' => 'string',
+                'example' => '{"icon":{"url16x16":"http://www.mycompany.com/support/ticket.png","title":"Support Ticket"},"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link summary.',
+                'required' => false,
+            ),
+            'issueLinkIconUrl' => array (
+                'type' => 'string',
+                'example' => '{"icon":{"title":"Support Ticket"},"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link icon Url.',
+                'required' => false,
+            ),
+            'issueLinkIconTitle' => array (
+                'type' => 'string',
+                'example' => '{"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link icon title.',
+                'required' => false,
+            ),
+            'issueLinkStatusResolved' => array (
+                'type' => 'boolean',
+                'example' => '{"status":{"resolved":true,"icon":{"url16x16":"http://www.mycompany.com/support/resolved.png","title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link status resolved.',
+                'required' => false,
+            ),
+            'issueLinkStatusIconUrl' => array (
+                'type' => 'string',
+                'example' => '{"status":{"icon":{"title":"Case Closed","link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link status icon Url.',
+                'required' => false,
+            ),
+            'issueLinkStatusIconTitle' => array (
+                'type' => 'string',
+                'example' => '{"status":{"icon":{"link":"http://www.mycompany.com/support?id=1&details=closed"}}}',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link status icon title.',
+                'required' => false,
+            ),
+            'issueLinkStatusIconLink' => array (
+                'type' => 'string',
+                'example' => '',
+                'schema' => '{"title":"Remote Object","type":"object","properties":{"url":{"type":"string"},"title":{"type":"string"},"summary":{"type":"string"},"icon":{"$ref":"#/definitions/icon"},"status":{"title":"Status","type":"object","properties":{"resolved":{"type":"boolean"},"icon":{"$ref":"#/definitions/icon"}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Remote issue link status icon link.',
                 'required' => false,
             ),
         ),
@@ -2447,13 +2511,13 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'linkId' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'LinkId',
+                'type' => 'string',
+                'info' => 'Link identifier.',
             ),
         ),
     ),
@@ -2461,22 +2525,22 @@ return array (
         'name' => 'getIssueTransitions',
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/transitions',
         'method' => 'GET',
-        'description' => 'Get a list of the transitions possible for this issue by the current user, along with fields that are required and their types. Fields will only be returned if expand=transitions.fields. The fields in the metadata correspond to the fields in the transition screen for that transition.Fields not in the screen will not be in the metadata.',
+        'description' => 'Get a list of the transitions possible for this issue by the current user, along with fields that are required and their types.',
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'transitionId' => array (
                 'type' => 'string',
-                'info' => '.',
+                'info' => 'Transition identifier.',
                 'required' => false,
             ),
             'skipRemoteOnlyCondition' => array (
-                'type' => 'booleanDefault: false',
+                'type' => 'boolean',
                 'info' => 'Flag to skip evaluation of {@link RemoteOnlyCondition}, can only be used by add-on users.',
                 'required' => false,
             ),
@@ -2486,47 +2550,47 @@ return array (
         'name' => 'makeIssueTransition',
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/transitions',
         'method' => 'POST',
-        'description' => 'Perform a transition on an issue.When performing the transition you can update or set other issue fields. The fields that can be set on transtion, in either the fields parameter or the update parameter can be determinedusing the /rest/api/2/issue/{issueIdOrKey}/transitions?expand=transitions.fields resource.If a field is not configured to appear on the transition screen, then it will not be in the transition metadata, and a fieldvalidation error will occur if it is submitted.',
+        'description' => 'Perform a transition on an issue.When performing the transition you can update or set other issue fields.',
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
+            ),
+            'transition' => array (
+                'type' => 'JSON',
+                'example' => '{"id":"5"}',
+                'schema' => '{"title":"Transition","type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"},"to":{"title":"Status","type":"object","properties":{"statusColor":{"type":"string"},"description":{"type":"string"},"iconUrl":{"type":"string"},"name":{"type":"string"},"id":{"type":"string"},"statusCategory":{"title":"Status Category","type":"object","properties":{"id":{"type":"integer"},"key":{"type":"string"},"colorName":{"type":"string"},"name":{"type":"string"}},"additionalProperties":false}},"additionalProperties":false},"hasScreen":{"type":"boolean"},"fields":{"type":"object","patternProperties":{".+":{"title":"Field Meta","type":"object","properties":{"required":{"type":"boolean"},"schema":{"title":"Json Type","type":"object","properties":{"type":{"type":"string"},"items":{"type":"string"},"system":{"type":"string"},"custom":{"type":"string"},"customId":{"type":"integer"}},"additionalProperties":false},"name":{"type":"string"},"key":{"type":"string"},"autoCompleteUrl":{"type":"string"},"hasDefaultValue":{"type":"boolean"},"operations":{"type":"array","items":{"type":"string"}},"allowedValues":{"type":"array","items":[]}},"additionalProperties":false,"required":["required"]}},"additionalProperties":false}},"additionalProperties":false}',
+                'info' => 'Issue transition.',
+                'required' => true,
             ),
             'update' => array (
                 'type' => 'JSON',
                 'example' => '{"comment":[{"add":{"body":"Bug has been fixed."}}]}',
                 'schema' => '{"type":"object","patternProperties":{".+":{"type":"array","items":{"title":"Field Operation","type":"object"}}},"additionalProperties":false}',
-                'info' => 'Update.',
+                'info' => 'Issue update parameters.',
                 'required' => false,
             ),
             'fields' => array (
                 'type' => 'JSON',
                 'example' => '{"assignee":{"name":"bob"},"resolution":{"name":"Fixed"}}',
                 'schema' => '{"type":"object","patternProperties":{".+":[]},"additionalProperties":false}',
-                'info' => 'Fields.',
-                'required' => false,
-            ),
-            'transition' => array (
-                'type' => 'JSON',
-                'example' => '{"id":"5"}',
-                'schema' => '{"title":"Transition","type":"object","properties":{"id":{"type":"string"},"name":{"type":"string"},"to":{"title":"Status","type":"object","properties":{"statusColor":{"type":"string"},"description":{"type":"string"},"iconUrl":{"type":"string"},"name":{"type":"string"},"id":{"type":"string"},"statusCategory":{"title":"Status Category","type":"object","properties":{"id":{"type":"integer"},"key":{"type":"string"},"colorName":{"type":"string"},"name":{"type":"string"}},"additionalProperties":false}},"additionalProperties":false},"hasScreen":{"type":"boolean"},"fields":{"type":"object","patternProperties":{".+":{"title":"Field Meta","type":"object","properties":{"required":{"type":"boolean"},"schema":{"title":"Json Type","type":"object","properties":{"type":{"type":"string"},"items":{"type":"string"},"system":{"type":"string"},"custom":{"type":"string"},"customId":{"type":"integer"}},"additionalProperties":false},"name":{"type":"string"},"key":{"type":"string"},"autoCompleteUrl":{"type":"string"},"hasDefaultValue":{"type":"boolean"},"operations":{"type":"array","items":{"type":"string"}},"allowedValues":{"type":"array","items":[]}},"additionalProperties":false,"required":["required"]}},"additionalProperties":false}},"additionalProperties":false}',
-                'info' => 'Transition.',
+                'info' => 'Issue fields.',
                 'required' => false,
             ),
             'historyMetadata' => array (
                 'type' => 'JSON',
                 'example' => '{"type":"myplugin:type","description":"text description","descriptionKey":"plugin.changereason.i18.key","activityDescription":"text description","activityDescriptionKey":"plugin.activity.i18.key","actor":{"id":"tony","displayName":"Tony","type":"mysystem-user","avatarUrl":"http://mysystem/avatar/tony.jpg","url":"http://mysystem/users/tony"},"generator":{"id":"mysystem-1","type":"mysystem-application"},"cause":{"id":"myevent","type":"mysystem-event"},"extraData":{"keyvalue":"extra data","goes":"here"}}',
                 'schema' => '{"title":"History Metadata","type":"object","properties":{"type":{"type":"string"},"description":{"type":"string"},"descriptionKey":{"type":"string"},"activityDescription":{"type":"string"},"activityDescriptionKey":{"type":"string"},"emailDescription":{"type":"string"},"emailDescriptionKey":{"type":"string"},"actor":{"$ref":"#/definitions/history-metadata-participant"},"generator":{"$ref":"#/definitions/history-metadata-participant"},"cause":{"$ref":"#/definitions/history-metadata-participant"},"extraData":{"type":"object","patternProperties":{".+":{"type":"string"}},"additionalProperties":false}},"additionalProperties":false}',
-                'info' => 'HistoryMetadata.',
+                'info' => 'Issue history metadata.',
                 'required' => false,
             ),
             'properties' => array (
                 'schema' => '{"type":"array","items":{"title":"Entity Property","type":"object","properties":{"key":{"type":"string"},"value":[]},"additionalProperties":false}}',
-                'type' => 'PreString',
-                'info' => 'Properties.',
+                'type' => 'Array',
+                'info' => 'Issue properties.',
                 'required' => false,
             ),
         ),
@@ -2541,8 +2605,8 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
         ),
     ),
@@ -2556,8 +2620,8 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
         ),
     ),
@@ -2571,8 +2635,8 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
         ),
     ),
@@ -2586,8 +2650,8 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
         ),
     ),
@@ -2596,18 +2660,19 @@ return array (
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/watchers',
         'method' => 'POST',
         'description' => 'Adds a user to an issue\'s watcher list.',
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
-            'properties' => array (
+            'userName' => array (
                 'schema' => '{"id":"https://docs.atlassian.com/jira/REST/schema/string#","title":"String","type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Properties.',
+                'type' => 'string',
+                'info' => 'User name.',
                 'required' => false,
             ),
         ),
@@ -2622,13 +2687,13 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'username' => array (
                 'type' => 'string',
-                'info' => 'A String containing the name of the user to remove from the watcher list. Must not be null.',
-                'required' => false,
+                'info' => 'A String containing the name of the user to remove from the watcher list.',
+                'required' => true,
             ),
         ),
     ),
@@ -2642,12 +2707,12 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'expand' => array (
                 'type' => 'stringDefault:',
-                'info' => 'Optional comma separated list of parameters to expand:  properties (provides worklog properties).',
+                'info' => 'Comma separated list of parameters to expand.',
                 'required' => false,
             ),
         ),
@@ -2657,115 +2722,75 @@ return array (
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog',
         'method' => 'POST',
         'description' => 'Adds a new worklog entry to an issue.',
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
             'adjustEstimate' => array (
                 'type' => 'string',
-                'info' => '(optional) allows you to provide specific instructions to update the remaining time estimate of the issue.  Valid values are"new" - sets the estimate to a specific value"leave"- leaves the estimate as is"manual" - specify a specific amount to increase remaining estimate by"auto"- Default option.  Will automatically adjust the value based on the new timeSpent specified on the worklog.',
+                'info' => 'Allows you to provide specific instructions to update the remaining time estimate of the issue.',
                 'required' => false,
             ),
             'newEstimate' => array (
                 'type' => 'string',
-                'info' => '(required when "new" is selected for adjustEstimate) the new value for the remaining estimate field. e.g. "2d".',
+                'info' => 'The new value for the remaining estimate field.',
                 'required' => false,
             ),
             'reduceBy' => array (
                 'type' => 'string',
-                'info' => '(required when "manual" is selected for adjustEstimate) the amount to reduce the remaining estimate by e.g. "2d".',
+                'info' => 'The amount to reduce the remaining estimate by.',
                 'required' => false,
             ),
             'expand' => array (
-                'type' => 'stringDefault:',
-                'info' => 'Optional comma separated list of parameters to expand:  properties (provides worklog properties).',
+                'type' => 'string',
+                'info' => 'Comma separated list of parameters to expand.',
                 'required' => false,
             ),
             'comment' => array (
                 'example' => '"I did some work here."',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Comment.',
+                'type' => 'string',
+                'info' => 'Worklog comment.',
                 'required' => false,
             ),
-            'visibility' => array (
-                'type' => 'JSON',
+            'visibilityType' => array (
+                'type' => 'string',
                 'example' => '{"type":"group","value":"jira-developers"}',
                 'schema' => '{"title":"Visibility","type":"object","properties":{"type":{"type":"string","enum":["group","role"]},"value":{"type":"string"}},"additionalProperties":false}',
-                'info' => 'Visibility.',
+                'info' => 'Visibility type. One of "group","role".',
+                'required' => false,
+            ),
+            'visibilityValue' => array (
+                'type' => 'string',
+                'example' => '{"type":"group","value":"jira-developers"}',
+                'schema' => '{"title":"Visibility","type":"object","properties":{"type":{"type":"string","enum":["group","role"]},"value":{"type":"string"}},"additionalProperties":false}',
+                'info' => 'Visibility value.',
                 'required' => false,
             ),
             'started' => array (
                 'example' => '"2017-02-21T01:03:28.187+0000"',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Started.',
+                'type' => 'string',
+                'info' => 'Started. Example "2017-02-21T01:03:28.187+0000".',
                 'required' => false,
             ),
             'timeSpentSeconds' => array (
                 'example' => '12000',
                 'schema' => '{"type":"integer"}',
-                'type' => 'PreString',
-                'info' => 'TimeSpentSeconds.',
-                'required' => false,
-            ),
-            'author' => array (
-                'schema' => '{"$ref":"#/definitions/user"}',
-                'type' => 'PreString',
-                'info' => 'Author.',
-                'required' => false,
-            ),
-            'updateAuthor' => array (
-                'schema' => '{"$ref":"#/definitions/user"}',
-                'type' => 'PreString',
-                'info' => 'UpdateAuthor.',
-                'required' => false,
-            ),
-            'created' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Created.',
-                'required' => false,
-            ),
-            'updated' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Updated.',
-                'required' => false,
-            ),
-            'timeSpent' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'TimeSpent.',
-                'required' => false,
-            ),
-            'id' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Id.',
-                'required' => false,
-            ),
-            'issueId' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'IssueId.',
-                'required' => false,
-            ),
-            'properties' => array (
-                'schema' => '{"type":"array","items":{"title":"Entity Property","type":"object","properties":{"key":{"type":"string"},"value":[]},"additionalProperties":false}}',
-                'type' => 'PreString',
-                'info' => 'Properties.',
+                'type' => 'integer',
+                'info' => 'Time spent in seconds.',
                 'required' => false,
             ),
         ),
     ),
     array (
         'name' => 'getIssueWorklog',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{worklogId}',
         'method' => 'GET',
         'description' => 'Returns a specific worklog.Note: The work log won\'t be returned if the Log work field is hidden for the project.',
         'example' => '',
@@ -2773,130 +2798,101 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
-            'id' => array (
+            'worklogId' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'Id',
+                'type' => 'string',
+                'info' => 'Worklog identifier.',
             ),
             'expand' => array (
-                'type' => 'stringDefault:',
-                'info' => 'Optional comma separated list of parameters to expand:  properties (provides worklog properties).',
+                'type' => 'string',
+                'info' => 'Comma separated list of parameters to expand.',
                 'required' => false,
             ),
         ),
     ),
     array (
         'name' => 'updateIssueWorklog',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{worklogId}',
         'method' => 'PUT',
-        'description' => 'Updates an existing worklog entry. Note that:. .',
+        'description' => 'Updates an existing worklog entry.',
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
-            'id' => array (
+            'worklogId' => array (
                 'required' => true,
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Id',
+                'type' => 'string',
+                'info' => 'Worklog identifier.',
             ),
             'adjustEstimate' => array (
                 'type' => 'string',
-                'info' => '(optional) allows you to provide specific instructions to update the remaining time estimate of the issue.  Valid values are"new" - sets the estimate to a specific value"leave"- leaves the estimate as is"auto"- Default option.  Will automatically adjust the value based on the new timeSpent specified on the worklog.',
+                'info' => 'Allows you to provide specific instructions to update the remaining time estimate of the issue.',
                 'required' => false,
             ),
             'newEstimate' => array (
                 'type' => 'string',
-                'info' => '(required when "new" is selected for adjustEstimate) the new value for the remaining estimate field.',
+                'info' => 'The new value for the remaining estimate field.',
+                'required' => false,
+            ),
+            'reduceBy' => array (
+                'type' => 'string',
+                'info' => 'The amount to reduce the remaining estimate by.',
                 'required' => false,
             ),
             'expand' => array (
-                'type' => 'stringDefault:',
-                'info' => 'Optional comma separated list of parameters to expand:  properties (provides worklog properties).',
+                'type' => 'string',
+                'info' => 'Comma separated list of parameters to expand.',
                 'required' => false,
             ),
             'comment' => array (
                 'example' => '"I did some work here."',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Comment.',
+                'type' => 'string',
+                'info' => 'Worklog comment.',
                 'required' => false,
             ),
-            'visibility' => array (
-                'type' => 'JSON',
+            'visibilityType' => array (
+                'type' => 'string',
                 'example' => '{"type":"group","value":"jira-developers"}',
                 'schema' => '{"title":"Visibility","type":"object","properties":{"type":{"type":"string","enum":["group","role"]},"value":{"type":"string"}},"additionalProperties":false}',
-                'info' => 'Visibility.',
+                'info' => 'Visibility type. One of "group","role".',
+                'required' => false,
+            ),
+            'visibilityValue' => array (
+                'type' => 'string',
+                'example' => '{"type":"group","value":"jira-developers"}',
+                'schema' => '{"title":"Visibility","type":"object","properties":{"type":{"type":"string","enum":["group","role"]},"value":{"type":"string"}},"additionalProperties":false}',
+                'info' => 'Visibility value.',
                 'required' => false,
             ),
             'started' => array (
                 'example' => '"2017-02-21T01:03:28.187+0000"',
                 'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Started.',
+                'type' => 'string',
+                'info' => 'Started. Example "2017-02-21T01:03:28.187+0000".',
                 'required' => false,
             ),
             'timeSpentSeconds' => array (
                 'example' => '12000',
                 'schema' => '{"type":"integer"}',
-                'type' => 'PreString',
-                'info' => 'TimeSpentSeconds.',
-                'required' => false,
-            ),
-            'author' => array (
-                'schema' => '{"$ref":"#/definitions/user"}',
-                'type' => 'PreString',
-                'info' => 'Author.',
-                'required' => false,
-            ),
-            'updateAuthor' => array (
-                'schema' => '{"$ref":"#/definitions/user"}',
-                'type' => 'PreString',
-                'info' => 'UpdateAuthor.',
-                'required' => false,
-            ),
-            'created' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Created.',
-                'required' => false,
-            ),
-            'updated' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'Updated.',
-                'required' => false,
-            ),
-            'timeSpent' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'TimeSpent.',
-                'required' => false,
-            ),
-            'issueId' => array (
-                'schema' => '{"type":"string"}',
-                'type' => 'PreString',
-                'info' => 'IssueId.',
-                'required' => false,
-            ),
-            'properties' => array (
-                'schema' => '{"type":"array","items":{"title":"Entity Property","type":"object","properties":{"key":{"type":"string"},"value":[]},"additionalProperties":false}}',
-                'type' => 'PreString',
-                'info' => 'Properties.',
+                'type' => 'integer',
+                'info' => 'Time spent in seconds.',
                 'required' => false,
             ),
         ),
     ),
     array (
         'name' => 'deleteIssueWorklog',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/worklog/{worklogId}',
         'method' => 'DELETE',
         'description' => 'Deletes an existing worklog entry.',
         'example' => '',
@@ -2904,27 +2900,27 @@ return array (
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
             ),
-            'id' => array (
+            'worklogId' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'Id',
+                'type' => 'string',
+                'info' => 'Worklog identifier.',
             ),
             'adjustEstimate' => array (
                 'type' => 'string',
-                'info' => '(optional) allows you to provide specific instructions to update the remaining time estimate of the issue.  Valid values are"new" - sets the estimate to a specific value"leave"- leaves the estimate as is"manual" - specify a specific amount to increase remaining estimate by"auto"- Default option.  Will automatically adjust the value based on the new timeSpent specified on the worklog.',
+                'info' => 'Allows you to provide specific instructions to update the remaining time estimate of the issue.',
                 'required' => false,
             ),
             'newEstimate' => array (
                 'type' => 'string',
-                'info' => '(required when "new" is selected for adjustEstimate) the new value for the remaining estimate field. e.g. "2d".',
+                'info' => 'The new value for the remaining estimate field.',
                 'required' => false,
             ),
             'increaseBy' => array (
                 'type' => 'string',
-                'info' => '(required when "manual" is selected for adjustEstimate) the amount to increase the remaining estimate by e.g. "2d".',
+                'info' => 'The amount to increase the remaining estimate by e.g.',
                 'required' => false,
             ),
         ),
@@ -2933,28 +2929,28 @@ return array (
         'name' => 'getCreatedIssueMeta',
         'vendorUrl' => '/rest/api/2/issue/createmeta',
         'method' => 'GET',
-        'description' => 'Returns the meta data for creating issues. This includes the available projects, issue types and fields,including field types and whether or not those fields are required.Projects will not be returned if the user does not have permission to create issues in that project. The fields in the createmeta correspond to the fields in the create screen for the project/issuetype.Fields not in the screen will not be in the createmeta. Fields will only be returned if expand=projects.issuetypes.fields. The results can be filtered by project and/or issue type, given by the query params.',
+        'description' => 'Returns the meta data for creating issues.',
         'example' => '',
         'schema' => '',
         'args' => array (
             'projectIds' => array (
                 'type' => 'string',
-                'info' => 'Combined with the projectKeys param, lists the projects with which to filter the results. If absent, all projects are returned.This parameter can be specified multiple times, and/or be a comma-separated list.Specifiying a project that does not exist (or that you cannot create issues in) is not an error, but it will not be in the results.',
+                'info' => 'Comma-separated list, combined with the projectKeys param, lists the projects with which to filter the results.',
                 'required' => false,
             ),
             'projectKeys' => array (
                 'type' => 'string',
-                'info' => 'Combined with the projectIds param, lists the projects with which to filter the results. If null, all projects are returned.This parameter can be specified multiple times, and/or be a comma-separated list.Specifiying a project that does not exist (or that you cannot create issues in) is not an error, but it will not be in the results.',
+                'info' => 'Comma-separated list, combined with the projectIds param, lists the projects with which to filter the results.',
                 'required' => false,
             ),
             'issuetypeIds' => array (
                 'type' => 'string',
-                'info' => 'Combinded with issuetypeNames, lists the issue types with which to filter the results. If null, all issue types are returned.This parameter can be specified multiple times, and/or be a comma-separated list.Specifiying an issue type that does not exist is not an error.',
+                'info' => 'Comma-separated list, combinded with issuetypeNames, lists the issue types with which to filter the results.',
                 'required' => false,
             ),
             'issuetypeNames' => array (
                 'type' => 'string',
-                'info' => 'Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.This parameter can be specified multiple times, but is NOT interpreted as a comma-separated list.Specifiying an issue type that does not exist is not an error.',
+                'info' => 'Comma-separated list, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.',
                 'required' => false,
             ),
         ),
@@ -2963,28 +2959,28 @@ return array (
         'name' => 'getIssuesBasedOnQuary',
         'vendorUrl' => '/rest/api/2/issue/picker',
         'method' => 'GET',
-        'description' => 'Returns suggested issues which match the auto-completion query for the user which executes this request. This RESTmethod will check the user\'s history and the user\'s browsing context and select this issues, which match the query.',
+        'description' => 'Returns suggested issues which match the auto-completion query for the user which executes this request.',
         'example' => '',
         'schema' => '',
         'args' => array (
             'query' => array (
                 'type' => 'string',
-                'info' => 'The query.',
-                'required' => false,
+                'info' => 'The query string.',
+                'required' => true,
             ),
             'currentJQL' => array (
                 'type' => 'string',
-                'info' => 'The JQL in context of which the request is executed. Only issues which match this JQL query will be included in results.',
+                'info' => 'The JQL in context of which the request is executed.',
                 'required' => false,
             ),
             'currentIssueKey' => array (
                 'type' => 'string',
-                'info' => 'The key of the issue in context of which the request is executed. The issue which is in context will not be included in the auto-completion result, even if it matches the query.',
+                'info' => 'The key of the issue in context of which the request is executed.',
                 'required' => false,
             ),
             'currentProjectId' => array (
                 'type' => 'string',
-                'info' => 'The id of the project in context of which the request is executed. Suggested issues will be only from this project.',
+                'info' => 'The id of the project in context of which the request is executed.',
                 'required' => false,
             ),
             'showSubTasks' => array (
@@ -3003,14 +2999,20 @@ return array (
         'name' => 'addIssueAttachment',
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/attachments',
         'method' => 'POST',
-        'description' => 'Add one or more attachments to an issue. This resource expects a multipart post. The media-type multipart/form-data is defined in RFC 1867. Most clientlibraries have classes that make dealing with multipart posts simple. For instance, in Java the Apache HTTP Componentslibrary provides aMultiPartEntitythat makes it simple to submit a multipart POST. In order to protect against XSRF attacks, because this method accepts multipart/form-data, it has XSRF protectionon it.  This means you must submit a header of X-Atlassian-Token: no-check with the request, otherwise it will beblocked. The name of the multipart/form-data parameter that contains attachments must be "file". A simple example to upload a file called "myfile.txt" to issue REST-123:. .',
+        'description' => 'Add one or more attachments to an issue.',
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
             'issueIdOrKey' => array (
                 'required' => true,
-                'type' => 'PreString',
-                'info' => 'IssueIdOrKey',
+                'type' => 'string',
+                'info' => 'Issue identifier or key.',
+            ),
+            'Attachment' => array (
+                'required' => true,
+                'type' => 'File',
+                'info' => 'Issue attachment file.',
             ),
         ),
     ),
