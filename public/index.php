@@ -63,14 +63,49 @@ foreach($blocksData as $oneBlock){
             'required' => true
         ];
     }
+    echo '<hr>';
     // ARGS from param
     foreach($currParse['param'] as $oneParam){
-        if(isset($args[$oneParam[0]])){
-            $args[$oneParam[0]]['type'] = $oneParam[1];
-            $args[$oneParam[0]]['info'] = $oneParam[2];
-        }
+        $args[trim($oneParam[0])]['type'] = trim($oneParam[1]);
+        $args[trim($oneParam[0])]['info'] = trim($oneParam[2]);
     }
-    //var_dump($currParse['']);
+    // ARGS from example
+    if(strlen($currParse['example'])>0){
+        $example = json_decode($currParse['example'], true);
+        if(is_array($example)){
+            foreach($example as $exName => $exData){
+                if(!isset($args[$exName]['type'])&&is_array($exData)){
+                    $args[$exName]['type'] = 'JSON';
+                }
+                $args[$exName]['example'] = json_encode($exData);
+            }
+        }
+    }else{
+        $newBlock['example'] = $currParse['example'];
+    }
+    // ARGS from schema
+    if(strlen($currParse['schema'])>0){
+        $schema = json_decode($currParse['schema'], true);
+        if(isset($schema['properties'])&&is_array($schema['properties'])){
+            foreach($schema['properties'] as $schName => $schData){
+                $args[$schName]['schema'] = json_encode($schData);
+            }
+        }else{
+            $args[$schName]['schema'] = json_encode($schema);
+        }
+    }else{
+        $newBlock['schema'] = $currParse['schema'];
+    }
+
+    foreach($args as $name => &$arg){
+        //argType
+        if(!isset($arg['type'])){ $arg['type'] = 'String'; }
+        //argInfo
+        if(!isset($arg['info'])){ $arg['info'] = $name; }
+        //argRequired
+        if(!isset($arg['required'])){ $arg['required'] = false; }
+    }
+
 
     $newBlock['args'] = $args;
 
