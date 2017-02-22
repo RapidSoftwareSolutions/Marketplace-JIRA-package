@@ -4,7 +4,6 @@ test/rapid.*
 test/*.json
 test/*.ods
 test/*.ods#
-test/*.php
+test/*.nogit.php
 test/*.txt
-test/*
 .idea/
