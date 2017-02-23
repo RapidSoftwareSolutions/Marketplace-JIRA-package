@@ -10,46 +10,4491 @@
     ],
     "accounts": {
         "domain": "jira.atlassian.com",
-        "credentials": []
+        "credentials": [
+            "jiraUsername",
+            "jiraPassword"
+        ]
     },
     "blocks": [
         {
-            "name": "search",
-            "description": "Search for content within the iTunes Store, App Store, iBooks Store and Mac App Store.",
+            "name": "getMyPermissions",
+            "description": "Returns all permissions in the system and whether the currently logged in user has them.",
             "args": [
                 {
-                    "name": "term",
-                    "type": "String",
-                    "info": "The text string you want to search for.",
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
                     "required": true
                 },
                 {
-                    "name": "country",
-                    "type": "String",
-                    "info": "The two-letter country code for the store you want to search.",
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
                     "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "projectKey",
+                    "type": "String",
+                    "info": "Key of project to scope returned permissions for.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "String",
+                    "info": "Id of project to scope returned permissions for.",
+                    "required": false
+                },
+                {
+                    "name": "issueKey",
+                    "type": "String",
+                    "info": "Key of the issue to scope returned permissions for.",
+                    "required": false
+                },
+                {
+                    "name": "issueId",
+                    "type": "String",
+                    "info": "Id of the issue to scope returned permissions for.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getAllPermissions",
+            "description": "Returns all permissions that are present in the JIRA instance - Global, Project and the global ones added by plugins.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getProperty",
+            "description": "Returns an application property.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "key",
+                    "type": "String",
+                    "info": "A String containing the property key.",
+                    "required": false
+                },
+                {
+                    "name": "permissionLevel",
+                    "type": "String",
+                    "info": "When fetching a list specifies the permission level of all items in the list.",
+                    "required": false
+                },
+                {
+                    "name": "keyFilter",
+                    "type": "String",
+                    "info": "When fetching a list allows the list to be filtered by the property's start of key e.g.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "setProperty",
+            "description": "Modify an application property via PUT.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "propertiesId",
+                    "type": "String",
+                    "info": "Application property identifier.",
+                    "required": true
+                },
+                {
+                    "name": "value",
+                    "type": "String",
+                    "info": "If present in the PUT will override the existing value.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getAdvancedSettings",
+            "description": "Returns the properties that are displayed on the \"General Configuration > Advanced Settings\" page.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getApplicationRoles",
+            "description": "Returns all ApplicationRoles in the system. Will also return an ETag header containing a version hash of thecollection of ApplicationRoles.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getSingleApplicationRole",
+            "description": "Returns the ApplicationRole with passed key if it exists.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "roleKey",
+                    "type": "String",
+                    "info": "ApplicationRole key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getSingleAttachment",
+            "description": "Returns the meta-data for an attachment, including the URI of the actual attached file.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "attachmentId",
+                    "type": "String",
+                    "info": "Attachment identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "removeSingleAttachment",
+            "description": "Remove an attachment from an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "attachmentId",
+                    "type": "String",
+                    "info": "Attachment identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getAuditingRecords",
+            "description": "Returns auditing records filtered using provided parameters.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filter",
+                    "type": "String",
+                    "info": "Text query, each record that will be returned must contain the provided text in one of its fields.",
+                    "required": false
+                },
+                {
+                    "name": "offset",
+                    "type": "Number",
+                    "info": "The number of record from which search starts.",
+                    "required": false
                 },
                 {
                     "name": "limit",
                     "type": "Number",
-                    "info": "The number of search results you want the iTunes Store to return. In range 1 - 200.The default is 50.",
+                    "info": "Maximum number of returned results (if is limit is <= 0 or > 1000, it will be set do default value: 1000).",
                     "required": false
                 },
                 {
-                    "name": "lang",
+                    "name": "from",
                     "type": "String",
-                    "info": "The language, English or Japanese, you want to use when returning search results. Specify the language using the five-letter codename. The default is en_us (English).",
+                    "info": "Timestamp in past. 'from' must be less or equal 'to'",
+                    "required": false
+                },
+                {
+                    "name": "to",
+                    "type": "String",
+                    "info": "Timestamp in past; 'from' must be less or equal 'to'.",
                     "required": false
                 }
-            ],
-            "callbacks": [
+            ]
+        },
+        {
+            "name": "addAuditingRecord",
+            "description": "Store a record in Audit Log.",
+            "args": [
                 {
-                    "name": "error",
-                    "info": "Error"
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
                 },
                 {
-                    "name": "success",
-                    "info": "Success"
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "remoteAddress",
+                    "type": "String",
+                    "info": "Record remote address.",
+                    "required": false
+                },
+                {
+                    "name": "authorKey",
+                    "type": "String",
+                    "info": "Record authorkey.",
+                    "required": false
+                },
+                {
+                    "name": "eventSource",
+                    "type": "String",
+                    "info": "Record event source.",
+                    "required": false
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Record description.",
+                    "required": false
+                },
+                {
+                    "name": "summary",
+                    "type": "String",
+                    "info": "Record summary.",
+                    "required": false
+                },
+                {
+                    "name": "created",
+                    "type": "String",
+                    "info": "Record created.",
+                    "required": false
+                },
+                {
+                    "name": "category",
+                    "type": "String",
+                    "info": "Record category.",
+                    "required": false
+                },
+                {
+                    "name": "objectItemId",
+                    "type": "String",
+                    "info": "Record ObjectItem identifier.",
+                    "required": false
+                },
+                {
+                    "name": "objectItemName",
+                    "type": "String",
+                    "info": "Record ObjectItem name.",
+                    "required": false
+                },
+                {
+                    "name": "objectItemTypeName",
+                    "type": "String",
+                    "info": "Record ObjectItem type name.",
+                    "required": false
+                },
+                {
+                    "name": "objectItemParentId",
+                    "type": "String",
+                    "info": "Record ObjectItem parent identifier.",
+                    "required": false
+                },
+                {
+                    "name": "objectItemParentName",
+                    "type": "String",
+                    "info": "Record ObjectItem parent name.",
+                    "required": false
+                },
+                {
+                    "name": "changedValues",
+                    "type": "Array",
+                    "info": "Record changed values. Example [{\"fieldName\":\"email\",\"changedFrom\":\"user@atlassian.com\",\"changedTo\":\"newuser@atlassian.com\"}].",
+                    "required": false
+                },
+                {
+                    "name": "associatedItems",
+                    "type": "Array",
+                    "info": "Record associated items. Example [{\"id\":\"jira-software-users\",\"name\":\"jira-software-users\",\"typeName\":\"GROUP\",\"parentId\":\"1\",\"parentName\":\"JIRA Internal Directory\"}].",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getAllSystemAvatars",
+            "description": "Returns all system avatars of the given type.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "avatarType",
+                    "type": "String",
+                    "info": "System avatar type.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getCommentPropertiesKeys",
+            "description": "Returns the keys of all properties for the comment identified by the key or by the id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identified.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteCommentProperty",
+            "description": "Removes the property from the comment identified by the key or by the id. Ths user removing the property is requiredto have permissions to administer the comment.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identified.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "setCommentProperty",
+            "description": "Sets the value of the specified comment's property.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identified.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getCommentProperty",
+            "description": "Returns the value of the property with a given key from the comment identified by the key or by the id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identified.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "createComponent",
+            "description": "Create a component.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Component name.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Component description.",
+                    "required": false
+                },
+                {
+                    "name": "leadUserName",
+                    "type": "String",
+                    "info": "Component lead user name.",
+                    "required": false
+                },
+                {
+                    "name": "assigneeType",
+                    "type": "String",
+                    "info": "Component assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
+                    "required": false
+                },
+                {
+                    "name": "isAssigneeTypeValid",
+                    "type": "Boolean",
+                    "info": "Component is assignee type valid.",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "type": "String",
+                    "info": "Project key.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "Number",
+                    "info": "Project identifier.",
+                    "required": false
+                },
+                {
+                    "name": "lead",
+                    "type": "String",
+                    "info": "Component lead.",
+                    "required": false
+                },
+                {
+                    "name": "assignee",
+                    "type": "String",
+                    "info": "Component assignee.",
+                    "required": false
+                },
+                {
+                    "name": "realAssigneeType",
+                    "type": "String",
+                    "info": "Real assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\"",
+                    "required": false
+                },
+                {
+                    "name": "realAssignee",
+                    "type": "String",
+                    "info": "Component real assignee.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "updateComponent",
+            "description": "Modify a component.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "componentId",
+                    "type": "String",
+                    "info": "Component identifier.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Component name.",
+                    "required": false
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Component description.",
+                    "required": false
+                },
+                {
+                    "name": "leadUserName",
+                    "type": "String",
+                    "info": "Component lead user name.",
+                    "required": false
+                },
+                {
+                    "name": "assigneeType",
+                    "type": "String",
+                    "info": "Assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
+                    "required": false
+                },
+                {
+                    "name": "isAssigneeTypeValid",
+                    "type": "Boolean",
+                    "info": "Is assignee type valid.",
+                    "required": false
+                },
+                {
+                    "name": "project",
+                    "type": "String",
+                    "info": "Component project.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "Number",
+                    "info": "Component project identifier.",
+                    "required": false
+                },
+                {
+                    "name": "lead",
+                    "type": "String",
+                    "info": "Component lead.",
+                    "required": false
+                },
+                {
+                    "name": "assignee",
+                    "type": "String",
+                    "info": "Component assignee.",
+                    "required": false
+                },
+                {
+                    "name": "realAssigneeType",
+                    "type": "String",
+                    "info": "Real assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
+                    "required": false
+                },
+                {
+                    "name": "realAssignee",
+                    "type": "String",
+                    "info": "Real assignee.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getComponent",
+            "description": "Returns a project component.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "componentId",
+                    "type": "String",
+                    "info": "Component identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteComponent",
+            "description": "Delete a project component.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "componentId",
+                    "type": "String",
+                    "info": "Component identifier.",
+                    "required": true
+                },
+                {
+                    "name": "moveIssuesTo",
+                    "type": "String",
+                    "info": "The new component applied to issues whose 'id' component will be deleted. If this value is null, then the 'id' component is simply removed from the related isues.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getComponentIssuesCounts",
+            "description": "Returns counts of issues related to this component.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "componentId",
+                    "type": "String",
+                    "info": "Component identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getConfiguration",
+            "description": "Returns the information if the optional features in JIRA are enabled or disabled.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getSelectedTimeTracking",
+            "description": "Returns the currently selected time-tracking implementation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "selectTimeTracking",
+            "description": "Selects a time tracking implementation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "key",
+                    "type": "String",
+                    "info": "Implementation key.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Implementation name.",
+                    "required": false
+                },
+                {
+                    "name": "url",
+                    "type": "String",
+                    "info": "Implementation Url.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "disableTimeTracking",
+            "description": "Disables time tracking.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getTimeTrackingList",
+            "description": "Retrieve the list of available time tracking implementations.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getTimeTrackingConfiguration",
+            "description": "Returns the configuration options for time tracking.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "setTimeTrackingConfiguration",
+            "description": "Sets the options for time tracking.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "workingHoursPerDay",
+                    "type": "Number",
+                    "info": "Working hours per day.",
+                    "required": false
+                },
+                {
+                    "name": "workingDaysPerWeek",
+                    "type": "Number",
+                    "info": "Working days per week.",
+                    "required": false
+                },
+                {
+                    "name": "timeFormat",
+                    "type": "String",
+                    "info": "Time format. One of \"pretty\",\"days\",\"hours\".",
+                    "required": false
+                },
+                {
+                    "name": "defaultUnit",
+                    "type": "String",
+                    "info": "Default unit. One of \"minute\",\"hour\",\"day\",\"week\".",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getSingleCustomFieldOption",
+            "description": "Returns a full representation of the Custom Field Option that has the given id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "optionId",
+                    "type": "String",
+                    "info": "Option identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getDashboards",
+            "description": "Returns a list of all dashboards, optionally filtering them.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filter",
+                    "type": "String",
+                    "info": "An optional filter that is applied to the list of dashboards. Example \"favourite\", \"my\".",
+                    "required": false
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The index of the first dashboard to return (0-based). must be 0 or a multiple ofmaxResults.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "A hint as to the the maximum number of dashboards to return in each call.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getSingleDashboard",
+            "description": "Returns a single dashboard.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "dashboardId",
+                    "type": "String",
+                    "info": "Dashboard identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getDashboardPropertiesKeys",
+            "description": "Returns the keys of all properties for the dashboard item identified by the id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "dashboardId",
+                    "type": "String",
+                    "info": "Dashboard identifier.",
+                    "required": true
+                },
+                {
+                    "name": "itemId",
+                    "type": "String",
+                    "info": "Item identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteDashboardProperty",
+            "description": "Removes the property from the dashboard item identified by the key or by the id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "dashboardId",
+                    "type": "String",
+                    "info": "Dashboard identifier.",
+                    "required": true
+                },
+                {
+                    "name": "itemId",
+                    "type": "String",
+                    "info": "Item identifier.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "setDashboardProperty",
+            "description": "Sets the value of the specified dashboard item's property.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "dashboardId",
+                    "type": "String",
+                    "info": "Dashboard identifier.",
+                    "required": true
+                },
+                {
+                    "name": "itemId",
+                    "type": "String",
+                    "info": "Item identifier.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getDashboardProperty",
+            "description": "Returns the value of the property with a given key from the dashboard item identified by the id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "dashboardId",
+                    "type": "String",
+                    "info": "Dashboard identifier.",
+                    "required": true
+                },
+                {
+                    "name": "itemId",
+                    "type": "String",
+                    "info": "Item identifier.",
+                    "required": true
+                },
+                {
+                    "name": "propertyKey",
+                    "type": "String",
+                    "info": "Property key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "createCustomField",
+            "description": "Creates a custom field using a definition.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Custom field name.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Custom field description.",
+                    "required": false
+                },
+                {
+                    "name": "type",
+                    "type": "String",
+                    "info": "Custom field type.",
+                    "required": false
+                },
+                {
+                    "name": "searcherKey",
+                    "type": "String",
+                    "info": "Custom field searcher key.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getFields",
+            "description": "Returns a list of all fields, both System and Custom.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "createSelectFieldOption",
+            "description": "Creates an option for a select list issue field, for a given field key.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "value",
+                    "type": "String",
+                    "info": "Option value.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getSelectFieldOptions",
+            "description": "Returns all options defined for a select list issue field, for a given field key.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The starting index of the returned objects. Base index: 0.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "The maximum number of items to return per page. Default: 50.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "updateSelectFieldOptions",
+            "description": "Updates an option for a select list issue field, for a given field key and option Id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "optionId",
+                    "type": "String",
+                    "info": "Option identifier.",
+                    "required": true
+                },
+                {
+                    "name": "id",
+                    "type": "Number",
+                    "info": "Identifier.",
+                    "required": true
+                },
+                {
+                    "name": "value",
+                    "type": "String",
+                    "info": "Option value.",
+                    "required": true
+                },
+                {
+                    "name": "propertiesLeaderName",
+                    "type": "String",
+                    "info": "Options leader name.",
+                    "required": false
+                },
+                {
+                    "name": "propertiesLeaderEmail",
+                    "type": "String",
+                    "info": "Options leader email.",
+                    "required": false
+                },
+                {
+                    "name": "propertiesMembers",
+                    "type": "String",
+                    "info": "Options members.",
+                    "required": false
+                },
+                {
+                    "name": "propertiesDescription",
+                    "type": "String",
+                    "info": "Options description.",
+                    "required": false
+                },
+                {
+                    "name": "configScopeProjects",
+                    "type": "String",
+                    "info": "Comma separated options config scope projects identifier.",
+                    "required": false
+                },
+                {
+                    "name": "configAttributes",
+                    "type": "Array",
+                    "info": "Options config attributes.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getSelectFieldSingleOption",
+            "description": "Returns an option for a select list issue field, for a given field key and option Id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "optionId",
+                    "type": "String",
+                    "info": "Option identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteSelectFieldSingleOption",
+            "description": "Deletes an option from a select list issue field, for a given field key and option Id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "optionId",
+                    "type": "String",
+                    "info": "Option identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getAvailableSelectFieldOptions",
+            "description": "Returns the options defined for a select list issue field that are available to the currently logged-in user and can be assigned to an issue, for a given field key.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The starting index of the returned objects. Base index: 0.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "The maximum number of items to return per page. Default: 50.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "Number",
+                    "info": "Only options available for this project will be returned.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "searchSelectFieldOptions",
+            "description": "Returns the options defined for a select list issue field that are available to the currently logged-in user, for a given field key. The list of options will be paginated.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "fieldKey",
+                    "type": "String",
+                    "info": "Field key.",
+                    "required": true
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The starting index of the returned objects. Base index: 0.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "The maximum number of items to return per page. Default: 50.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "Number",
+                    "info": "Only options available for this project will be returned.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "createFilter",
+            "description": "Creates a new filter, and returns newly created filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "New filter name.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "New filter description.",
+                    "required": false
+                },
+                {
+                    "name": "jql",
+                    "type": "String",
+                    "info": "New filter Jql string.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "The parameters to expand.",
+                    "required": false
+                },
+                {
+                    "name": "favourite",
+                    "type": "Boolean",
+                    "info": "New filter is favourite.",
+                    "required": false
+                },
+                {
+                    "name": "owner",
+                    "type": "String",
+                    "info": "Owner.",
+                    "required": false
+                },
+                {
+                    "name": "viewUrl",
+                    "type": "String",
+                    "info": "View Url.",
+                    "required": false
+                },
+                {
+                    "name": "searchUrl",
+                    "type": "String",
+                    "info": "Search Url.",
+                    "required": false
+                },
+                {
+                    "name": "sharePermissions",
+                    "type": "Array",
+                    "info": "Filter Permission.",
+                    "required": false
+                },
+                {
+                    "name": "sharedUsers",
+                    "type": "JSON",
+                    "info": "User Bean List Wrapper.",
+                    "required": false
+                },
+                {
+                    "name": "subscriptions",
+                    "type": "JSON",
+                    "info": "Filter Subscription Bean List Wrapper.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "updateFilter",
+            "description": "Updates an existing filter, and returns its new value.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "New filter name.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "New filter description.",
+                    "required": false
+                },
+                {
+                    "name": "jql",
+                    "type": "String",
+                    "info": "New filter Jql string.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "The parameters to expand.",
+                    "required": false
+                },
+                {
+                    "name": "favourite",
+                    "type": "Boolean",
+                    "info": "New filter is favourite.",
+                    "required": false
+                },
+                {
+                    "name": "owner",
+                    "type": "String",
+                    "info": "Owner.",
+                    "required": false
+                },
+                {
+                    "name": "viewUrl",
+                    "type": "String",
+                    "info": "View Url.",
+                    "required": false
+                },
+                {
+                    "name": "searchUrl",
+                    "type": "String",
+                    "info": "Search Url.",
+                    "required": false
+                },
+                {
+                    "name": "sharePermissions",
+                    "type": "Array",
+                    "info": "Filter Permission.",
+                    "required": false
+                },
+                {
+                    "name": "sharedUsers",
+                    "type": "JSON",
+                    "info": "User Bean List Wrapper.",
+                    "required": false
+                },
+                {
+                    "name": "subscriptions",
+                    "type": "JSON",
+                    "info": "Filter Subscription Bean List Wrapper.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteFilter",
+            "description": "Delete a filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getFilter",
+            "description": "Returns a filter given an id.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "The parameters to expand.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getFilterDefaultColumns",
+            "description": "Returns the default columns for the given filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "setFilterDefaultColumns",
+            "description": "Sets the default columns for the given filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "resetFilterDefaultColumns",
+            "description": "Resets the columns for the given filter such that the filter no longer has its own column config.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getFilterSharePermissions",
+            "description": "Returns all share permissions of the given filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "addFilterSharePermissions",
+            "description": "Adds a share permissions to the given filter. Adding a global permission removes all previous permissions from the filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                },
+                {
+                    "name": "type",
+                    "type": "String",
+                    "info": "Filter type.",
+                    "required": false
+                },
+                {
+                    "name": "groupname",
+                    "type": "String",
+                    "info": "Filter groupname.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "String",
+                    "info": "Filter project identifier.",
+                    "required": false
+                },
+                {
+                    "name": "projectRoleId",
+                    "type": "String",
+                    "info": "Filter project role identifier.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getFilterSingleSharePermission",
+            "description": "Returns a single share permission of the given filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                },
+                {
+                    "name": "permissionId",
+                    "type": "String",
+                    "info": "Permission identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteFilterSingleSharePermission",
+            "description": "Removes a share permissions from the given filter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "filterId",
+                    "type": "String",
+                    "info": "Filter identifier.",
+                    "required": true
+                },
+                {
+                    "name": "permissionId",
+                    "type": "String",
+                    "info": "Permission identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getDefaultShareScope",
+            "description": "Returns the default share scope of the logged-in user.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "setDefaultShareScope",
+            "description": "Sets the default share scope of the logged-in user.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "scope",
+                    "type": "String",
+                    "info": "Share scope. One of \"GLOBAL\",\"AUTHENTICATED\",\"PRIVATE\".",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getFavouriteFilters",
+            "description": "Returns the favourite filters of the logged-in user.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "The parameters to expand.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getMyFilters",
+            "description": "Returns the owned filters of the logged-in user.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "The parameters to expand.",
+                    "required": false
+                },
+                {
+                    "name": "includeFavourites",
+                    "type": "Boolean",
+                    "info": "Include favourites.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "createGroup",
+            "description": "Creates a group by given group parameter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Group name.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteGroup",
+            "description": "Deletes a group by given group parameter.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "groupname",
+                    "type": "String",
+                    "info": "The name of the group to delete.",
+                    "required": true
+                },
+                {
+                    "name": "swapGroup",
+                    "type": "String",
+                    "info": "Specify a different group to transfer the restrictions comments and worklogs to.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getUsersFromGroup",
+            "description": "Returns a paginated list of users who are members of the specified group and its subgroups.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "groupname",
+                    "type": "String",
+                    "info": "A name of the group for which members will be returned.",
+                    "required": true
+                },
+                {
+                    "name": "includeInactiveUsers",
+                    "type": "Boolean",
+                    "info": "Inactive users will be included in the response if set to true.",
+                    "required": false
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The index of the first user in group to return (0 based).",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "The maximum number of users to return (max 50).",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "addUserToGroup",
+            "description": "Adds given user to a group. Returns the current state of the group.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "groupname",
+                    "type": "String",
+                    "info": "A name of requested group.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "User name.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "deleteUserFromGroup",
+            "description": "Removes given user from a group.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "groupname",
+                    "type": "String",
+                    "info": "A name of requested group.",
+                    "required": true
+                },
+                {
+                    "name": "username",
+                    "type": "String",
+                    "info": "User to remove from a group.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "findGroups",
+            "description": "Returns groups with substrings matching a given query.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "query",
+                    "type": "String",
+                    "info": "A String to match groups agains.",
+                    "required": false
+                },
+                {
+                    "name": "exclude",
+                    "type": "String",
+                    "info": "Exclude group.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "Max results.",
+                    "required": false
+                },
+                {
+                    "name": "userName",
+                    "type": "String",
+                    "info": "User name.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "findUsersAndGroups",
+            "description": "Returns a list of users and groups matching query with highlighting.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "query",
+                    "type": "String",
+                    "info": "A string used to search username, Name or e-mail address.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "The maximum number of users to return (defaults to 50).",
+                    "required": false
+                },
+                {
+                    "name": "showAvatar",
+                    "type": "Boolean",
+                    "info": "Show avatar.",
+                    "required": false
+                },
+                {
+                    "name": "fieldId",
+                    "type": "String",
+                    "info": "The custom field id.",
+                    "required": false
+                },
+                {
+                    "name": "projectId",
+                    "type": "String",
+                    "info": "The list of project ids to further restrict the search.",
+                    "required": false
+                },
+                {
+                    "name": "issueTypeId",
+                    "type": "String",
+                    "info": "The list of issue type ids to further restrict the search.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "createSingleIssue",
+            "description": "Creates an issue or a sub-task from a JSON representation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "update",
+                    "type": "JSON",
+                    "info": "Update. Example {\"worklog\":[{\"add\":{\"timeSpent\":\"60m\",\"started\":\"2011-07-05T11:05:00.000+0000\"}}]}.",
+                    "required": false
+                },
+                {
+                    "name": "fields",
+                    "type": "JSON",
+                    "info": "New issue fields. Example {\"project\":{\"id\":\"10000\"},\"summary\":\"something's wrong\",\"issuetype\":{\"id\":\"10000\"},\"assignee\":{\"name\":\"homer\"},\"reporter\":{\"name\":\"smithers\"},\"priority\":{\"id\":\"20000\"},\"labels\":[\"bugfix\",\"blitz_test\"],\"timetracking\":{\"originalEstimate\":\"10\",\"remainingEstimate\":\"5\"},\"security\":{\"id\":\"10000\"},\"versions\":[{\"id\":\"10000\"}],\"environment\":\"environment\",\"description\":\"description\",\"duedate\":\"2011-03-11\",\"fixVersions\":[{\"id\":\"10001\"}],\"components\":[{\"id\":\"10000\"}],\"customfield_30000\":[\"10000\",\"10002\"]}.",
+                    "required": false
+                },
+                {
+                    "name": "transition",
+                    "type": "JSON",
+                    "info": "New issue transition.",
+                    "required": false
+                },
+                {
+                    "name": "historyMetadata",
+                    "type": "JSON",
+                    "info": "New issue history metadata.",
+                    "required": false
+                },
+                {
+                    "name": "properties",
+                    "type": "Array",
+                    "info": "Entity properties.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "createIssues",
+            "description": "Creates issues or sub-tasks from a JSON representation. Creates many issues in one bulk operation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueUpdates",
+                    "type": "Array",
+                    "info": "Issue updates Object. Example [{\"update\":{\"worklog\":[{\"add\":{\"timeSpent\":\"60m\",\"started\":\"2011-07-05T11:05:00.000+0000\"}}]},\"fields\":{\"project\":{\"id\":\"10000\"},\"summary\":\"something's wrong\",\"issuetype\":{\"id\":\"10000\"},\"assignee\":{\"name\":\"homer\"},\"reporter\":{\"name\":\"smithers\"},\"priority\":{\"id\":\"20000\"},\"labels\":[\"bugfix\",\"blitz_test\"],\"timetracking\":{\"originalEstimate\":\"10\",\"remainingEstimate\":\"5\"},\"security\":{\"id\":\"10000\"},\"versions\":[{\"id\":\"10000\"}],\"environment\":\"environment\",\"description\":\"description\",\"duedate\":\"2011-03-11\",\"fixVersions\":[{\"id\":\"10001\"}],\"components\":[{\"id\":\"10000\"}],\"customfield_30000\":[\"10000\",\"10002\"],\"customfield_80000\":{\"value\":\"red\"},\"customfield_20000\":\"06/Jul/11 3:25 PM\",\"customfield_40000\":\"this is a text field\",\"customfield_70000\":[\"jira-administrators\",\"jira-software-users\"],\"customfield_60000\":\"jira-software-users\",\"customfield_50000\":\"this is a text area. big text.\",\"customfield_10000\":\"09/Jun/81\"}},{\"update\":[],\"fields\":{\"project\":{\"id\":\"1000\"},\"summary\":\"something's very wrong\",\"issuetype\":{\"id\":\"10000\"},\"assignee\":{\"name\":\"jerry\"},\"reporter\":{\"name\":\"kosecki\"},\"priority\":{\"id\":\"20000\"},\"labels\":[\"new_release\"],\"timetracking\":{\"originalEstimate\":\"15\",\"remainingEstimate\":\"5\"},\"security\":{\"id\":\"10000\"},\"versions\":[{\"id\":\"10000\"}],\"environment\":\"environment\",\"description\":\"description\",\"duedate\":\"2011-04-16\",\"fixVersions\":[{\"id\":\"10001\"}],\"components\":[{\"id\":\"10000\"}],\"customfield_30000\":[\"10000\",\"10002\"],\"customfield_80000\":{\"value\":\"red\"},\"customfield_20000\":\"06/Jul/11 3:25 PM\",\"customfield_40000\":\"this is a text field\",\"customfield_70000\":[\"jira-administrators\",\"jira-software-users\"],\"customfield_60000\":\"jira-software-users\",\"customfield_50000\":\"this is a text area. big text.\",\"customfield_10000\":\"09\\/Jun\\/81\"}}],",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getSingleIssue",
+            "description": "Returns a full representation of the issue for the given issue key.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "fields",
+                    "type": "String",
+                    "info": "The list of fields to return for the issue. By default, all fields are returned.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Expand.",
+                    "required": false
+                },
+                {
+                    "name": "properties",
+                    "type": "String",
+                    "info": "The list of properties to return for the issue.",
+                    "required": false
+                },
+                {
+                    "name": "fieldsByKeys",
+                    "type": "Boolean",
+                    "info": "If true then fields in issues will be referenced by keys instead of ids.",
+                    "required": false
+                },
+                {
+                    "name": "updateHistory",
+                    "type": "Boolean",
+                    "info": "Update history.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteSingleIssue",
+            "description": "Delete an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "updateSingleIssue",
+            "description": "Edits an issue from a JSON representation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "notifyUsers",
+                    "type": "Boolean",
+                    "info": "Send the email with notification that the issue was updated to users that watch it.",
+                    "required": false
+                },
+                {
+                    "name": "overrideScreenSecurity",
+                    "type": "Boolean",
+                    "info": "Allows to update fields that are not on the screen.",
+                    "required": false
+                },
+                {
+                    "name": "overrideEditableFlag",
+                    "type": "Boolean",
+                    "info": "Updates the issue even if the issue is not editable due to being in a status with jira.issue.editable set to false or missing.",
+                    "required": false
+                },
+                {
+                    "name": "transition",
+                    "type": "JSON",
+                    "info": "Transition properties.",
+                    "required": false
+                },
+                {
+                    "name": "fields",
+                    "type": "JSON",
+                    "info": "Fields properties.",
+                    "required": false
+                },
+                {
+                    "name": "update",
+                    "type": "JSON",
+                    "info": "Update properties.",
+                    "required": false
+                },
+                {
+                    "name": "historyMetadata",
+                    "type": "JSON",
+                    "info": "HistoryMetadata properties.",
+                    "required": false
+                },
+                {
+                    "name": "properties",
+                    "type": "Array",
+                    "info": "Issue properties.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "assignIssueToUser",
+            "description": "Assigns an issue to a user.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "name",
+                    "type": "String",
+                    "info": "User name.",
+                    "required": true
+                },
+                {
+                    "name": "key",
+                    "type": "String",
+                    "info": "Key.",
+                    "required": false
+                },
+                {
+                    "name": "accountId",
+                    "type": "String",
+                    "info": "Account identifier.",
+                    "required": false
+                },
+                {
+                    "name": "emailAddress",
+                    "type": "String",
+                    "info": "Email address.",
+                    "required": false
+                },
+                {
+                    "name": "avatarUrls",
+                    "type": "JSON",
+                    "info": "Avatar Urls.",
+                    "required": false
+                },
+                {
+                    "name": "displayName",
+                    "type": "String",
+                    "info": "Display name.",
+                    "required": false
+                },
+                {
+                    "name": "active",
+                    "type": "Boolean",
+                    "info": "Is active.",
+                    "required": false
+                },
+                {
+                    "name": "timeZone",
+                    "type": "String",
+                    "info": "TimeZone.",
+                    "required": false
+                },
+                {
+                    "name": "locale",
+                    "type": "String",
+                    "info": "Locale.",
+                    "required": false
+                },
+                {
+                    "name": "groups",
+                    "type": "String",
+                    "info": "Groups.",
+                    "required": false
+                },
+                {
+                    "name": "applicationRoles",
+                    "type": "String",
+                    "info": "Application roles.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getIssueComments",
+            "description": "Returns all comments for an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "startAt",
+                    "type": "Number",
+                    "info": "The page offset, if not specified then defaults to 0.",
+                    "required": false
+                },
+                {
+                    "name": "maxResults",
+                    "type": "Number",
+                    "info": "How many results on the page should be included. Defaults to 50.",
+                    "required": false
+                },
+                {
+                    "name": "orderBy",
+                    "type": "String",
+                    "info": "Ordering of the results.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "addCommentToIssue",
+            "description": "Adds a new comment to an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
+                    "required": false
+                },
+                {
+                    "name": "body",
+                    "type": "String",
+                    "info": "Comment body.",
+                    "required": false
+                },
+                {
+                    "name": "visibilityType",
+                    "type": "String",
+                    "info": "Visibility type. One of \"group\",\"role\".",
+                    "required": false
+                },
+                {
+                    "name": "visibilityValue",
+                    "type": "String",
+                    "info": "Visibility value.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "updateIssueComment",
+            "description": "Updates an existing comment using its JSON representation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identifier.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
+                    "required": false
+                },
+                {
+                    "name": "body",
+                    "type": "String",
+                    "info": "Comment body.",
+                    "required": false
+                },
+                {
+                    "name": "visibilityType",
+                    "type": "String",
+                    "info": "Visibility type. One of \"group\",\"role\".",
+                    "required": false
+                },
+                {
+                    "name": "visibilityValue",
+                    "type": "String",
+                    "info": "Visibility value.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteIssueComment",
+            "description": "Deletes an existing comment.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getIssueSingleComment",
+            "description": "Returns a single comment.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key",
+                    "required": true
+                },
+                {
+                    "name": "commentId",
+                    "type": "String",
+                    "info": "Comment identifier.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "sendIssueNotify",
+            "description": "Sends a notification (email) to the list or recipients defined in the request.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "subject",
+                    "type": "String",
+                    "info": "Notify subject.",
+                    "required": true
+                },
+                {
+                    "name": "textBody",
+                    "type": "String",
+                    "info": "Notify text body.",
+                    "required": false
+                },
+                {
+                    "name": "htmlBody",
+                    "type": "String",
+                    "info": "Notify Html body.",
+                    "required": false
+                },
+                {
+                    "name": "showToReporter",
+                    "type": "Boolean",
+                    "info": "Show to reporter.",
+                    "required": false
+                },
+                {
+                    "name": "showToAssignee",
+                    "type": "Boolean",
+                    "info": "Show to assignee.",
+                    "required": false
+                },
+                {
+                    "name": "showToWatchers",
+                    "type": "Boolean",
+                    "info": "Show to watchers.",
+                    "required": false
+                },
+                {
+                    "name": "showToVoters",
+                    "type": "Boolean",
+                    "info": "Show to voters.",
+                    "required": false
+                },
+                {
+                    "name": "showToUsers",
+                    "type": "Array",
+                    "info": "Show to users. Example [{\"name\":\"fred\",\"active\":false}].",
+                    "required": false
+                },
+                {
+                    "name": "showToGroups",
+                    "type": "Array",
+                    "info": "Show to groups. Example [{\"name\":\"notification-group\",\"self\":\"http://www.example.com/jira/rest/api/2/group?groupname=notification-group\"}].",
+                    "required": false
+                },
+                {
+                    "name": "restrictGroups",
+                    "type": "Array",
+                    "info": "Restrict groups. Example [{\"name\":\"notification-group\",\"self\":\"http://www.example.com/jira/rest/api/2/group?groupname=notification-group\"}].",
+                    "required": false
+                },
+                {
+                    "name": "restrictPermissions",
+                    "type": "Array",
+                    "info": "Restrict groups. Example [{\"id\":\"10\",\"key\":\"BROWSE\"}].",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getRemoteIssueLinks",
+            "description": "A REST sub-resource representing the remote issue links on the issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key",
+                    "required": true
+                },
+                {
+                    "name": "globalId",
+                    "type": "String",
+                    "info": "The id of the remote issue link to be returned.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "createRemoteIssueLink",
+            "description": "Create remote issue link from a JSON representation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "applicationType",
+                    "type": "String",
+                    "info": "Application type.",
+                    "required": false
+                },
+                {
+                    "name": "applicationName",
+                    "type": "String",
+                    "info": "Application name.",
+                    "required": false
+                },
+                {
+                    "name": "relationship",
+                    "type": "String",
+                    "info": "Relationship.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkUrl",
+                    "type": "String",
+                    "info": "Remote issue link Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkTitle",
+                    "type": "String",
+                    "info": "Remote issue link title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkSummary",
+                    "type": "String",
+                    "info": "Remote issue link summary.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkIconUrl",
+                    "type": "String",
+                    "info": "Remote issue link icon Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkIconTitle",
+                    "type": "String",
+                    "info": "Remote issue link icon title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusResolved",
+                    "type": "Boolean",
+                    "info": "Remote issue link status resolved.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconUrl",
+                    "type": "String",
+                    "info": "Remote issue link status icon Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconTitle",
+                    "type": "String",
+                    "info": "Remote issue link status icon title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconLink",
+                    "type": "String",
+                    "info": "Remote issue link status icon link.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteRemoteIssueLinkByGlobalId",
+            "description": "Delete the remote issue link with the given global id on the issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "globalId",
+                    "type": "String",
+                    "info": "The global id of the remote issue link.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getRemoteIssueLinkById",
+            "description": "Get the remote issue link with the given id on the issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key",
+                    "required": true
+                },
+                {
+                    "name": "linkId",
+                    "type": "String",
+                    "info": "Link identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "updateRemoteIssueLink",
+            "description": "Updates a remote issue link from a JSON representation.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "linkId",
+                    "type": "String",
+                    "info": "Link identifier.",
+                    "required": true
+                },
+                {
+                    "name": "globalId",
+                    "type": "String",
+                    "info": "Global identifier.",
+                    "required": false
+                },
+                {
+                    "name": "applicationType",
+                    "type": "String",
+                    "info": "Application type.",
+                    "required": false
+                },
+                {
+                    "name": "applicationName",
+                    "type": "String",
+                    "info": "Application name.",
+                    "required": false
+                },
+                {
+                    "name": "relationship",
+                    "type": "String",
+                    "info": "Relationship.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkUrl",
+                    "type": "String",
+                    "info": "Remote issue link Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkTitle",
+                    "type": "String",
+                    "info": "Remote issue link title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkSummary",
+                    "type": "String",
+                    "info": "Remote issue link summary.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkIconUrl",
+                    "type": "String",
+                    "info": "Remote issue link icon Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkIconTitle",
+                    "type": "String",
+                    "info": "Remote issue link icon title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusResolved",
+                    "type": "Boolean",
+                    "info": "Remote issue link status resolved.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconUrl",
+                    "type": "String",
+                    "info": "Remote issue link status icon Url.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconTitle",
+                    "type": "String",
+                    "info": "Remote issue link status icon title.",
+                    "required": false
+                },
+                {
+                    "name": "issueLinkStatusIconLink",
+                    "type": "String",
+                    "info": "Remote issue link status icon link.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteRemoteIssueLinkById",
+            "description": "Delete the remote issue link with the given id on the issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "linkId",
+                    "type": "String",
+                    "info": "Link identifier.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getIssueTransitions",
+            "description": "Get a list of the transitions possible for this issue by the current user, along with fields that are required and their types.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "transitionId",
+                    "type": "String",
+                    "info": "Transition identifier.",
+                    "required": false
+                },
+                {
+                    "name": "skipRemoteOnlyCondition",
+                    "type": "Boolean",
+                    "info": "Flag to skip evaluation of {@link RemoteOnlyCondition}, can only be used by add-on users.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "makeIssueTransition",
+            "description": "Perform a transition on an issue.When performing the transition you can update or set other issue fields.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "transition",
+                    "type": "JSON",
+                    "info": "Issue transition.",
+                    "required": true
+                },
+                {
+                    "name": "update",
+                    "type": "JSON",
+                    "info": "Issue update parameters.",
+                    "required": false
+                },
+                {
+                    "name": "fields",
+                    "type": "JSON",
+                    "info": "Issue fields.",
+                    "required": false
+                },
+                {
+                    "name": "historyMetadata",
+                    "type": "JSON",
+                    "info": "Issue history metadata.",
+                    "required": false
+                },
+                {
+                    "name": "properties",
+                    "type": "Array",
+                    "info": "Issue properties.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteIssueVote",
+            "description": "Remove your vote from an issue. (i.e. \"unvote\").",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "addIssueVote",
+            "description": "Cast your vote in favour of an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getIssueVotes",
+            "description": "A REST sub-resource representing the voters on the issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getIssueWatchers",
+            "description": "Returns the list of watchers for the issue with the given key.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "addIssueWatcher",
+            "description": "Adds a user to an issue's watcher list.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "userName",
+                    "type": "String",
+                    "info": "User name.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteIssueWatcher",
+            "description": "Removes a user from an issue's watcher list.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "username",
+                    "type": "String",
+                    "info": "A String containing the name of the user to remove from the watcher list.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "getIssueWorklog",
+            "description": "Returns all work logs for an issue.Note: Work logs won't be returned if the Log work field is hidden for the project.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Comma separated list of parameters to expand.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "addIssueWorklog",
+            "description": "Adds a new worklog entry to an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "adjustEstimate",
+                    "type": "String",
+                    "info": "Allows you to provide specific instructions to update the remaining time estimate of the issue.",
+                    "required": false
+                },
+                {
+                    "name": "newEstimate",
+                    "type": "String",
+                    "info": "The new value for the remaining estimate field.",
+                    "required": false
+                },
+                {
+                    "name": "reduceBy",
+                    "type": "String",
+                    "info": "The amount to reduce the remaining estimate by.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Comma separated list of parameters to expand.",
+                    "required": false
+                },
+                {
+                    "name": "comment",
+                    "type": "String",
+                    "info": "Worklog comment.",
+                    "required": false
+                },
+                {
+                    "name": "visibilityType",
+                    "type": "String",
+                    "info": "Visibility type. One of \"group\",\"role\".",
+                    "required": false
+                },
+                {
+                    "name": "visibilityValue",
+                    "type": "String",
+                    "info": "Visibility value.",
+                    "required": false
+                },
+                {
+                    "name": "started",
+                    "type": "String",
+                    "info": "Started. Example \"2017-02-21T01:03:28.187+0000\".",
+                    "required": false
+                },
+                {
+                    "name": "timeSpentSeconds",
+                    "type": "Number",
+                    "info": "Time spent in seconds.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getIssueWorklog",
+            "description": "Returns a specific worklog.Note: The work log won't be returned if the Log work field is hidden for the project.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "worklogId",
+                    "type": "String",
+                    "info": "Worklog identifier.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Comma separated list of parameters to expand.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "updateIssueWorklog",
+            "description": "Updates an existing worklog entry.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "worklogId",
+                    "type": "String",
+                    "info": "Worklog identifier.",
+                    "required": true
+                },
+                {
+                    "name": "adjustEstimate",
+                    "type": "String",
+                    "info": "Allows you to provide specific instructions to update the remaining time estimate of the issue.",
+                    "required": false
+                },
+                {
+                    "name": "newEstimate",
+                    "type": "String",
+                    "info": "The new value for the remaining estimate field.",
+                    "required": false
+                },
+                {
+                    "name": "reduceBy",
+                    "type": "String",
+                    "info": "The amount to reduce the remaining estimate by.",
+                    "required": false
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Comma separated list of parameters to expand.",
+                    "required": false
+                },
+                {
+                    "name": "comment",
+                    "type": "String",
+                    "info": "Worklog comment.",
+                    "required": false
+                },
+                {
+                    "name": "visibilityType",
+                    "type": "String",
+                    "info": "Visibility type. One of \"group\",\"role\".",
+                    "required": false
+                },
+                {
+                    "name": "visibilityValue",
+                    "type": "String",
+                    "info": "Visibility value.",
+                    "required": false
+                },
+                {
+                    "name": "started",
+                    "type": "String",
+                    "info": "Started. Example \"2017-02-21T01:03:28.187+0000\".",
+                    "required": false
+                },
+                {
+                    "name": "timeSpentSeconds",
+                    "type": "Number",
+                    "info": "Time spent in seconds.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "deleteIssueWorklog",
+            "description": "Deletes an existing worklog entry.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "worklogId",
+                    "type": "String",
+                    "info": "Worklog identifier.",
+                    "required": true
+                },
+                {
+                    "name": "adjustEstimate",
+                    "type": "String",
+                    "info": "Allows you to provide specific instructions to update the remaining time estimate of the issue.",
+                    "required": false
+                },
+                {
+                    "name": "newEstimate",
+                    "type": "String",
+                    "info": "The new value for the remaining estimate field.",
+                    "required": false
+                },
+                {
+                    "name": "increaseBy",
+                    "type": "String",
+                    "info": "The amount to increase the remaining estimate by e.g.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getCreatedIssueMeta",
+            "description": "Returns the meta data for creating issues.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "projectIds",
+                    "type": "String",
+                    "info": "Comma-separated list, combined with the projectKeys param, lists the projects with which to filter the results.",
+                    "required": false
+                },
+                {
+                    "name": "projectKeys",
+                    "type": "String",
+                    "info": "Comma-separated list, combined with the projectIds param, lists the projects with which to filter the results.",
+                    "required": false
+                },
+                {
+                    "name": "issuetypeIds",
+                    "type": "String",
+                    "info": "Comma-separated list, combinded with issuetypeNames, lists the issue types with which to filter the results.",
+                    "required": false
+                },
+                {
+                    "name": "issuetypeNames",
+                    "type": "String",
+                    "info": "Comma-separated list, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "getIssuesBasedOnQuery",
+            "description": "Returns suggested issues which match the auto-completion query for the user which executes this request.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "query",
+                    "type": "String",
+                    "info": "The query string.",
+                    "required": true
+                },
+                {
+                    "name": "currentJQL",
+                    "type": "String",
+                    "info": "The JQL in context of which the request is executed.",
+                    "required": false
+                },
+                {
+                    "name": "currentIssueKey",
+                    "type": "String",
+                    "info": "The key of the issue in context of which the request is executed.",
+                    "required": false
+                },
+                {
+                    "name": "currentProjectId",
+                    "type": "String",
+                    "info": "The id of the project in context of which the request is executed.",
+                    "required": false
+                },
+                {
+                    "name": "showSubTasks",
+                    "type": "Boolean",
+                    "info": "If set to false, subtasks will not be included in the list.",
+                    "required": false
+                },
+                {
+                    "name": "showSubTaskParent",
+                    "type": "Boolean",
+                    "info": "If set to false and request is executed in context of a subtask, the parent issue will not be included in the auto-completion result, even if it matches the query.",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "addIssueAttachment",
+            "description": "Add one or more attachments to an issue.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "issueIdOrKey",
+                    "type": "String",
+                    "info": "Issue identifier or key.",
+                    "required": true
+                },
+                {
+                    "name": "Attachment",
+                    "type": "File",
+                    "info": "Issue attachment file.",
+                    "required": true
                 }
             ]
         }

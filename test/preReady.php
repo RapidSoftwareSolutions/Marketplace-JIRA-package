@@ -66,13 +66,13 @@ return array (
     ),
     array (
         'name' => 'setProperty',
-        'vendorUrl' => '/rest/api/2/application-properties/{id}',
+        'vendorUrl' => '/rest/api/2/application-properties/{propertiesId}',
         'method' => 'PUT',
         'description' => 'Modify an application property via PUT.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'propertiesId' => array (
                 'required' => true,
                 'example' => '"jira.home"',
                 'schema' => '{"type":"string"}',
@@ -108,13 +108,13 @@ return array (
     ),
     array (
         'name' => 'getSingleApplicationRole',
-        'vendorUrl' => '/rest/api/2/applicationrole/{key}',
+        'vendorUrl' => '/rest/api/2/applicationrole/{roleKey}',
         'method' => 'GET',
         'description' => 'Returns the ApplicationRole with passed key if it exists.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'key' => array (
+            'roleKey' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'ApplicationRole key.',
@@ -123,13 +123,13 @@ return array (
     ),
     array (
         'name' => 'getSingleAttachment',
-        'vendorUrl' => '/rest/api/2/attachment/{id}',
+        'vendorUrl' => '/rest/api/2/attachment/{attachmentId}',
         'method' => 'GET',
         'description' => 'Returns the meta-data for an attachment, including the URI of the actual attached file.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'attachmentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Attachment identifier.',
@@ -138,13 +138,13 @@ return array (
     ),
     array (
         'name' => 'removeSingleAttachment',
-        'vendorUrl' => '/rest/api/2/attachment/{id}',
+        'vendorUrl' => '/rest/api/2/attachment/{attachmentId}',
         'method' => 'DELETE',
         'description' => 'Remove an attachment from an issue.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'attachmentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Attachment identifier.',
@@ -293,13 +293,13 @@ return array (
     ),
     array (
         'name' => 'getAllSystemAvatars',
-        'vendorUrl' => '/rest/api/2/avatar/{type}/system',
+        'vendorUrl' => '/rest/api/2/avatar/{avatarType}/system',
         'method' => 'GET',
         'description' => 'Returns all system avatars of the given type.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'type' => array (
+            'avatarType' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'System avatar type.',
@@ -466,13 +466,13 @@ return array (
     ),
     array (
         'name' => 'updateComponent',
-        'vendorUrl' => '/rest/api/2/component/{id}',
+        'vendorUrl' => '/rest/api/2/component/{componentId}',
         'method' => 'PUT',
         'description' => 'Modify a component.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'componentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Component identifier.',
@@ -554,13 +554,13 @@ return array (
     ),
     array (
         'name' => 'getComponent',
-        'vendorUrl' => '/rest/api/2/component/{id}',
+        'vendorUrl' => '/rest/api/2/component/{componentId}',
         'method' => 'GET',
         'description' => 'Returns a project component.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'componentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Component identifier.',
@@ -569,13 +569,13 @@ return array (
     ),
     array (
         'name' => 'deleteComponent',
-        'vendorUrl' => '/rest/api/2/component/{id}',
+        'vendorUrl' => '/rest/api/2/component/{componentId}',
         'method' => 'DELETE',
         'description' => 'Delete a project component.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'componentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Component identifier.',
@@ -589,13 +589,13 @@ return array (
     ),
     array (
         'name' => 'getComponentIssuesCounts',
-        'vendorUrl' => '/rest/api/2/component/{id}/relatedIssueCounts',
+        'vendorUrl' => '/rest/api/2/component/{componentId}/relatedIssueCounts',
         'method' => 'GET',
         'description' => 'Returns counts of issues related to this component.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'componentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Component identifier.',
@@ -712,13 +712,13 @@ return array (
     ),
     array (
         'name' => 'getSingleCustomFieldOption',
-        'vendorUrl' => '/rest/api/2/customFieldOption/{id}',
+        'vendorUrl' => '/rest/api/2/customFieldOption/{optionId}',
         'method' => 'GET',
         'description' => 'Returns a full representation of the Custom Field Option that has the given id.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'optionId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Option identifier.',
@@ -752,13 +752,13 @@ return array (
     ),
     array (
         'name' => 'getSingleDashboard',
-        'vendorUrl' => '/rest/api/2/dashboard/{id}',
+        'vendorUrl' => '/rest/api/2/dashboard/{dashboardId}',
         'method' => 'GET',
         'description' => 'Returns a single dashboard.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'dashboardId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Dashboard identifier.',
@@ -1209,13 +1209,13 @@ return array (
     ),
     array (
         'name' => 'updateFilter',
-        'vendorUrl' => '/rest/api/2/filter/{id}',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}',
         'method' => 'PUT',
         'description' => 'Updates an existing filter, and returns its new value.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'schema' => '{"type":"string"}',
                 'type' => 'string',
@@ -1294,13 +1294,13 @@ return array (
     ),
     array (
         'name' => 'deleteFilter',
-        'vendorUrl' => '/rest/api/2/filter/{id}',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}',
         'method' => 'DELETE',
         'description' => 'Delete a filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1309,13 +1309,13 @@ return array (
     ),
     array (
         'name' => 'getFilter',
-        'vendorUrl' => '/rest/api/2/filter/{id}',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}',
         'method' => 'GET',
         'description' => 'Returns a filter given an id.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1329,13 +1329,13 @@ return array (
     ),
     array (
         'name' => 'getFilterDefaultColumns',
-        'vendorUrl' => '/rest/api/2/filter/{id}/columns',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/columns',
         'method' => 'GET',
         'description' => 'Returns the default columns for the given filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1344,13 +1344,13 @@ return array (
     ),
     array (
         'name' => 'setFilterDefaultColumns',
-        'vendorUrl' => '/rest/api/2/filter/{id}/columns',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/columns',
         'method' => 'PUT',
         'description' => 'Sets the default columns for the given filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1359,28 +1359,28 @@ return array (
     ),
     array (
         'name' => 'resetFilterDefaultColumns',
-        'vendorUrl' => '/rest/api/2/filter/{id}/columns',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/columns',
         'method' => 'DELETE',
         'description' => 'Resets the columns for the given filter such that the filter no longer has its own column config.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
-                'info' => '/rest/api/2/filter/{id}/columns',
+                'info' => 'Filter identifier.',
             ),
         ),
     ),
     array (
         'name' => 'getFilterSharePermissions',
-        'vendorUrl' => '/rest/api/2/filter/{id}/permission',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/permission',
         'method' => 'GET',
         'description' => 'Returns all share permissions of the given filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1389,13 +1389,13 @@ return array (
     ),
     array (
         'name' => 'addFilterSharePermissions',
-        'vendorUrl' => '/rest/api/2/filter/{id}/permission',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/permission',
         'method' => 'POST',
         'description' => 'Adds a share permissions to the given filter. Adding a global permission removes all previous permissions from the filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1410,13 +1410,13 @@ return array (
             'groupname' => array (
                 'example' => '"jira-administrators"',
                 'schema' => '{"type":"string"}',
-                'type' => 'tring',
+                'type' => 'string',
                 'info' => 'Filter groupname.',
                 'required' => false,
             ),
             'projectId' => array (
                 'schema' => '{"type":"string"}',
-                'type' => 'tring',
+                'type' => 'string',
                 'info' => 'Filter project identifier.',
                 'required' => false,
             ),
@@ -1430,13 +1430,13 @@ return array (
     ),
     array (
         'name' => 'getFilterSingleSharePermission',
-        'vendorUrl' => '/rest/api/2/filter/{id}/permission/{permissionId}',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/permission/{permissionId}',
         'method' => 'GET',
         'description' => 'Returns a single share permission of the given filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1450,13 +1450,13 @@ return array (
     ),
     array (
         'name' => 'deleteFilterSingleSharePermission',
-        'vendorUrl' => '/rest/api/2/filter/{id}/permission/{permissionId}',
+        'vendorUrl' => '/rest/api/2/filter/{filterId}/permission/{permissionId}',
         'method' => 'DELETE',
         'description' => 'Removes a share permissions from the given filter.',
         'example' => '',
         'schema' => '',
         'args' => array (
-            'id' => array (
+            'filterId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Filter identifier.',
@@ -1579,17 +1579,17 @@ return array (
                 'required' => true,
             ),
             'includeInactiveUsers' => array (
-                'type' => 'booleanDefault: false',
+                'type' => 'boolean',
                 'info' => 'Inactive users will be included in the response if set to true.',
                 'required' => false,
             ),
             'startAt' => array (
-                'type' => 'longDefault: 0',
+                'type' => 'long',
                 'info' => 'The index of the first user in group to return (0 based).',
                 'required' => false,
             ),
             'maxResults' => array (
-                'type' => 'intDefault: 50',
+                'type' => 'int',
                 'info' => 'The maximum number of users to return (max 50).',
                 'required' => false,
             ),
@@ -1812,9 +1812,7 @@ return array (
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}',
         'method' => 'DELETE',
         'description' => 'Delete an issue.',
-        'default' => array(
-            'deleteSubtasks' => 'true',
-        ),
+        'custom' => true,
         'example' => '',
         'schema' => '',
         'args' => array (
@@ -2046,7 +2044,7 @@ return array (
     ),
     array (
         'name' => 'updateIssueComment',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{commentId}',
         'method' => 'PUT',
         'description' => 'Updates an existing comment using its JSON representation.',
         'example' => '',
@@ -2057,7 +2055,7 @@ return array (
                 'type' => 'string',
                 'info' => 'Issue identifier or key.',
             ),
-            'id' => array (
+            'commentId' => array (
                 'required' => true,
                 'schema' => '{"type":"string"}',
                 'type' => 'string',
@@ -2093,7 +2091,7 @@ return array (
     ),
     array (
         'name' => 'deleteIssueComment',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{commentId}',
         'method' => 'DELETE',
         'description' => 'Deletes an existing comment.',
         'example' => '',
@@ -2104,7 +2102,7 @@ return array (
                 'type' => 'string',
                 'info' => 'Issue identifier or key',
             ),
-            'id' => array (
+            'commentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Comment identifier.',
@@ -2113,7 +2111,7 @@ return array (
     ),
     array (
         'name' => 'getIssueSingleComment',
-        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{id}',
+        'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/comment/{commentId}',
         'method' => 'GET',
         'description' => 'Returns a single comment.',
         'example' => '',
@@ -2124,7 +2122,7 @@ return array (
                 'type' => 'string',
                 'info' => 'Issue identifier or key',
             ),
-            'id' => array (
+            'commentId' => array (
                 'required' => true,
                 'type' => 'string',
                 'info' => 'Comment identifier.',
@@ -2350,7 +2348,7 @@ return array (
         ),
     ),
     array (
-        'name' => 'deleteRemoteIssueLinkById',
+        'name' => 'deleteRemoteIssueLinkByGlobalId',
         'vendorUrl' => '/rest/api/2/issue/{issueIdOrKey}/remotelink',
         'method' => 'DELETE',
         'description' => 'Delete the remote issue link with the given global id on the issue.',
@@ -2711,7 +2709,7 @@ return array (
                 'info' => 'Issue identifier or key.',
             ),
             'expand' => array (
-                'type' => 'stringDefault:',
+                'type' => 'string',
                 'info' => 'Comma separated list of parameters to expand.',
                 'required' => false,
             ),
@@ -2956,7 +2954,7 @@ return array (
         ),
     ),
     array (
-        'name' => 'getIssuesBasedOnQuary',
+        'name' => 'getIssuesBasedOnQuery',
         'vendorUrl' => '/rest/api/2/issue/picker',
         'method' => 'GET',
         'description' => 'Returns suggested issues which match the auto-completion query for the user which executes this request.',

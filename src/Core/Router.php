@@ -63,7 +63,7 @@ class Router
         // Get method for vendor route
         if(
             isset($this->custom[$block['name']]['method'])&&
-            in_array($this->custom[$block['name']]['method'], ['GET'])
+            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE'])
         ){
             $method = $this->custom[$block['name']]['method'];
         }else{
