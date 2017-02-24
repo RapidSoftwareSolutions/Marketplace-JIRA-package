@@ -4052,8 +4052,8 @@ return array (
             ),
         ),
         array (
-            'name' => 'getIssueWorklog',
-            'description' => 'Returns all work logs for an issue.Note: Work logs won\'t be returned if the Log work field is hidden for the project.',
+            'name' => 'getWorklogById',
+            'description' => 'Returns a specific worklog.',
             'args' => array (
                 array (
                     'name' => 'jiraUsername',
@@ -4077,6 +4077,12 @@ return array (
                     'name' => 'issueIdOrKey',
                     'type' => 'String',
                     'info' => 'Issue identifier or key.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'worklogId',
+                    'type' => 'String',
+                    'info' => 'Worklog identifier.',
                     'required' => true,
                 ),
                 array (
@@ -4173,7 +4179,7 @@ return array (
         ),
         array (
             'name' => 'getIssueWorklog',
-            'description' => 'Returns a specific worklog.Note: The work log won\'t be returned if the Log work field is hidden for the project.',
+            'description' => 'Returns a specific worklog.',
             'args' => array (
                 array (
                     'name' => 'jiraUsername',
@@ -4197,12 +4203,6 @@ return array (
                     'name' => 'issueIdOrKey',
                     'type' => 'String',
                     'info' => 'Issue identifier or key.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'worklogId',
-                    'type' => 'String',
-                    'info' => 'Worklog identifier.',
                     'required' => true,
                 ),
                 array (
@@ -5775,6 +5775,20 @@ return array (
             'method' => 'DELETE',
         ),
         'getIssueWorklog' => array (
+            'dictionary' => array (
+                'jiraUsername' => 'jiraUsername',
+                'jiraPassword' => 'jiraPassword',
+                'jiraName' => 'jiraName',
+                'issueIdOrKey' => 'issueIdOrKey',
+                'expand' => 'expand',
+            ),
+            'query' => array (
+                'expand',
+            ),
+            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/{{issueIdOrKey}}/worklog',
+            'method' => 'GET',
+        ),
+        'getWorklogById' => array (
             'dictionary' => array (
                 'jiraUsername' => 'jiraUsername',
                 'jiraPassword' => 'jiraPassword',
