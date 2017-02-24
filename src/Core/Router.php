@@ -63,7 +63,7 @@ class Router
         // Get method for vendor route
         if(
             isset($this->custom[$block['name']]['method'])&&
-            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE'])
+            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE', 'POST-FILE'])
         ){
             $method = $this->custom[$block['name']]['method'];
         }else{
@@ -138,6 +138,8 @@ class Router
                 unset($sendParam['jiraPassword']);
             }
             $baseAuthorization = base64_encode($jiraUsername . ':' . $jiraPassword);
+
+            unset($sendParam['jiraName']);
 
             $sendBody = $sendParam;
             // If need, custom make custom processing for route
@@ -299,10 +301,18 @@ class Router
             if($method == 'GET'){
                 $clientSetup['query'] = json_decode($sendBody, true);
             }else{
-                $clientSetup['form_params'] = json_decode($sendBody, true);
+                $clientSetup['body'] = json_decode($sendBody, true);
             }
 
-//var_dump($method, $url, $clientSetup);
+            if($method == 'POST-FILE') {
+                //$clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
+                //$clientSetup['headers']['Content-Type'] = 'multipart/form-data';
+                //$clientSetup['multipart'] = [['file' => file_get_contents($clientSetup['body']['Attachment'], 'r')]];
+
+                //unset($clientSetup['body']);
+                $method = 'POST';
+                exit();
+            }
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
