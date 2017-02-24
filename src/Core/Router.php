@@ -147,8 +147,9 @@ class Router
                 $sendBody = json_encode($sendBody);
             }
 
+
             // Make request
-            $result = $this->httpRequest($vendorUrl, $method, $sendBody, $baseAuthorization);
+            $result = $this->httpRequest($vendorUrl, $method, $sendBody, $baseAuthorization, $blockName);
             echo json_encode($result);
             exit(200);
         });
@@ -273,7 +274,7 @@ class Router
         return $result;
     }
 
-    protected function httpRequest($url, $method, $sendBody, $baseAuthorization)
+    protected function httpRequest($url, $method, $sendBody, $baseAuthorization, $blockName)
     {
         if($sendBody == '[]' || $sendBody == '{}'){
             $sendBody = '';
@@ -294,6 +295,11 @@ class Router
                 $clientSetup['form_params'] = json_decode($sendBody, true);
             }
 
+            if($blockName == 'getAuditingRecords'){
+                echo json_encode([$method, $url, $clientSetup]);
+                exit(200);
+            }
+            
 //var_dump($method, $url, $clientSetup);
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);

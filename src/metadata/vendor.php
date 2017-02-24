@@ -165,7 +165,7 @@ return array (
                     'name' => 'value',
                     'type' => 'String',
                     'info' => 'If present in the PUT will override the existing value.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
