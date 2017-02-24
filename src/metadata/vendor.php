@@ -116,8 +116,8 @@ return array (
                 array (
                     'name' => 'key',
                     'type' => 'String',
-                    'info' => 'A String containing the property key.',
-                    'required' => false,
+                    'info' => 'A String containing the property key. Example "jira.home".',
+                    'required' => true,
                 ),
                 array (
                     'name' => 'permissionLevel',
