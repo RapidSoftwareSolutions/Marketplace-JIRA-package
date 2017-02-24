@@ -125,6 +125,7 @@ class Router
 
             // Prepare param
             $sendParam = $this->prepareParam($inputPram, $blockCustom['dictionary'], $blockName);
+            var_dump($sendParam);
             // Authorization param
             $jiraUsername = '';
             if(isset($sendParam['jiraUsername'])){
@@ -139,18 +140,11 @@ class Router
             $baseAuthorization = base64_encode($jiraUsername . ':' . $jiraPassword);
 
             $sendBody = $sendParam;
-            // If need, custom make custom default processing
-            if(isset($blockCustom['default'])&&is_array($blockCustom['default'])&&count($blockCustom['default'])>0){
-                $sendBody = array_merge($blockCustom['default'], $sendBody);
-            }
             // If need, custom make custom processing for route
             if(isset($blockCustom['custom'])&&$blockCustom['custom'] == true){
                 $sendBody = CustomModel::$blockName($sendParam, $this->custom[$blockName], $vendorUrl);
             }else{
-                unset($sendBody['appClientId']);
-                if(isset($this->custom[$blockName]['showApiType'])&&$this->custom[$blockName]['showApiType']==true){
-                    $sendBody['api_type'] = 'json';
-                }
+                unset($sendBody['jiraName']);
                 $sendBody = json_encode($sendBody);
             }
 
@@ -206,7 +200,9 @@ class Router
             $param = [];
             // Check input param in param list
             foreach($paramList as $oneParam){
-                $param[$oneParam] = (isset($jsonParam[$oneParam]))?$jsonParam[$oneParam]:false;
+                if(isset($jsonParam[$oneParam])){
+                    $param[$oneParam] = $jsonParam[$oneParam];
+                }
             }
 
             return $param;
@@ -273,10 +269,6 @@ class Router
                 $finalParamName = $dictionary[$paramName];
             }
             $result[$finalParamName] = $paramVal;
-            // URL encode term field
-            if($paramName == 'term'){
-                $result[$finalParamName] = urlencode($paramVal);
-            }
         }
 
         return $result;
@@ -302,6 +294,8 @@ class Router
             }else{
                 $clientSetup['form_params'] = json_decode($sendBody, true);
             }
+
+var_dump($method, $url, $clientSetup);
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
