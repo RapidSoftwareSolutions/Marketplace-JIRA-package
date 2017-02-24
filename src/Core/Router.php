@@ -125,6 +125,19 @@ class Router
 
             // Prepare param
             $sendParam = $this->prepareParam($inputPram, $blockCustom['dictionary'], $blockName);
+            // Authorization param
+            $jiraUsername = '';
+            if(isset($sendParam['jiraUsername'])){
+                $jiraUsername = $sendParam['jiraUsername'];
+                unset($sendParam['jiraUsername']);
+            }
+            $jiraPassword = '';
+            if(isset($sendParam['jiraPassword'])){
+                $jiraPassword = $sendParam['jiraPassword'];
+                unset($sendParam['jiraPassword']);
+            }
+            $baseAuthorization = base64_encode($jiraUsername . ':' . $jiraPassword);
+
             $sendBody = $sendParam;
             // If need, custom make custom default processing
             if(isset($blockCustom['default'])&&is_array($blockCustom['default'])&&count($blockCustom['default'])>0){
@@ -142,7 +155,7 @@ class Router
             }
 
             // Make request
-            $result = $this->httpRequest($vendorUrl, $method, $sendBody);
+            $result = $this->httpRequest($vendorUrl, $method, $sendBody, $baseAuthorization);
             echo json_encode($result);
             exit(200);
         });
@@ -269,7 +282,7 @@ class Router
         return $result;
     }
 
-    protected function httpRequest($url, $method, $sendBody)
+    protected function httpRequest($url, $method, $sendBody, $baseAuthorization)
     {
         if($sendBody == '[]' || $sendBody == '{}'){
             $sendBody = '';
@@ -282,8 +295,13 @@ class Router
                 'headers' => [
                     'Content-Type' => 'application/json',
                 ] ];
+            $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
 
-            $clientSetup['query'] = json_decode($sendBody, true);
+            if($method == 'GET'){
+                $clientSetup['query'] = json_decode($sendBody, true);
+            }else{
+                $clientSetup['form_params'] = json_decode($sendBody, true);
+            }
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
