@@ -125,7 +125,6 @@ class Router
 
             // Prepare param
             $sendParam = $this->prepareParam($inputPram, $blockCustom['dictionary'], $blockName);
-            var_dump($sendParam);
             // Authorization param
             $jiraUsername = '';
             if(isset($sendParam['jiraUsername'])){
@@ -294,8 +293,6 @@ class Router
             }else{
                 $clientSetup['form_params'] = json_decode($sendBody, true);
             }
-
-var_dump($method, $url, $clientSetup);
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
