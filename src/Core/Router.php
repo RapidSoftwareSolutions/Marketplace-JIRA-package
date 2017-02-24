@@ -294,6 +294,8 @@ class Router
                 $clientSetup['form_params'] = json_decode($sendBody, true);
             }
 
+//var_dump($method, $url, $clientSetup);
+
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
 
