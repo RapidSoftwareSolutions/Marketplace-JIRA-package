@@ -3,7 +3,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 use Core\Router;
 
-//header('Content-type: application/json');
+header('Content-type: application/json');
 http_response_code (200);
 define('RAPID_IN', TRUE);
 
