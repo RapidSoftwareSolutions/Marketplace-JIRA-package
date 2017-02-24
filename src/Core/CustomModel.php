@@ -29,6 +29,12 @@ class CustomModel
 
         return json_encode($result);
     }
+    public static function getIssueComments($param, &$blockCustom, $vendorUrl){
+        $result = $param;
+        $result['orderBy'] = 'created';
+
+        return json_encode($result);
+    }
     public static function addCommentToIssue($param, &$blockCustom, $vendorUrl){
         $result = $param;
 

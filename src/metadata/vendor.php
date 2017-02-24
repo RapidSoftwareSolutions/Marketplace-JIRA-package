@@ -3096,12 +3096,6 @@ return array (
                     'required' => false,
                 ),
                 array (
-                    'name' => 'orderBy',
-                    'type' => 'String',
-                    'info' => 'Ordering of the results.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'expand',
                     'type' => 'String',
                     'info' => 'Optional flags: renderedBody (provides body rendered in HTML).',
@@ -5494,6 +5488,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/{{issueIdOrKey}}/comment',
             'method' => 'GET',
+            'custom' => true,
         ),
         'addCommentToIssue' => array (
             'dictionary' => array (

@@ -113,8 +113,8 @@
                 {
                     "name": "key",
                     "type": "String",
-                    "info": "A String containing the property key.",
-                    "required": false
+                    "info": "A String containing the property key. Example \"jira.home\".",
+                    "required": true
                 },
                 {
                     "name": "permissionLevel",
@@ -3090,12 +3090,6 @@
                     "name": "maxResults",
                     "type": "Number",
                     "info": "How many results on the page should be included. Defaults to 50.",
-                    "required": false
-                },
-                {
-                    "name": "orderBy",
-                    "type": "String",
-                    "info": "Ordering of the results.",
                     "required": false
                 },
                 {
