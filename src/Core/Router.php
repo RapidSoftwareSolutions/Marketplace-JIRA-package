@@ -83,7 +83,8 @@ class Router
         // Add route
         $this->klein->respond('POST', $routePath, function()use($param, $blockName, $blockCustom, $method){
             // Get input param
-            $inputPram = $this->getInputPram($param['param']);
+            $queryParam = isset($blockCustom['query'])?$blockCustom['query']:[];
+            $inputPram = $this->getInputPram($param['param'], $queryParam);
             if(is_string($inputPram)){
                 echo $inputPram;
                 exit(200);
@@ -180,7 +181,7 @@ class Router
         ];
     }
 
-    private function getInputPram($paramList)
+    private function getInputPram($paramList, $queryParam)
     {
         // Retrieve data params from input body
         $requestBody = file_get_contents('php://input');
@@ -200,7 +201,13 @@ class Router
             $param = [];
             // Check input param in param list
             foreach($paramList as $oneParam){
-                if(isset($jsonParam[$oneParam])){
+                if(
+                    isset($jsonParam[$oneParam])&&
+                    !(
+                        in_array($oneParam, $queryParam)&&
+                        !is_array($jsonParam[$oneParam])&&
+                        strlen($jsonParam[$oneParam])==0
+                    )){
                     $param[$oneParam] = $jsonParam[$oneParam];
                 }
             }
@@ -295,13 +302,6 @@ class Router
                 $clientSetup['form_params'] = json_decode($sendBody, true);
             }
 
-            if($blockName == 'getAuditingRecords'){
-                $result['callback'] = 'error';
-                $result['contextWrites']['to'] = json_encode([$method, $url, $clientSetup]);
-                echo json_encode($result);
-                exit(200);
-            }
-            
 //var_dump($method, $url, $clientSetup);
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
