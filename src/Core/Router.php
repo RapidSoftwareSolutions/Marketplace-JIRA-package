@@ -296,7 +296,9 @@ class Router
             }
 
             if($blockName == 'getAuditingRecords'){
-                echo json_encode([$method, $url, $clientSetup]);
+                $result['callback'] = 'error';
+                $result['contextWrites']['to'] = json_encode([$method, $url, $clientSetup]);
+                echo json_encode($result);
                 exit(200);
             }
             
