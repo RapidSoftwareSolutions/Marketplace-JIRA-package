@@ -286,11 +286,6 @@ class CustomModel
         return json_encode($result);
     }
     public static function updateIssueWorklog($param, &$blockCustom, $vendorUrl){
-        return self::addIssueWorklog($param, &$blockCustom, $vendorUrl);
-    }
-    public static function addIssueAttachment($param, &$blockCustom, $vendorUrl){
-        $result = $param;
-
-        return json_encode($result);
+        return self::addIssueWorklog($param, $blockCustom, $vendorUrl);
     }
 }

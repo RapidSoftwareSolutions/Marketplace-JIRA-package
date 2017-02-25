@@ -5921,7 +5921,6 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/{{issueIdOrKey}}/attachments',
             'method' => 'POST-FILE',
-            'custom' => true,
         ),
     ),
 );
