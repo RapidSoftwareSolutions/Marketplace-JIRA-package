@@ -308,9 +308,12 @@ class Router
                 //$clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
                 //$clientSetup['headers']['Content-Type'] = 'multipart/form-data';
                 //$clientSetup['multipart'] = [['file' => file_get_contents($clientSetup['body']['Attachment'], 'r')]];
-
+                $result['callback'] = 'error';
+                $result['contextWrites']['to']['status_code'] = 'API_ERROR';
+                $result['contextWrites']['to']['status_msg'] = 'File upload error';
                 //unset($clientSetup['body']);
                 $method = 'POST';
+                echo json_encode($result);
                 exit();
             }
 

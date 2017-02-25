@@ -458,13 +458,13 @@ return array (
                 array (
                     'name' => 'changedValues',
                     'type' => 'Array',
-                    'info' => 'Record changed values. Example [{"fieldName":"email","changedFrom":"user@atlassian.com","changedTo":"newuser@atlassian.com"}].',
+                    'info' => 'Record changed values.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'associatedItems',
                     'type' => 'Array',
-                    'info' => 'Record associated items. Example [{"id":"jira-software-users","name":"jira-software-users","typeName":"GROUP","parentId":"1","parentName":"JIRA Internal Directory"}].',
+                    'info' => 'Record associated items.',
                     'required' => false,
                 ),
             ),
@@ -2732,13 +2732,13 @@ return array (
                 array (
                     'name' => 'update',
                     'type' => 'JSON',
-                    'info' => 'Update. Example {"worklog":[{"add":{"timeSpent":"60m","started":"2011-07-05T11:05:00.000+0000"}}]}.',
+                    'info' => 'Update.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'fields',
                     'type' => 'JSON',
-                    'info' => 'New issue fields. Example {"project":{"id":"10000"},"summary":"something\'s wrong","issuetype":{"id":"10000"},"assignee":{"name":"homer"},"reporter":{"name":"smithers"},"priority":{"id":"20000"},"labels":["bugfix","blitz_test"],"timetracking":{"originalEstimate":"10","remainingEstimate":"5"},"security":{"id":"10000"},"versions":[{"id":"10000"}],"environment":"environment","description":"description","duedate":"2011-03-11","fixVersions":[{"id":"10001"}],"components":[{"id":"10000"}],"customfield_30000":["10000","10002"]}.',
+                    'info' => 'New issue fields.',
                     'required' => false,
                 ),
                 array (
@@ -2786,7 +2786,7 @@ return array (
                 array (
                     'name' => 'issueUpdates',
                     'type' => 'Array',
-                    'info' => 'Issue updates Object. Example [{"update":{"worklog":[{"add":{"timeSpent":"60m","started":"2011-07-05T11:05:00.000+0000"}}]},"fields":{"project":{"id":"10000"},"summary":"something\'s wrong","issuetype":{"id":"10000"},"assignee":{"name":"homer"},"reporter":{"name":"smithers"},"priority":{"id":"20000"},"labels":["bugfix","blitz_test"],"timetracking":{"originalEstimate":"10","remainingEstimate":"5"},"security":{"id":"10000"},"versions":[{"id":"10000"}],"environment":"environment","description":"description","duedate":"2011-03-11","fixVersions":[{"id":"10001"}],"components":[{"id":"10000"}],"customfield_30000":["10000","10002"],"customfield_80000":{"value":"red"},"customfield_20000":"06/Jul/11 3:25 PM","customfield_40000":"this is a text field","customfield_70000":["jira-administrators","jira-software-users"],"customfield_60000":"jira-software-users","customfield_50000":"this is a text area. big text.","customfield_10000":"09/Jun/81"}},{"update":[],"fields":{"project":{"id":"1000"},"summary":"something\'s very wrong","issuetype":{"id":"10000"},"assignee":{"name":"jerry"},"reporter":{"name":"kosecki"},"priority":{"id":"20000"},"labels":["new_release"],"timetracking":{"originalEstimate":"15","remainingEstimate":"5"},"security":{"id":"10000"},"versions":[{"id":"10000"}],"environment":"environment","description":"description","duedate":"2011-04-16","fixVersions":[{"id":"10001"}],"components":[{"id":"10000"}],"customfield_30000":["10000","10002"],"customfield_80000":{"value":"red"},"customfield_20000":"06/Jul/11 3:25 PM","customfield_40000":"this is a text field","customfield_70000":["jira-administrators","jira-software-users"],"customfield_60000":"jira-software-users","customfield_50000":"this is a text area. big text.","customfield_10000":"09\\/Jun\\/81"}}],',
+                    'info' => 'Issue updates Object.',
                     'required' => false,
                 ),
             ),
@@ -3368,25 +3368,25 @@ return array (
                 array (
                     'name' => 'showToUsers',
                     'type' => 'Array',
-                    'info' => 'Show to users. Example [{"name":"fred","active":false}].',
+                    'info' => 'Show to users.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'showToGroups',
                     'type' => 'Array',
-                    'info' => 'Show to groups. Example [{"name":"notification-group","self":"http://www.example.com/jira/rest/api/2/group?groupname=notification-group"}].',
+                    'info' => 'Show to groups.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'restrictGroups',
                     'type' => 'Array',
-                    'info' => 'Restrict groups. Example [{"name":"notification-group","self":"http://www.example.com/jira/rest/api/2/group?groupname=notification-group"}].',
+                    'info' => 'Restrict groups.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'restrictPermissions',
                     'type' => 'Array',
-                    'info' => 'Restrict groups. Example [{"id":"10","key":"BROWSE"}].',
+                    'info' => 'Restrict groups.',
                     'required' => false,
                 ),
             ),
