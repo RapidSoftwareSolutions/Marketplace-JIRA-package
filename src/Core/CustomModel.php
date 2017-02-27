@@ -39,6 +39,9 @@ class CustomModel
 
         return json_encode($result);
     }
+    public static function setCommentProperty($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
     public static function updateSelectFieldOptions($param, &$blockCustom, $vendorUrl){
         $result = [];
 

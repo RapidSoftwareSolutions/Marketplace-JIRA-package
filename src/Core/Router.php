@@ -111,6 +111,7 @@ class Router
                             $paramVal=urlencode($paramVal);
                         }
                         $vendorUrl = str_replace('{{' . $oneUrlPart . '}}', $paramVal, $vendorUrl);
+                        //unset($inputPram[$oneUrlPart]);
                     } else {
                         $response = [];
                         $response['callback'] = 'error';
@@ -300,7 +301,7 @@ class Router
             if($method == 'GET'){
                 $clientSetup['query'] = json_decode($sendBody, true);
             }else{
-                $clientSetup['body'] = json_decode($sendBody, true);
+                $clientSetup['body'] = $sendBody;
             }
 
             if($method == 'POST-FILE') {

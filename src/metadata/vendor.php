@@ -599,6 +599,12 @@ return array (
                     'info' => 'Property key.',
                     'required' => true,
                 ),
+                array (
+                    'name' => 'value',
+                    'type' => 'String',
+                    'info' => 'Property value.',
+                    'required' => true,
+                ),
             ),
         ),
         array (
@@ -4684,9 +4690,11 @@ return array (
                 'jiraName' => 'jiraName',
                 'commentId' => 'commentId',
                 'propertyKey' => 'propertyKey',
+                'value' => 'value',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/comment/{{commentId}}/properties/{{propertyKey}}',
             'method' => 'PUT',
+            'custom' => true,
         ),
         'getCommentProperty' => array (
             'dictionary' => array (

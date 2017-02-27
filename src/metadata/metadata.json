@@ -595,6 +595,12 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                },
+                {
+                    "name": "value",
+                    "type": "String",
+                    "info": "Property value.",
+                    "required": true
                 }
             ]
         },
