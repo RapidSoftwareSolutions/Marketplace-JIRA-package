@@ -4005,10 +4005,10 @@
                     "required": true
                 },
                 {
-                    "name": "userName",
+                    "name": "username",
                     "type": "String",
                     "info": "User name.",
-                    "required": false
+                    "required": true
                 }
             ]
         },

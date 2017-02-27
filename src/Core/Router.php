@@ -305,7 +305,6 @@ class Router
                     if(is_array($sendBody)){
                         $querySetup = [];
                         foreach($sendBody as $pName => $pVal){
-                            var_dump($pName, $query, in_array($pName, $query));
                             if(in_array($pName, $query)){
                                 $querySetup[$pName] = $pVal;
                                 unset($sendBody[$pName]);
@@ -316,7 +315,7 @@ class Router
                         $clientSetup['body'] = json_encode($sendBody);
                     }
                 }
-                $clientSetup['body'] = $sendBody;
+                $clientSetup['body'] = json_encode($sendBody);
             }
 
             if($method == 'POST-FILE') {
