@@ -319,7 +319,18 @@ class Router
             }
 
             if($method == 'POST-FILE') {
-                return $this->sendFile($url, $baseAuthorization);
+                $method = 'POST';
+                unset($clientSetup['body']);
+                unset($clientSetup['query']);
+                $clientSetup['headers'] = [];
+                $clientSetup['headers']['X-Atlassian-Token'] = 'no-check';
+                $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
+                $sendBody = json_decode($sendBody, true);
+                $attachment = fopen($sendBody['Attachment'], 'r');
+                $clientSetup['multipart'] = [[
+                    'name'     => 'file',
+                    'contents' => $attachment
+                ]];
             }
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
@@ -378,83 +389,18 @@ class Router
         return $result;
     }
 
-    private function sendFile($url, $baseAuthorization)
+    private function sendFile($method, $url, $sendBody, $baseAuthorization)
     {
-        $headers['Content-Type'] = 'application/json';
+        $headers['X-Atlassian-Token'] = 'no-check';
         $headers['Authorization'] = 'Basic ' . $baseAuthorization;
+        $sendBody = json_encode($sendBody, true);
+        $formData['file'] = file_get_contents($sendBody['file']);
 
         $result = [];
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'INTERNAL_PACKAGE_ERROR';
         $result['contextWrites']['to']['status_msg'] = 'File upload error.';
-        /*
-        $this->http->postAsync($url,
-            [
-                'headers' => $headers,
-                'json' => $body,
-                'stream' => true
-            ]
-        )->then(
-            function (\Psr\Http\Message\ResponseInterface $response) use ($client, $post_data, $settings, &$result) {
-                $responseApi = $response->getBody()->getContents();
 
-                $size = strlen($responseApi);
-
-                if (in_array($response->getStatusCode(), ['200', '201', '202', '203', '204'])) {
-                    try {
-                        $fileUrl = $client->post($settings['uploadServiceUrl'], [
-                            'multipart' => [
-                                [
-                                    'name' => 'length',
-                                    'contents' => $size
-                                ],
-                                [
-                                    'name' => 'file',
-                                    'filename' => bin2hex(random_bytes(5)) . $settings['fileExtensions']['wav'],
-                                    'contents' => $responseApi
-                                ],
-                            ]
-                        ]);
-
-                        $gcloud = $fileUrl->getBody()->getContents();
-
-                        $resultDecoded = json_decode($gcloud, true);
-
-                        $result['callback'] = 'success';
-                        $result['contextWrites']['to'] = ($resultDecoded != NULL) ? $resultDecoded : $gcloud;
-                    } catch (GuzzleHttp\Exception\BadResponseException $exception) {
-                        $result['callback'] = 'error';
-                        $result['contextWrites']['to']['status_code'] = 'INTERNAL_PACKAGE_ERROR';
-                        $result['contextWrites']['to']['status_msg'] = 'Something went wrong during file link receiving.';
-                    }
-
-                } else {
-                    $resultDecoded = json_decode($responseApi, true);
-
-                    $result['callback'] = 'error';
-                    $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-                    $result['contextWrites']['to']['status_msg'] = ($resultDecoded != NULL) ? $resultDecoded : $responseApi;
-
-                }
-            },
-            function (GuzzleHttp\Exception\BadResponseException $exception) use (&$result) {
-
-                $result['callback'] = 'error';
-                $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-                $result['contextWrites']['to']['status_msg'] = $exception->getMessage();
-
-            },
-            function (GuzzleHttp\Exception\ConnectException $exception) use (&$result) {
-                $result['callback'] = 'error';
-                $result['contextWrites']['to']['status_code'] = 'INTERNAL_PACKAGE_ERROR';
-                $result['contextWrites']['to']['status_msg'] = 'Something went wrong inside the package.';
-
-            }
-        )
-            ->wait();
-
-        return $response->withHeader('Content-type', 'application/json')->withJson($result, 200, JSON_UNESCAPED_SLASHES);
-        */
         return $result;
     }
 
