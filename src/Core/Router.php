@@ -203,11 +203,13 @@ class Router
             $param = [];
             // Check input param in param list
             foreach($paramList as $oneParam){
-                if(
-                    isset($jsonParam[$oneParam])&&
-                    strlen($jsonParam[$oneParam])!=0
-                ){
-                    $param[$oneParam] = $jsonParam[$oneParam];
+                if(isset($jsonParam[$oneParam])){
+                    if(!is_array(($jsonParam[$oneParam]))&&strlen($jsonParam[$oneParam])!=0){
+                        $param[$oneParam] = $jsonParam[$oneParam];
+                    }
+                    if(is_array(($jsonParam[$oneParam]))&&count($jsonParam[$oneParam])>0){
+                        $param[$oneParam] = $jsonParam[$oneParam];
+                    }
                 }
             }
 
