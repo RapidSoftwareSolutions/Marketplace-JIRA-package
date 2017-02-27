@@ -111,7 +111,7 @@ class Router
                             $paramVal=urlencode($paramVal);
                         }
                         $vendorUrl = str_replace('{{' . $oneUrlPart . '}}', $paramVal, $vendorUrl);
-                        //unset($inputPram[$oneUrlPart]);
+                        unset($inputPram[$oneUrlPart]);
                     } else {
                         $response = [];
                         $response['callback'] = 'error';
