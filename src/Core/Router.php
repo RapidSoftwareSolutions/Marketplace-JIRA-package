@@ -205,11 +205,8 @@ class Router
             foreach($paramList as $oneParam){
                 if(
                     isset($jsonParam[$oneParam])&&
-                    !(
-                        in_array($oneParam, $queryParam)&&
-                        !is_array($jsonParam[$oneParam])&&
-                        strlen($jsonParam[$oneParam])==0
-                    )){
+                    strlen($jsonParam[$oneParam])!=0
+                ){
                     $param[$oneParam] = $jsonParam[$oneParam];
                 }
             }
@@ -307,12 +304,6 @@ class Router
             if($method == 'POST-FILE') {
                 return $this->sendFile($url, $baseAuthorization);
             }
-
-if($method=='POST'&&$url=='https://imrapid.atlassian.net/rest/api/2/component'){
-    $result['callback'] = 'success';
-    $result['contextWrites']['to'] = json_encode($clientSetup);
-    return $result;
-}
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);
             $responseBody = $vendorResponse->getBody()->getContents();
