@@ -152,7 +152,7 @@ class Router
             }
 
             // Make request
-            $result = $this->httpRequest($vendorUrl, $method, $sendBody, $baseAuthorization, $blockName);
+            $result = $this->httpRequest($vendorUrl, $method, $sendBody, $baseAuthorization, $queryParam);
             echo json_encode($result);
             exit(200);
         });
@@ -282,7 +282,7 @@ class Router
         return $result;
     }
 
-    protected function httpRequest($url, $method, $sendBody, $baseAuthorization, $blockName)
+    protected function httpRequest($url, $method, $sendBody, $baseAuthorization, $query = [])
     {
         if($sendBody == '[]' || $sendBody == '{}'){
             $sendBody = '';
@@ -300,6 +300,22 @@ class Router
             if($method == 'GET'){
                 $clientSetup['query'] = json_decode($sendBody, true);
             }else{
+                if(count($query)>0){
+                    $sendBody = json_decode($sendBody, true);
+                    if(is_array($sendBody)){
+                        $querySetup = [];
+                        foreach($sendBody as $pName => $pVal){
+                            var_dump($pName, $query, in_array($pName, $query));
+                            if(in_array($pName, $query)){
+                                $querySetup[$pName] = $pVal;
+                                unset($sendBody[$pName]);
+                            }
+                        }
+                        $clientSetup['query'] = $querySetup;
+                    }else{
+                        $clientSetup['body'] = json_encode($sendBody);
+                    }
+                }
                 $clientSetup['body'] = $sendBody;
             }
 

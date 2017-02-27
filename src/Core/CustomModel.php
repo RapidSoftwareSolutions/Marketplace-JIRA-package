@@ -272,7 +272,7 @@ class CustomModel
     public static function addIssueWorklog($param, &$blockCustom, $vendorUrl){
         $result = [];
         //
-        $paramNames = ['comment', 'started', 'timeSpentSeconds'];
+        $paramNames = ['comment', 'started', 'timeSpentSeconds', 'adjustEstimate', 'newEstimate', 'expand'];
         foreach($paramNames as $paramName){
             if(isset($param[$paramName])&&strlen($param[$paramName])>0)
                 $result[$paramName] = (is_numeric($param[$paramName]))?intval($param[$paramName]):$param[$paramName];

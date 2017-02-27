@@ -3459,6 +3459,18 @@
                     "required": true
                 },
                 {
+                    "name": "issueLinkUrl",
+                    "type": "String",
+                    "info": "Remote issue link Url.",
+                    "required": true
+                },
+                {
+                    "name": "issueLinkTitle",
+                    "type": "String",
+                    "info": "Remote issue link title.",
+                    "required": true
+                },
+                {
                     "name": "applicationType",
                     "type": "String",
                     "info": "Application type.",
@@ -3474,18 +3486,6 @@
                     "name": "relationship",
                     "type": "String",
                     "info": "Relationship.",
-                    "required": false
-                },
-                {
-                    "name": "issueLinkUrl",
-                    "type": "String",
-                    "info": "Remote issue link Url.",
-                    "required": false
-                },
-                {
-                    "name": "issueLinkTitle",
-                    "type": "String",
-                    "info": "Remote issue link title.",
                     "required": false
                 },
                 {
