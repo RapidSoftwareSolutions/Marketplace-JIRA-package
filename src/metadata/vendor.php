@@ -4122,6 +4122,24 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'comment',
+                    'type' => 'String',
+                    'info' => 'Worklog comment.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'started',
+                    'type' => 'String',
+                    'info' => 'Started. Example "2017-02-21T01:03:28.187+0000".',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'timeSpentSeconds',
+                    'type' => 'Number',
+                    'info' => 'Time spent in seconds.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'adjustEstimate',
                     'type' => 'String',
                     'info' => 'Allows you to provide specific instructions to update the remaining time estimate of the issue.',
@@ -4146,12 +4164,6 @@ return array (
                     'required' => false,
                 ),
                 array (
-                    'name' => 'comment',
-                    'type' => 'String',
-                    'info' => 'Worklog comment.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'visibilityType',
                     'type' => 'String',
                     'info' => 'Visibility type. One of "group","role".',
@@ -4161,18 +4173,6 @@ return array (
                     'name' => 'visibilityValue',
                     'type' => 'String',
                     'info' => 'Visibility value.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'started',
-                    'type' => 'String',
-                    'info' => 'Started. Example "2017-02-21T01:03:28.187+0000".',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'timeSpentSeconds',
-                    'type' => 'Number',
-                    'info' => 'Time spent in seconds.',
                     'required' => false,
                 ),
             ),
