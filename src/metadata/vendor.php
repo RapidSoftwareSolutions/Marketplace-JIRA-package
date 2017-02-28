@@ -4467,7 +4467,7 @@ return array (
         ),
         array (
             'name' => 'addIssueAttachment',
-            'description' => 'Add one or more attachments to an issue.',
+            'description' => 'Add attachment to an issue.',
             'args' => array (
                 array (
                     'name' => 'jiraUsername',

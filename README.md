@@ -1463,7 +1463,7 @@ Returns suggested issues which match the auto-completion query for the user whic
 | showSubTaskParent| Boolean    | If set to false and request is executed in context of a subtask, the parent issue will not be included in the auto-completion result, even if it matches the query.
 
 ## JIRA.addIssueAttachment
-Add one or more attachments to an issue.
+Add attachment to an issue.
 
 | Field       | Type       | Description
 |-------------|------------|----------
