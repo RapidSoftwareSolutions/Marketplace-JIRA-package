@@ -5220,7 +5220,7 @@
         },
         {
             "name": "createIssueType",
-            "description": "Creates an issue type from a JSON representation and adds the issue newly created issue type to the default issuetype scheme.",
+            "description": "Creates an issue type.",
             "args": [
                 {
                     "name": "jiraUsername",
@@ -5244,18 +5244,24 @@
                     "name": "name",
                     "type": "String",
                     "info": "Name.",
-                    "required": false
-                },
-                {
-                    "name": "description",
-                    "type": "String",
-                    "info": "Description.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "type",
                     "type": "String",
                     "info": "Type.",
+                    "required": true
+                },
+                {
+                    "name": "subtask",
+                    "type": "Boolean",
+                    "info": "Is subtask.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Description.",
                     "required": false
                 }
             ]
@@ -5700,7 +5706,7 @@
                     "name": "key",
                     "type": "String",
                     "info": "Key of the preference to be returned.",
-                    "required": false
+                    "required": true
                 }
             ]
         },
