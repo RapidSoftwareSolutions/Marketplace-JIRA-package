@@ -321,12 +321,13 @@ class Router
             if($method == 'POST-FILE') {
                 $method = 'POST';
                 unset($clientSetup['body']);
-                unset($clientSetup['query']);
                 $clientSetup['headers'] = [];
                 $clientSetup['headers']['X-Atlassian-Token'] = 'no-check';
                 $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
-                $sendBody = json_decode($sendBody, true);
-                $attachment = fopen($sendBody['Attachment'], 'r');
+                if(!is_array($sendBody)){
+                    $sendBody = json_decode($sendBody, true);
+                }
+                $attachment = fopen($sendBody['file'], 'r');
                 $clientSetup['multipart'] = [[
                     'name'     => 'file',
                     'contents' => $attachment

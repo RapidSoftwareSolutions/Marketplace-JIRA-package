@@ -80,16 +80,6 @@ class CustomModel
 
         return json_encode($result);
     }
-    public static function createSingleIssue($param, &$blockCustom, $vendorUrl){
-        $result = $param;
-
-        return json_encode($result);
-    }
-    public static function updateSingleIssue($param, &$blockCustom, $vendorUrl){
-        $result = $param;
-
-        return json_encode($result);
-    }
     public static function getIssueComments($param, &$blockCustom, $vendorUrl){
         $result = $param;
         $result['orderBy'] = 'created';
@@ -264,11 +254,6 @@ class CustomModel
 
         return json_encode($result);
     }
-    public static function addIssueWatcher($param, &$blockCustom, $vendorUrl){
-        $result = $param['userName'];
-
-        return json_encode($result);
-    }
     public static function addIssueWorklog($param, &$blockCustom, $vendorUrl){
         $result = [];
         //
@@ -290,5 +275,94 @@ class CustomModel
     }
     public static function updateIssueWorklog($param, &$blockCustom, $vendorUrl){
         return self::addIssueWorklog($param, $blockCustom, $vendorUrl);
+    }
+
+/* part 2 */
+
+    public static function setIssueProperty($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function setWorklogProperty($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function createIssueLink($param, &$blockCustom, $vendorUrl){
+        $result = [];
+
+        $result['type'] = self::checkJsonParam([
+            ['typeName', 'name'],
+            ['typeId', 'id'],
+            ['typeInward', 'inward'],
+            ['typeOutward', 'outward'],
+        ], $param);
+        if(count($result['type'])<=0){
+            unset($result['type']);
+        }
+
+        if(isset($param['inwardIssue'])&&count($param['inwardIssue'])>0)
+            $result['inwardIssue'] = (is_numeric($param['inwardIssue']))?intval($param['inwardIssue']):$param['inwardIssue'];
+        if(isset($param['outwardIssue'])&&count($param['outwardIssue'])>0)
+            $result['outwardIssue'] = (is_numeric($param['outwardIssue']))?intval($param['outwardIssue']):$param['outwardIssue'];
+
+        $result['comment'] = self::checkJsonParam([
+            ['commentAuthor', 'author'],
+            ['commentBody', 'body'],
+            ['commentRenderedBody', 'renderedBody'],
+            ['commentProperties', 'properties'],
+        ], $param);
+        if(count($result['comment'])<=0){
+            unset($result['comment']);
+        }
+
+        $result['comment']['visibility'] = self::checkJsonParam([
+            ['commentVisibilityType', 'type'],
+            ['commentVisibilityValue', 'value'],
+        ], $param);
+        if(count($result['comment']['visibility'])<=0){
+            unset($result['comment']['visibility']);
+        }
+
+        return json_encode($result);
+    }
+    public static function setIssueTypeProperty($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function setMyPreference($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function setProjectProperty($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function addDefaultActorsToRole($param, &$blockCustom, $vendorUrl){
+        $result = [];
+        if(isset($param['user'])&&strlen($param['user'])>0) {
+            $name = explode(',', $param['user']);
+            foreach($name as $oneName) $result['user'][] = trim($oneName);
+        }
+        if(isset($param['group'])&&strlen($param['group'])>0) {
+            $name = explode(',', $param['group']);
+            foreach($name as $oneName) $result['group'][] = trim($oneName);
+        }
+
+        return json_encode($result);
+    }
+
+    private static function checkJsonParam($paramNames, $param)
+    {
+        $return = [];
+        foreach($paramNames as $paramName){
+            if(isset($param[$paramName[0]])){
+                if(is_array($param[$paramName[0]])){
+                    if(count($param[$paramName[0]])>0){
+                        $return[$paramName[1]] = (is_numeric($param[$paramName[0]]))?intval($param[$paramName[0]]):$param[$paramName[0]];
+                    }
+                }else{
+                    if(strlen($param[$paramName[0]])>0){
+                        $return[$paramName[1]] = (is_numeric($param[$paramName[0]]))?intval($param[$paramName[0]]):$param[$paramName[0]];
+                    }
+                }
+            }
+        }
+
+        return $return;
     }
 }
