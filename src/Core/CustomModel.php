@@ -327,7 +327,11 @@ class CustomModel
         return json_encode($param['value']);
     }
     public static function setMyPreference($param, &$blockCustom, $vendorUrl){
-        return json_encode($param['value']);
+        $result = [
+            'key' => $param['key'],
+            'raw-value' => json_encode($param['value']),
+        ];
+        return json_encode($result);
     }
     public static function setProjectProperty($param, &$blockCustom, $vendorUrl){
         return json_encode($param['value']);

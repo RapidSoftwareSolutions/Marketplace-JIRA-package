@@ -311,6 +311,9 @@ class Router
                             }
                         }
                         $clientSetup['query'] = $querySetup;
+                        if(isset($sendBody['raw-value'])){
+                            $sendBody = json_decode($sendBody['raw-value'], true);
+                        }
                     }else{
                         $clientSetup['body'] = json_encode($sendBody);
                     }
