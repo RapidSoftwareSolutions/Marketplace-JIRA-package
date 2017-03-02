@@ -7210,7 +7210,7 @@ return array (
                     'name' => 'categorisedActors',
                     'type' => 'JSON',
                     'info' => 'Categorised actors. Example {"atlassian-user-role-actor":["admin"],"atlassian-group-role-actor":["jira-developers"]}.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
