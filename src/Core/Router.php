@@ -298,7 +298,9 @@ class Router
             $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
 
             if($method == 'GET'){
-                $clientSetup['query'] = json_decode($sendBody, true);
+                if(!empty($querySetup)) {
+                    $clientSetup['query'] = json_decode($sendBody, true);
+                }
             }else{
                 if(count($query)>0){
                     $sendBody = json_decode($sendBody, true);
@@ -310,15 +312,25 @@ class Router
                                 unset($sendBody[$pName]);
                             }
                         }
-                        $clientSetup['query'] = $querySetup;
+                        if(!empty($querySetup)) {
+                            $clientSetup['query'] = $querySetup;
+                        }
                         if(isset($sendBody['raw-value'])){
                             $sendBody = json_decode($sendBody['raw-value'], true);
                         }
                     }else{
-                        $clientSetup['body'] = json_encode($sendBody);
+                        $clientSetup['body'] = $sendBody;
                     }
                 }
-                $clientSetup['body'] = json_encode($sendBody);
+
+                if(!empty($sendBody)){
+                    if(is_array($sendBody)){
+                        $clientSetup['body'] = json_encode($sendBody);
+                    }else{
+                        $clientSetup['body'] = $sendBody;
+                    }
+
+                }
             }
 
             if($method == 'POST-FILE') {

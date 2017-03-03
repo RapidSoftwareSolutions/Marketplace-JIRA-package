@@ -4863,19 +4863,19 @@ return array (
                 array (
                     'name' => 'inwardIssue',
                     'type' => 'JSON',
-                    'info' => 'Inward issue. Example {"id": "issueId","key": "issueKey","fields": {"summary": "Issue summary","status": {"statusColor": "#009900","description": "Issue status description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","id": "Id","statusCategory": {"id": 9,"key": "completed","colorName": "green","name": "Completed"}},"issuetype": {"id": "10000","description": "Issue type description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","subtask": false,"avatarId": 10002},"priority": {"statusColor": "#009900","description": "Priority description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","id": "20000"}}}',
+                    'info' => 'Inward issue.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'outwardIssue',
                     'type' => 'JSON',
-                    'info' => 'Outward issue. Example {"id": "issueId","key": "issueKey","fields": {"summary": "Issue summary","status": {"statusColor": "#009900","description": "Issue status description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","id": "Id","statusCategory": {"id": 9,"key": "completed","colorName": "green","name": "Completed"}},"issuetype": {"id": "10000","description": "Issue type description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","subtask": false,"avatarId": 10002},"priority": {"statusColor": "#009900","description": "Priority description","iconUrl": "http://www.example.com/jira/images/icons/priorities/major.png","name": "Name","id": "20000"}}}',
+                    'info' => 'Outward issue.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'commentAuthor',
                     'type' => 'JSON',
-                    'info' => 'Comment author. Example {"name": "userName","key": "userKey","accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e","emailAddress": "fred@example.com","avatarUrls": {"16x16": "http://www.example.com/jira/secure/useravatar?size=xsmall&ownerId=fred","24x24": "http://www.example.com/jira/secure/useravatar?size=small&ownerId=fred"},"displayName": "userDisplayName","active": true,"timeZone": "Australia/Sydney"}',
+                    'info' => 'Comment author.',
                     'required' => false,
                 ),
                 array (
@@ -5026,13 +5026,13 @@ return array (
                     'name' => 'inward',
                     'type' => 'String',
                     'info' => 'Inward issues.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'outward',
                     'type' => 'String',
                     'info' => 'Outward issues.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -5254,12 +5254,6 @@ return array (
                     'name' => 'type',
                     'type' => 'String',
                     'info' => 'Type.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'subtask',
-                    'type' => 'Boolean',
-                    'info' => 'Is subtask.',
                     'required' => true,
                 ),
                 array (
@@ -5943,7 +5937,7 @@ return array (
                 array (
                     'name' => 'permissions',
                     'type' => 'Array',
-                    'info' => 'Permissions. Example [{"holder": {"type": "group","parameter": "jira-developers"},"permission": "ADMINISTER_PROJECTS"}].',
+                    'info' => 'Permissions.',
                     'required' => true,
                 ),
                 array (
@@ -6057,7 +6051,7 @@ return array (
                 array (
                     'name' => 'permissions',
                     'type' => 'Array',
-                    'info' => 'Permissions. Example [{"holder": {"type": "group","parameter": "jira-developers"},"permission": "ADMINISTER_PROJECTS"}].',
+                    'info' => 'Permissions.',
                     'required' => true,
                 ),
                 array (
@@ -6687,7 +6681,7 @@ return array (
                 array (
                     'name' => 'urls',
                     'type' => 'JSON',
-                    'info' => 'Urls. Example {"16x16": "http://www.example.com/jira/secure/useravatar?size=xsmall&ownerId=fred", "32x32": "http://www.example.com/jira/secure/useravatar?size=medium&ownerId=fred"}.',
+                    'info' => 'Urls.',
                     'required' => false,
                 ),
             ),
@@ -7209,7 +7203,7 @@ return array (
                 array (
                     'name' => 'categorisedActors',
                     'type' => 'JSON',
-                    'info' => 'Categorised actors. Example {"atlassian-user-role-actor":["admin"],"atlassian-group-role-actor":["jira-developers"]}.',
+                    'info' => 'Categorised actors.',
                     'required' => true,
                 ),
             ),
@@ -7249,9 +7243,9 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'categorisedActors',
+                    'name' => 'actors',
                     'type' => 'String',
-                    'info' => 'Categorised actors. Example {"atlassian-user-role-actor":["admin"],"atlassian-group-role-actor":["jira-developers"]}.',
+                    'info' => 'Categorised actors.',
                     'required' => true,
                 ),
             ),
@@ -7438,7 +7432,7 @@ return array (
                     'name' => 'permissionSchemeId',
                     'type' => 'Number',
                     'info' => 'Permission scheme identifier.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'expand',
@@ -7750,7 +7744,7 @@ return array (
                     'name' => 'key',
                     'type' => 'String',
                     'info' => 'The project key.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -9732,7 +9726,6 @@ return array (
                 'jiraName' => 'jiraName',
                 'name' => 'name',
                 'type' => 'type',
-                'subtask' => 'subtask',
                 'description' => 'description',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issuetype',
@@ -10385,10 +10378,11 @@ return array (
                 'jiraName' => 'jiraName',
                 'projectIdOrKey' => 'projectIdOrKey',
                 'roleId' => 'roleId',
-                'categorisedActors' => 'categorisedActors',
+                'actors' => 'actors',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/project/{{projectIdOrKey}}/role/{{roleId}}',
             'method' => 'POST',
+            'custom' => true,
         ),
         'deleteActorFromProjectRole' => array (
             'dictionary' => array (

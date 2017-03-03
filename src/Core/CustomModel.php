@@ -2,6 +2,8 @@
 
 namespace Core;
 
+use phpDocumentor\Reflection\Types\Boolean;
+
 if ( ! defined( 'RAPID_IN' ) ) exit( 'No direct script access allowed' );
 
 /**
@@ -294,7 +296,7 @@ class CustomModel
             ['typeInward', 'inward'],
             ['typeOutward', 'outward'],
         ], $param);
-        if(count($result['type'])<=0){
+        if(count($result['type'])==0){
             unset($result['type']);
         }
 
@@ -309,16 +311,17 @@ class CustomModel
             ['commentRenderedBody', 'renderedBody'],
             ['commentProperties', 'properties'],
         ], $param);
-        if(count($result['comment'])<=0){
-            unset($result['comment']);
-        }
 
         $result['comment']['visibility'] = self::checkJsonParam([
             ['commentVisibilityType', 'type'],
             ['commentVisibilityValue', 'value'],
         ], $param);
-        if(count($result['comment']['visibility'])<=0){
+        if(count($result['comment']['visibility'])==0){
             unset($result['comment']['visibility']);
+        }
+
+        if(count($result['comment'])==0){
+            unset($result['comment']);
         }
 
         return json_encode($result);
@@ -335,6 +338,9 @@ class CustomModel
     }
     public static function setProjectProperty($param, &$blockCustom, $vendorUrl){
         return json_encode($param['value']);
+    }
+    public static function addActorToProjectRole($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['actors']);
     }
     public static function addDefaultActorsToRole($param, &$blockCustom, $vendorUrl){
         $result = [];
