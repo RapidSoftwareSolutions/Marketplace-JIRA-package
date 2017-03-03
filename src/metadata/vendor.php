@@ -6776,36 +6776,37 @@ return array (
                 ),
             ),
         ),
-        array (
-            'name' => 'getAllProjectAvatars',
-            'description' => 'Returns all avatars which are visible for the currently logged in user.',
-            'args' => array (
-                array (
-                    'name' => 'jiraUsername',
-                    'type' => 'credentials',
-                    'info' => 'Username in JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'jiraPassword',
-                    'type' => 'credentials',
-                    'info' => 'Password in JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'jiraName',
-                    'type' => 'String',
-                    'info' => 'Name of JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'projectIdOrKey',
-                    'type' => 'String',
-                    'info' => 'Project identifier or key.',
-                    'required' => true,
-                ),
-            ),
-        ),
+// broken on vendor side
+//        array (
+//            'name' => 'getAllProjectAvatars',
+//            'description' => 'Returns all avatars which are visible for the currently logged in user.',
+//            'args' => array (
+//                array (
+//                    'name' => 'jiraUsername',
+//                    'type' => 'credentials',
+//                    'info' => 'Username in JIRA.',
+//                    'required' => true,
+//                ),
+//                array (
+//                    'name' => 'jiraPassword',
+//                    'type' => 'credentials',
+//                    'info' => 'Password in JIRA.',
+//                    'required' => true,
+//                ),
+//                array (
+//                    'name' => 'jiraName',
+//                    'type' => 'String',
+//                    'info' => 'Name of JIRA.',
+//                    'required' => true,
+//                ),
+//                array (
+//                    'name' => 'projectIdOrKey',
+//                    'type' => 'String',
+//                    'info' => 'Project identifier or key.',
+//                    'required' => true,
+//                ),
+//            ),
+//        ),
         array (
             'name' => 'getProjectComponents',
             'description' => 'Contains a full representation of a the specified project\'s components.',
@@ -10230,18 +10231,20 @@ return array (
                 'size',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/project/{{projectIdOrKey}}/avatar2',
-            'method' => 'POST-FILE',
+            'method' => 'POST-IMAGE',
         ),
-        'getAllProjectAvatars' => array (
-            'dictionary' => array (
-                'jiraUsername' => 'jiraUsername',
-                'jiraPassword' => 'jiraPassword',
-                'jiraName' => 'jiraName',
-                'projectIdOrKey' => 'projectIdOrKey',
-            ),
-            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/project/{{projectIdOrKey}}/avatars',
-            'method' => 'GET',
-        ),
+// broken on vendor side
+//        'getAllProjectAvatars' => array (
+//            'dictionary' => array (
+//                'jiraUsername' => 'jiraUsername',
+//                'jiraPassword' => 'jiraPassword',
+//                'jiraName' => 'jiraName',
+//                'projectIdOrKey' => 'projectIdOrKey',
+//            ),
+//            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/project/{{projectIdOrKey}}/avatars',
+//            'method' => 'GET',
+//        ),
+
         'getProjectComponents' => array (
             'dictionary' => array (
                 'jiraUsername' => 'jiraUsername',

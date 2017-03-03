@@ -2257,16 +2257,6 @@ Creates an avatar for a project, for a given project Id or project key.
 | y             | Number     | The Y coordinate of the top-left corner of the crop region. Default: 0.
 | size          | Number     | The length of each side of the crop region. The crop region can only be a square.
 
-## JIRA.getAllProjectAvatars
-Returns all avatars which are visible for the currently logged in user.
-
-| Field         | Type       | Description
-|---------------|------------|----------
-| jiraUsername  | credentials| Username in JIRA.
-| jiraPassword  | credentials| Password in JIRA.
-| jiraName      | String     | Name of JIRA.
-| projectIdOrKey| String     | Project identifier or key.
-
 ## JIRA.getProjectComponents
 Contains a full representation of a the specified project's components.
 

@@ -63,7 +63,7 @@ class Router
         // Get method for vendor route
         if(
             isset($this->custom[$block['name']]['method'])&&
-            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE', 'POST-FILE'])
+            in_array($this->custom[$block['name']]['method'], ['GET', 'POST', 'PUT', 'DELETE', 'POST-FILE', 'POST-IMAGE'])
         ){
             $method = $this->custom[$block['name']]['method'];
         }else{
@@ -347,6 +347,21 @@ class Router
                     'name'     => 'file',
                     'contents' => $attachment
                 ]];
+            }
+
+            if($method == 'POST-IMAGE') {
+                $method = 'POST';
+                unset($clientSetup['body']);
+                $clientSetup['headers'] = [];
+                $clientSetup['headers']['X-Atlassian-Token'] = 'no-check';
+                $clientSetup['headers']['Content-type'] = image_type_to_mime_type(exif_imagetype($sendBody['file']));
+                $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
+
+                if(!is_array($sendBody)){
+                    $sendBody = json_decode($sendBody, true);
+                }
+                $attachment = fopen($sendBody['file'], 'r');
+                $clientSetup['body'] = $attachment;
             }
 
             $vendorResponse = $this->http->request($method, $url, $clientSetup);

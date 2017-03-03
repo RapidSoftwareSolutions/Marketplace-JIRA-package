@@ -6773,36 +6773,6 @@
             ]
         },
         {
-            "name": "getAllProjectAvatars",
-            "description": "Returns all avatars which are visible for the currently logged in user.",
-            "args": [
-                {
-                    "name": "jiraUsername",
-                    "type": "credentials",
-                    "info": "Username in JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "jiraPassword",
-                    "type": "credentials",
-                    "info": "Password in JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "jiraName",
-                    "type": "String",
-                    "info": "Name of JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "projectIdOrKey",
-                    "type": "String",
-                    "info": "Project identifier or key.",
-                    "required": true
-                }
-            ]
-        },
-        {
             "name": "getProjectComponents",
             "description": "Contains a full representation of a the specified project's components.",
             "args": [
