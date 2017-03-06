@@ -343,9 +343,8 @@ return array (
             'name' => 'setIssueNavigatorDefaultColumns',
             'vendorUrl' => '/rest/api/2/settings/columns',
             'method' => 'PUT',
-            'description' => 'Sets the default system columns for issue navigator. Admin permission will be required.',
-            'args' => array (
-            ),
+            'description' => 'Sets the default system columns for issue navigator.',
+            'args' => array (),
         ),
         array (
             'name' => 'getStatuses',
@@ -447,12 +446,12 @@ return array (
                 'type' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Type.',
+                    'info' => 'Universal avatar type.',
                 ),
                 'owningObjectId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'OwningObjectId.',
+                    'info' => 'Universal avatar owning object identifier.',
                 ),
                 'id' => array (
                     'required' => true,
@@ -567,20 +566,19 @@ return array (
             'name' => 'setColumns',
             'vendorUrl' => '/rest/api/2/user/columns',
             'method' => 'PUT',
-            'description' => 'Sets the default columns for the given user.  Admin permission will be required to get columns for a userother than the currently logged in user.',
-            'args' => array (
-            ),
+            'description' => 'Sets the default columns for the given user.',
+            'args' => array (),
         ),
         array (
             'name' => 'resetDefaultColumns',
             'vendorUrl' => '/rest/api/2/user/columns',
             'method' => 'DELETE',
-            'description' => 'Reset the default columns for the given user to the system default. Admin permission will be required to getcolumns for a user other than the currently logged in user.',
+            'description' => 'Reset the default columns for the given user to the system default.',
             'args' => array (
                 'username' => array (
                     'type' => 'string',
                     'info' => 'Username.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -758,25 +756,38 @@ return array (
             ),
         ),
         array (
-            'name' => 'deleteUserProperty',
+            'name' => 'deleteUserPropertyByUserKey',
             'vendorUrl' => '/rest/api/2/user/properties/{propertyKey}',
             'method' => 'DELETE',
-            'description' => 'Removes the property from the user identified by the key or by the id. Ths user removing the property is requiredto have permissions to administer the user.',
+            'description' => 'Removes the property from the user identified by the key.',
             'args' => array (
                 'propertyKey' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'PropertyKey.',
+                    'info' => 'Property key.',
                 ),
                 'userKey' => array (
                     'type' => 'string',
                     'info' => 'Key of the user whose property is to be removed.',
-                    'required' => false,
+                    'required' => true,
+                ),
+            ),
+        ),
+        array (
+            'name' => 'deleteUserPropertyByUsername',
+            'vendorUrl' => '/rest/api/2/user/properties/{propertyKey}',
+            'method' => 'DELETE',
+            'description' => 'Removes the property from the user identified by the username.',
+            'args' => array (
+                'propertyKey' => array (
+                    'required' => true,
+                    'type' => 'String',
+                    'info' => 'Property key.',
                 ),
                 'username' => array (
                     'type' => 'string',
                     'info' => 'Username of the user whose property is to be removed.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -1101,12 +1112,12 @@ return array (
                 ),
                 'moveFixIssuesTo' => array (
                     'type' => 'string',
-                    'info' => 'The version to set fixVersion to on issues where the deleted version is the fix version,If null then the fixVersion is removed.',
+                    'info' => 'The version to set fixVersion to on issues where the deleted version is the fix version.',
                     'required' => false,
                 ),
                 'moveAffectedIssuesTo' => array (
                     'type' => 'string',
-                    'info' => 'The version to set affectedVersion to on issues where the deleted version is the affected version,If null then the affectedVersion is removed.',
+                    'info' => 'The version to set affectedVersion to on issues where the deleted version is the affected version.',
                     'required' => false,
                 ),
             ),
@@ -1125,7 +1136,7 @@ return array (
                 'moveIssuesTo' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'MoveIssuesTo.',
+                    'info' => 'Move issues to.',
                 ),
             ),
         ),
@@ -1299,7 +1310,7 @@ return array (
                 'globalId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'GlobalId.',
+                    'info' => 'Remote link global identifier.',
                 ),
             ),
         ),
@@ -1333,7 +1344,7 @@ return array (
             'name' => 'deleteWorkflowProperty',
             'vendorUrl' => '/rest/api/2/workflow/transitions/{transitionId}/properties',
             'method' => 'DELETE',
-            'description' => 'Delete a property from the passed transition on the passed workflow. It is not an error to delete a property thatdoes not exist.',
+            'description' => 'Delete a property from the passed transition on the passed workflow.',
             'args' => array (
                 'transitionId' => array (
                     'required' => true,
@@ -1352,7 +1363,7 @@ return array (
                 ),
                 'workflowMode' => array (
                     'type' => 'string',
-                    'info' => 'The type of workflow to use. Can either be "live" or "draft".',
+                    'info' => 'The type of workflow to use. One of "live", "draft".',
                     'required' => false,
                 ),
             ),
@@ -1689,7 +1700,7 @@ return array (
                 ),
                 'updateDraftIfNeeded' => array (
                     'type' => 'boolean',
-                    'info' => 'When true will create and return a draft when the workflow scheme cannot be edited(e.g. when it is being used by a project).',
+                    'info' => 'When true will create and return a draft when the workflow scheme cannot be edited.',
                     'required' => false,
                 ),
             ),
@@ -1936,7 +1947,7 @@ return array (
                 'issueType' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'IssueType.',
+                    'info' => 'Issue type.',
                 ),
             ),
         ),
@@ -2006,7 +2017,7 @@ return array (
                 'workflowName' => array (
                     'type' => 'string',
                     'info' => 'The name of the workflow to delete.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -2092,11 +2103,11 @@ return array (
                 'issueType' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'IssueType.',
+                    'info' => 'Issue type.',
                 ),
                 'updateDraftIfNeeded' => array (
                     'type' => 'boolean',
-                    'info' => 'When true will create and return a draft when the workflow scheme cannot be edited(e.g. when it is being used by a project).',
+                    'info' => 'When true will create and return a draft when the workflow scheme cannot be edited.',
                     'required' => false,
                 ),
             ),
@@ -2172,7 +2183,7 @@ return array (
                 'workflowName' => array (
                     'type' => 'string',
                     'info' => 'The name of the workflow to delete.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 'updateDraftIfNeeded' => array (
                     'type' => 'boolean',
