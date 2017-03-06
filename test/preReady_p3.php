@@ -457,7 +457,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Avatar identifier.',
                 ),
             ),
         ),
@@ -623,7 +623,7 @@ return array (
             ),
         ),
         array (
-            'name' => 'findUsers',
+            'name' => 'findUsersByProperty',
             'vendorUrl' => '/rest/api/2/user/search',
             'method' => 'GET',
             'description' => 'Returns a list of users that match the search string and/or property.',
@@ -661,53 +661,99 @@ return array (
             ),
         ),
         array (
+            'name' => 'findUsersByUsername',
+            'vendorUrl' => '/rest/api/2/user/search',
+            'method' => 'GET',
+            'description' => 'Returns a list of users that match the search string and/or property.',
+            'args' => array (
+                'username' => array (
+                    'type' => 'string',
+                    'info' => 'A query string used to search username, name or e-mail address.',
+                    'required' => true,
+                ),
+                'property' => array (
+                    'type' => 'string',
+                    'info' => 'A query string used to search by property. Example: propertyKey.something.nested=1.',
+                    'required' => false,
+                ),
+                'includeActive' => array (
+                    'type' => 'boolean',
+                    'info' => 'If true, then active users are included in the results.',
+                    'required' => false,
+                ),
+                'includeInactive' => array (
+                    'type' => 'boolean',
+                    'info' => 'If true, then inactive users are included in the results.',
+                    'required' => false,
+                ),
+                'startAt' => array (
+                    'type' => 'int',
+                    'info' => 'The index of the first user to return.',
+                    'required' => false,
+                ),
+                'maxResults' => array (
+                    'type' => 'int',
+                    'info' => 'The maximum number of users to return.',
+                    'required' => false,
+                ),
+            ),
+        ),
+        array (
             'name' => 'findUsersWithBrowsePermission',
             'vendorUrl' => '/rest/api/2/user/viewissue/search',
             'method' => 'GET',
-            'description' => 'Returns a list of active users that match the search string. This resource cannot be accessed anonymouslyand requires the Browse Users global permission.Given an issue key this resource will provide a list of users that match the search string and havethe browse issue permission for the issue provided.',
+            'description' => 'Returns a list of active users that match the search string.',
             'args' => array (
                 'username' => array (
                     'type' => 'string',
                     'info' => 'The username filter, no users returned if left blank.',
-                    'required' => false,
+                    'required' => true,
+                ),
+                'projectKey' => array (
+                    'type' => 'string',
+                    'info' => 'Project key to search for users with if no issueKey is supplied.',
+                    'required' => true,
                 ),
                 'issueKey' => array (
                     'type' => 'string',
                     'info' => 'The issue key for the issue being edited we need to find viewable users for.',
                     'required' => false,
                 ),
-                'projectKey' => array (
-                    'type' => 'string',
-                    'info' => 'The optional project key to search for users with if no issueKey is supplied.',
-                    'required' => false,
-                ),
                 'startAt' => array (
                     'type' => 'int',
-                    'info' => 'The index of the first user to return (0-based).',
+                    'info' => 'The index of the first user to return.',
                     'required' => false,
                 ),
                 'maxResults' => array (
                     'type' => 'int',
-                    'info' => 'The maximum number of users to return (defaults to 50). The maximum allowed value is 1000.If you specify a value that is higher than this number, your search results will be truncated.',
+                    'info' => 'The maximum number of users to return.',
                     'required' => false,
                 ),
             ),
         ),
         array (
-            'name' => 'getUserPropertiesKeys',
+            'name' => 'getUserPropertiesKeysByUserKey',
             'vendorUrl' => '/rest/api/2/user/properties',
             'method' => 'GET',
-            'description' => 'Returns the keys of all properties for the user identified by the key or by the id.',
+            'description' => 'Returns the keys of all properties for the user identified by the key.',
             'args' => array (
                 'userKey' => array (
                     'type' => 'string',
                     'info' => 'Key of the user whose properties are to be returned.',
-                    'required' => false,
+                    'required' => true,
                 ),
+            ),
+        ),
+        array (
+            'name' => 'getUserPropertiesKeysByUsername',
+            'vendorUrl' => '/rest/api/2/user/properties',
+            'method' => 'GET',
+            'description' => 'Returns the keys of all properties for the user identified by the username.',
+            'args' => array (
                 'username' => array (
                     'type' => 'string',
                     'info' => 'Username of the user whose properties are to be returned.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -758,25 +804,38 @@ return array (
             ),
         ),
         array (
-            'name' => 'getUserProperty',
+            'name' => 'getUserPropertyByUserKey',
             'vendorUrl' => '/rest/api/2/user/properties/{propertyKey}',
             'method' => 'GET',
-            'description' => 'Returns the value of the property with a given key from the user identified by the key or by the id. The user who retrievesthe property is required to have permissions to read the user.',
+            'description' => 'Returns the value of the property with a given key from the user identified by the key or by the id.',
             'args' => array (
                 'propertyKey' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'PropertyKey.',
+                    'info' => 'Property key.',
                 ),
                 'userKey' => array (
                     'type' => 'string',
                     'info' => 'Key of the user whose property is to be returned.',
-                    'required' => false,
+                    'required' => true,
+                ),
+            ),
+        ),
+        array (
+            'name' => 'getUserPropertyByUsername',
+            'vendorUrl' => '/rest/api/2/user/properties/{propertyKey}',
+            'method' => 'GET',
+            'description' => 'Returns the value of the property with a given key from the user identified by the username.',
+            'args' => array (
+                'propertyKey' => array (
+                    'required' => true,
+                    'type' => 'String',
+                    'info' => 'Property key.',
                 ),
                 'username' => array (
                     'type' => 'string',
                     'info' => 'Username of the user whose property is to be returned.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -844,7 +903,7 @@ return array (
                 'id' => array (
                     'schema' => '{"type":"string"}',
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'identifier.',
                     'required' => false,
                 ),
                 'overdue' => array (
@@ -914,11 +973,11 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
                 'expand' => array (
                     'type' => 'string',
-                    'info' => '',
+                    'info' => 'Expand parameters.',
                     'required' => false,
                 ),
             ),
@@ -934,7 +993,7 @@ return array (
                     'example' => '"10000"',
                     'schema' => '{"type":"string"}',
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
                 'self' => array (
                     'example' => '"http:\\/\\/www.example.com\\/jira\\/rest\\/api\\/2\\/version\\/10000"',
@@ -1038,7 +1097,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
                 'moveFixIssuesTo' => array (
                     'type' => 'string',
@@ -1061,7 +1120,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
                 'moveIssuesTo' => array (
                     'required' => true,
@@ -1079,7 +1138,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
             ),
         ),
@@ -1092,7 +1151,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Version identifier.',
                 ),
             ),
         ),
@@ -1105,7 +1164,7 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
             ),
         ),
@@ -1118,7 +1177,7 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
                 'globalId' => array (
                     'example' => '"SomeGlobalId"',
@@ -1161,7 +1220,7 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
                 'globalId' => array (
                     'example' => '"SomeGlobalId"',
@@ -1204,7 +1263,7 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
             ),
         ),
@@ -1217,12 +1276,12 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
                 'globalId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'GlobalId.',
+                    'info' => 'Remote link global identifier.',
                 ),
             ),
         ),
@@ -1235,7 +1294,7 @@ return array (
                 'versionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'VersionId.',
+                    'info' => 'Version identifier.',
                 ),
                 'globalId' => array (
                     'required' => true,
@@ -1253,7 +1312,7 @@ return array (
                 'globalId' => array (
                     'type' => 'string',
                     'info' => 'The global ID of the remote resource that is linked to the versions.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -1265,7 +1324,7 @@ return array (
             'args' => array (
                 'workflowName' => array (
                     'type' => 'string',
-                    'info' => '',
+                    'info' => 'Workflow name.',
                     'required' => false,
                 ),
             ),
@@ -1279,7 +1338,7 @@ return array (
                 'transitionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'TransitionId.',
+                    'info' => 'Transition identifier.',
                 ),
                 'key' => array (
                     'type' => 'string',
@@ -1307,7 +1366,7 @@ return array (
                 'transitionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'TransitionId.',
+                    'info' => 'Transition identifier.',
                 ),
                 'key' => array (
                     'type' => 'string',
@@ -1343,7 +1402,7 @@ return array (
                 'transitionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'TransitionId.',
+                    'info' => 'Transition identifier.',
                 ),
                 'key' => array (
                     'type' => 'string',
@@ -1379,16 +1438,11 @@ return array (
                 'transitionId' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'TransitionId.',
-                ),
-                'includeReservedKeys' => array (
-                    'type' => 'boolean',
-                    'info' => 'Some keys under the "jira." prefix are editable, some are not. Set this to truein order to include the non-editable keys in the response.',
-                    'required' => false,
+                    'info' => 'Transition identifier.',
                 ),
                 'key' => array (
                     'type' => 'string',
-                    'info' => 'The name of the property key to query. Can be left off the query to return all properties.',
+                    'info' => 'The name of the property key to query.',
                     'required' => false,
                 ),
                 'workflowName' => array (
@@ -1398,7 +1452,12 @@ return array (
                 ),
                 'workflowMode' => array (
                     'type' => 'string',
-                    'info' => 'The type of workflow to use. Can either be "live" or "draft".',
+                    'info' => 'The type of workflow to use. One of "live", "draft".',
+                    'required' => false,
+                ),
+                'includeReservedKeys' => array (
+                    'type' => 'boolean',
+                    'info' => 'Set this to true in order to include the non-editable keys in the response.',
                     'required' => false,
                 ),
             ),
@@ -1440,7 +1499,7 @@ return array (
                 'id' => array (
                     'schema' => '{"type":"integer"}',
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'identifier.',
                     'required' => false,
                 ),
                 'originalDefaultWorkflow' => array (
@@ -1496,7 +1555,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1509,11 +1568,11 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'returnDraftIfExists' => array (
-                    'type' => 'booleanDefault: false',
-                    'info' => 'When true indicates that a scheme\'s draft, if it exists, should be queried instead ofthe scheme itself.',
+                    'type' => 'boolean',
+                    'info' => 'When true indicates that a scheme\'s draft.',
                     'required' => false,
                 ),
             ),
@@ -1529,7 +1588,7 @@ return array (
                     'example' => '57585',
                     'schema' => '{"type":"integer"}',
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'name' => array (
                     'example' => '"Updated Workflow Scheme Name"',
@@ -1613,7 +1672,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1626,7 +1685,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'updateDraftIfNeeded' => array (
                     'type' => 'boolean',
@@ -1644,7 +1703,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflow' => array (
                     'example' => '"WorkflowName"',
@@ -1671,11 +1730,11 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'returnDraftIfExists' => array (
-                    'type' => 'booleanDefault: false',
-                    'info' => 'When true indicates that a scheme\'s draft, if it exists, should be queried instead ofthe scheme itself.',
+                    'type' => 'boolean',
+                    'info' => 'When true indicates that a scheme\'s draft.',
                     'required' => false,
                 ),
             ),
@@ -1689,7 +1748,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1702,7 +1761,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1717,7 +1776,7 @@ return array (
                     'example' => '57585',
                     'schema' => '{"type":"integer"}',
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'name' => array (
                     'example' => '"Updated Workflow Scheme Name"',
@@ -1801,7 +1860,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1814,7 +1873,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
             ),
         ),
@@ -1827,7 +1886,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflow' => array (
                     'example' => '"WorkflowName"',
@@ -1854,12 +1913,12 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'IssueType.',
+                    'info' => 'Issue type.',
                 ),
             ),
         ),
@@ -1872,7 +1931,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
@@ -1890,7 +1949,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
@@ -1924,11 +1983,11 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
-                    'info' => 'The workflow mapping to return. Null can be passed to return all mappings. Must be a valid workflow name.',
+                    'info' => 'The workflow mapping to return.',
                     'required' => false,
                 ),
             ),
@@ -1942,7 +2001,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
@@ -1960,7 +2019,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
@@ -2005,16 +2064,16 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'IssueType.',
+                    'info' => 'Issue type.',
                 ),
                 'returnDraftIfExists' => array (
                     'type' => 'booleanDefault: false',
-                    'info' => 'When true indicates that a scheme\'s draft, if it exists, should be queried instead ofthe scheme itself.',
+                    'info' => 'When true indicates that a scheme\'s draft.',
                     'required' => false,
                 ),
             ),
@@ -2028,7 +2087,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
@@ -2051,7 +2110,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'issueType' => array (
                     'required' => true,
@@ -2085,16 +2144,16 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
-                    'info' => 'The workflow mapping to return. Null can be passed to return all mappings. Must be a valid workflow name.',
+                    'info' => 'The workflow mapping to return.',
                     'required' => false,
                 ),
                 'returnDraftIfExists' => array (
                     'type' => 'booleanDefault: false',
-                    'info' => 'When true indicates that a scheme\'s draft, if it exists, should be queried instead ofthe scheme itself.',
+                    'info' => 'When true indicates that a scheme\'s draft.',
                     'required' => false,
                 ),
             ),
@@ -2108,7 +2167,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
@@ -2131,7 +2190,7 @@ return array (
                 'id' => array (
                     'required' => true,
                     'type' => 'String',
-                    'info' => 'Id.',
+                    'info' => 'Workflow scheme identifier.',
                 ),
                 'workflowName' => array (
                     'type' => 'string',
@@ -2171,10 +2230,10 @@ return array (
             'name' => 'getWorklogsDeletedSince',
             'vendorUrl' => '/rest/api/2/worklog/deleted',
             'method' => 'GET',
-            'description' => 'Returns worklogs id and delete time of worklogs that was deleted since given time.The returns set of worklogs is limited to 1000 elements.This API will not return worklogs deleted during last minute.',
+            'description' => 'Returns worklogs id and delete time of worklogs that was deleted since given time.',
             'args' => array (
                 'since' => array (
-                    'type' => 'longDefault: 0',
+                    'type' => 'long',
                     'info' => 'A date time in unix timestamp format since when deleted worklogs will be returned.',
                     'required' => false,
                 ),
@@ -2204,16 +2263,16 @@ return array (
             'name' => 'getWorklogsModifiedSince',
             'vendorUrl' => '/rest/api/2/worklog/updated',
             'method' => 'GET',
-            'description' => 'Returns worklogs id and update time of worklogs that was updated since given time.The returns set of worklogs is limited to 1000 elements.This API will not return worklogs updated during last minute.',
+            'description' => 'Returns worklogs id and update time of worklogs that was updated since given time.',
             'args' => array (
                 'since' => array (
-                    'type' => 'longDefault: 0',
+                    'type' => 'long',
                     'info' => 'A date time in unix timestamp format since when updated worklogs will be returned.',
                     'required' => false,
                 ),
                 'expand' => array (
                     'type' => 'stringDefault:',
-                    'info' => 'Optional comma separated list of parameters to expand:  properties (provides worklog properties).',
+                    'info' => 'Optional comma-separated list of parameters to expand.',
                     'required' => false,
                 ),
             ),
