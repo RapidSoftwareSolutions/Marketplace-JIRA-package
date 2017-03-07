@@ -8393,7 +8393,7 @@ return array (
             ),
         ),
         array (
-            'name' => 'moveScreenField',
+            'name' => 'moveScreenFieldByNeighbours',
             'description' => 'Moves field on the given tab.',
             'args' => array (
                 array (
@@ -8436,6 +8436,48 @@ return array (
                     'name' => 'after',
                     'type' => 'String',
                     'info' => 'A field to place this field after. The value should be the self link of another field.',
+                    'required' => true,
+                ),
+            ),
+        ),
+        array (
+            'name' => 'moveScreenFieldByPosition',
+            'description' => 'Moves field on the given tab.',
+            'args' => array (
+                array (
+                    'name' => 'jiraUsername',
+                    'type' => 'credentials',
+                    'info' => 'Username in JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'jiraPassword',
+                    'type' => 'credentials',
+                    'info' => 'Password in JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'jiraName',
+                    'type' => 'String',
+                    'info' => 'Name of JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'screenId',
+                    'type' => 'String',
+                    'info' => 'Screen identifier.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'tabId',
+                    'type' => 'String',
+                    'info' => 'Tab identifier.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'fieldId',
+                    'type' => 'String',
+                    'info' => 'Field identifier.',
                     'required' => true,
                 ),
                 array (
@@ -8481,7 +8523,7 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'pos',
+                    'name' => 'position',
                     'type' => 'String',
                     'info' => 'New screen tab position.',
                     'required' => true,
@@ -8550,7 +8592,7 @@ return array (
                     'name' => 'fieldsByKeys',
                     'type' => 'Boolean',
                     'info' => 'Fields by keys.',
-                    'required' => true,
+                    'required' => false,
                 ),
                 array (
                     'name' => 'validateQuery',
@@ -14614,7 +14656,7 @@ return array (
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/screens/{{screenId}}/tabs/{{tabId}}/fields/{{fieldId}}',
             'method' => 'DELETE',
         ),
-        'moveScreenField' => array (
+        'moveScreenFieldByNeighbours' => array (
             'dictionary' => array (
                 'jiraUsername' => 'jiraUsername',
                 'jiraPassword' => 'jiraPassword',
@@ -14623,6 +14665,18 @@ return array (
                 'tabId' => 'tabId',
                 'fieldId' => 'fieldId',
                 'after' => 'after',
+            ),
+            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/screens/{{screenId}}/tabs/{{tabId}}/fields/{{fieldId}}/move',
+            'method' => 'POST',
+        ),
+        'moveScreenFieldByPosition' => array (
+            'dictionary' => array (
+                'jiraUsername' => 'jiraUsername',
+                'jiraPassword' => 'jiraPassword',
+                'jiraName' => 'jiraName',
+                'screenId' => 'screenId',
+                'tabId' => 'tabId',
+                'fieldId' => 'fieldId',
                 'position' => 'position',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/screens/{{screenId}}/tabs/{{tabId}}/fields/{{fieldId}}/move',
@@ -14635,9 +14689,9 @@ return array (
                 'jiraName' => 'jiraName',
                 'screenId' => 'screenId',
                 'tabId' => 'tabId',
-                'pos' => 'pos',
+                'position' => 'position',
             ),
-            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/screens/{{screenId}}/tabs/{{tabId}}/move/{{pos}}',
+            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/screens/{{screenId}}/tabs/{{tabId}}/move/{{position}}',
             'method' => 'POST',
         ),
         'addFieldToDefaultScreen' => array (

@@ -8357,7 +8357,7 @@
             ]
         },
         {
-            "name": "moveScreenField",
+            "name": "moveScreenFieldByNeighbours",
             "description": "Moves field on the given tab.",
             "args": [
                 {
@@ -8400,6 +8400,48 @@
                     "name": "after",
                     "type": "String",
                     "info": "A field to place this field after. The value should be the self link of another field.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "moveScreenFieldByPosition",
+            "description": "Moves field on the given tab.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "screenId",
+                    "type": "String",
+                    "info": "Screen identifier.",
+                    "required": true
+                },
+                {
+                    "name": "tabId",
+                    "type": "String",
+                    "info": "Tab identifier.",
+                    "required": true
+                },
+                {
+                    "name": "fieldId",
+                    "type": "String",
+                    "info": "Field identifier.",
                     "required": true
                 },
                 {
@@ -8445,7 +8487,7 @@
                     "required": true
                 },
                 {
-                    "name": "pos",
+                    "name": "position",
                     "type": "String",
                     "info": "New screen tab position.",
                     "required": true
@@ -8514,7 +8556,7 @@
                     "name": "fieldsByKeys",
                     "type": "Boolean",
                     "info": "Fields by keys.",
-                    "required": true
+                    "required": false
                 },
                 {
                     "name": "validateQuery",
