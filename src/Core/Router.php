@@ -298,7 +298,7 @@ class Router
             $clientSetup['headers']['Authorization'] = 'Basic ' . $baseAuthorization;
 
             if($method == 'GET'){
-                if(!empty($querySetup)) {
+                if(!empty($sendBody)) {
                     $clientSetup['query'] = json_decode($sendBody, true);
                 }
             }else{
