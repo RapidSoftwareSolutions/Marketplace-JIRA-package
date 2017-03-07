@@ -9753,6 +9753,12 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'project',
+                    'type' => 'String',
+                    'info' => 'Project name.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'description',
                     'type' => 'String',
                     'info' => 'New version description.',
@@ -9773,19 +9779,7 @@ return array (
                 array (
                     'name' => 'releaseDate',
                     'type' => 'String',
-                    'info' => 'Release date. Example "2010-07-06".',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'userReleaseDate',
-                    'type' => 'String',
-                    'info' => 'User release date. Example "6/Jul/2010".',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'project',
-                    'type' => 'String',
-                    'info' => 'Project name.',
+                    'info' => 'Release date. Example "2017-06-07".',
                     'required' => false,
                 ),
                 array (
@@ -10194,6 +10188,12 @@ return array (
                     'name' => 'versionId',
                     'type' => 'String',
                     'info' => 'Version identifier.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'globalId',
+                    'type' => 'String',
+                    'info' => 'Link global identifier.',
                     'required' => true,
                 ),
                 array (
@@ -10617,15 +10617,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'key',
-                    'type' => 'String',
-                    'info' => 'The name of the property key to query.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow to use.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'key',
+                    'type' => 'String',
+                    'info' => 'The name of the property key to query.',
                     'required' => false,
                 ),
                 array (
@@ -15113,7 +15113,6 @@ return array (
                 'archived' => 'archived',
                 'released' => 'released',
                 'releaseDate' => 'releaseDate',
-                'userReleaseDate' => 'userReleaseDate',
                 'project' => 'project',
                 'projectId' => 'projectId',
                 'userStartDate' => 'userStartDate',
@@ -15122,6 +15121,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/version',
             'method' => 'POST',
+            'custom' => true,
         ),
         'moveVersion' => array (
             'dictionary' => array (
@@ -15235,6 +15235,7 @@ return array (
                 'jiraPassword' => 'jiraPassword',
                 'jiraName' => 'jiraName',
                 'versionId' => 'versionId',
+                'globalId' => 'globalId',
                 'myCustomLinkProperty' => 'myCustomLinkProperty',
                 'colors' => 'colors',
                 'notes' => 'notes',

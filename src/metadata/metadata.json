@@ -9717,6 +9717,12 @@
                     "required": true
                 },
                 {
+                    "name": "project",
+                    "type": "String",
+                    "info": "Project name.",
+                    "required": true
+                },
+                {
                     "name": "description",
                     "type": "String",
                     "info": "New version description.",
@@ -9737,19 +9743,7 @@
                 {
                     "name": "releaseDate",
                     "type": "String",
-                    "info": "Release date. Example \"2010-07-06\".",
-                    "required": false
-                },
-                {
-                    "name": "userReleaseDate",
-                    "type": "String",
-                    "info": "User release date. Example \"6/Jul/2010\".",
-                    "required": false
-                },
-                {
-                    "name": "project",
-                    "type": "String",
-                    "info": "Project name.",
+                    "info": "Release date. Example \"2017-06-07\".",
                     "required": false
                 },
                 {
@@ -10158,6 +10152,12 @@
                     "name": "versionId",
                     "type": "String",
                     "info": "Version identifier.",
+                    "required": true
+                },
+                {
+                    "name": "globalId",
+                    "type": "String",
+                    "info": "Link global identifier.",
                     "required": true
                 },
                 {
@@ -10581,15 +10581,15 @@
                     "required": true
                 },
                 {
-                    "name": "key",
-                    "type": "String",
-                    "info": "The name of the property key to query.",
-                    "required": false
-                },
-                {
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow to use.",
+                    "required": true
+                },
+                {
+                    "name": "key",
+                    "type": "String",
+                    "info": "The name of the property key to query.",
                     "required": false
                 },
                 {

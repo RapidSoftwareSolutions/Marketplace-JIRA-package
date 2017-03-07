@@ -363,14 +363,14 @@ class CustomModel
 
         if(isset($result['fields'])){
             $fields = explode(',', $result['fields']);
-            if(count($fields)>1){
+            if(count($fields)>0){
                 $result['fields'] = [];
                 foreach ($fields as $oneField) $result['fields'][] = trim($oneField);
             }
         }
         if(isset($result['properties'])){
             $properties = explode(',', $result['properties']);
-            if(count($properties)>1){
+            if(count($properties)>0){
                 $result['properties'] = [];
                 foreach ($properties as $oneProperties) $result['properties'][] = trim($oneProperties);
             }
@@ -381,12 +381,15 @@ class CustomModel
     public static function setBaseURL($param, &$blockCustom, $vendorUrl){
         return json_encode($param['value']);
     }
+    public static function createVersion($param, &$blockCustom, $vendorUrl){
+        return stripcslashes(json_encode($param));
+    }
     public static function createRemoteVersionLink($param, &$blockCustom, $vendorUrl){
         $result = $param;
 
         if(isset($result['colors'])){
             $colors = explode(',', $result['colors']);
-            if(count($colors)>1){
+            if(count($colors)>0){
                 $result['colors'] = [];
                 foreach ($colors as $oneColors) $result['colors'][] = trim($oneColors);
             }
@@ -399,9 +402,9 @@ class CustomModel
 
         if(isset($result['ids'])){
             $ids = explode(',', $result['ids']);
-            if(count($ids)>1){
+            if(count($ids)>0){
                 $result['ids'] = [];
-                foreach ($ids as $oneIds) $result['ids'][] = trim($oneIds);
+                foreach ($ids as $oneIds) $result['ids'][] = intval($oneIds);
             }
         }
 
