@@ -356,6 +356,58 @@ class CustomModel
         return json_encode($result);
     }
 
+    /* part 3 */
+
+    public static function search($param, &$blockCustom, $vendorUrl){
+        $result = $param;
+
+        if(isset($result['fields'])){
+            $fields = explode(',', $result['fields']);
+            if(count($fields)>1){
+                $result['fields'] = [];
+                foreach ($fields as $oneField) $result['fields'][] = trim($oneField);
+            }
+        }
+        if(isset($result['properties'])){
+            $properties = explode(',', $result['properties']);
+            if(count($properties)>1){
+                $result['properties'] = [];
+                foreach ($properties as $oneProperties) $result['properties'][] = trim($oneProperties);
+            }
+        }
+
+        return json_encode($result);
+    }
+    public static function setBaseURL($param, &$blockCustom, $vendorUrl){
+        return json_encode($param['value']);
+    }
+    public static function createRemoteVersionLink($param, &$blockCustom, $vendorUrl){
+        $result = $param;
+
+        if(isset($result['colors'])){
+            $colors = explode(',', $result['colors']);
+            if(count($colors)>1){
+                $result['colors'] = [];
+                foreach ($colors as $oneColors) $result['colors'][] = trim($oneColors);
+            }
+        }
+
+        return json_encode($result);
+    }
+    public static function getWorklogs($param, &$blockCustom, $vendorUrl){
+        $result = $param;
+
+        if(isset($result['ids'])){
+            $ids = explode(',', $result['ids']);
+            if(count($ids)>1){
+                $result['ids'] = [];
+                foreach ($ids as $oneIds) $result['ids'][] = trim($oneIds);
+            }
+        }
+
+        return json_encode($result);
+    }
+
     private static function checkJsonParam($paramNames, $param)
     {
         $return = [];
