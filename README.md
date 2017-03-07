@@ -135,8 +135,8 @@ Store a record in Audit Log.
 | objectItemTypeName  | String     | Record ObjectItem type name.
 | objectItemParentId  | String     | Record ObjectItem parent identifier.
 | objectItemParentName| String     | Record ObjectItem parent name.
-| changedValues       | Array      | Record changed values.
-| associatedItems     | Array      | Record associated items.
+| changedValues       | Array      | Array of JSON objects, record changed values.
+| associatedItems     | Array      | Array of JSON objects, record associated items.
 
 #### Example of 'changedValues' field
 ```json
@@ -494,7 +494,7 @@ Updates an option for a select list issue field, for a given field key and optio
 | propertiesMembers    | String     | Options members.
 | propertiesDescription| String     | Options description.
 | configScopeProjects  | String     | Comma separated options config scope projects identifier.
-| configAttributes     | Array      | Options config attributes.
+| configAttributes     | Array      | Array of Strings, options config attributes.
 
 ## JIRA.getSelectFieldSingleOption
 Returns an option for a select list issue field, for a given field key and option Id.
@@ -560,9 +560,9 @@ Creates a new filter, and returns newly created filter.
 | owner           | String     | Owner.
 | viewUrl         | String     | View Url.
 | searchUrl       | String     | Search Url.
-| sharePermissions| Array      | Filter Permission.
-| sharedUsers     | JSON       | User Bean List Wrapper.
-| subscriptions   | JSON       | Filter Subscription Bean List Wrapper.
+| sharePermissions| Array      | Array of JSON objects, filter Permission.
+| sharedUsers     | JSON       | JSON Object, user Bean List Wrapper.
+| subscriptions   | JSON       | JSON Object, filter Subscription Bean List Wrapper.
 
 ## JIRA.updateFilter
 Updates an existing filter, and returns its new value.
@@ -581,9 +581,9 @@ Updates an existing filter, and returns its new value.
 | owner           | String     | Owner.
 | viewUrl         | String     | View Url.
 | searchUrl       | String     | Search Url.
-| sharePermissions| Array      | Filter Permission.
-| sharedUsers     | JSON       | User Bean List Wrapper.
-| subscriptions   | JSON       | Filter Subscription Bean List Wrapper.
+| sharePermissions| Array      | Array of JSON objects, filter Permission.
+| sharedUsers     | JSON       | JSON Object, user Bean List Wrapper.
+| subscriptions   | JSON       | JSON Object, filter Subscription Bean List Wrapper.
 
 ## JIRA.deleteFilter
 Delete a filter.
@@ -814,11 +814,11 @@ Creates an issue or a sub-task from a JSON representation.
 | jiraUsername   | credentials| Username in JIRA.
 | jiraPassword   | credentials| Password in JIRA.
 | jiraName       | String     | Name of JIRA.
-| update         | JSON       | Update.
-| fields         | JSON       | New issue fields.
-| transition     | JSON       | New issue transition.
-| historyMetadata| JSON       | New issue history metadata.
-| properties     | Array      | Entity properties.
+| update         | JSON       | JSON Object, update.
+| fields         | JSON       | JSON Object, new issue fields.
+| transition     | JSON       | JSON Object, new issue transition.
+| historyMetadata| JSON       | JSON Object, new issue history metadata.
+| properties     | Array      | Array of JSON objects, entity properties.
 
 #### Example of 'update' field
 ```json
@@ -883,7 +883,7 @@ Creates issues or sub-tasks from a JSON representation. Creates many issues in o
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| issueUpdates| Array      | Issue updates Object.
+| issueUpdates| Array      | Array of JSON objects, issue updates Object.
 
 #### Example of 'issueUpdates' field
 ```json
@@ -1034,11 +1034,11 @@ Edits an issue from a JSON representation.
 | notifyUsers           | Boolean    | Send the email with notification that the issue was updated to users that watch it.
 | overrideScreenSecurity| Boolean    | Allows to update fields that are not on the screen.
 | overrideEditableFlag  | Boolean    | Updates the issue even if the issue is not editable due to being in a status with jira.issue.editable set to false or missing.
-| transition            | JSON       | Transition properties.
-| fields                | JSON       | Fields properties.
-| update                | JSON       | Update properties.
-| historyMetadata       | JSON       | HistoryMetadata properties.
-| properties            | Array      | Issue properties.
+| transition            | JSON       | JSON Object, transition properties.
+| fields                | JSON       | JSON Object, fields properties.
+| update                | JSON       | JSON Object, update properties.
+| historyMetadata       | JSON       | JSON Object, history metadata properties.
+| properties            | Array      | Array of JSON objects, issue properties.
 
 ## JIRA.assignIssueToUser
 Assigns an issue to a user.
@@ -1053,7 +1053,7 @@ Assigns an issue to a user.
 | key             | String     | Key.
 | accountId       | String     | Account identifier.
 | emailAddress    | String     | Email address.
-| avatarUrls      | JSON       | Avatar Urls.
+| avatarUrls      | JSON       | JSON Object, avatar Urls.
 | displayName     | String     | Display name.
 | active          | Boolean    | Is active.
 | timeZone        | String     | TimeZone.
@@ -1142,10 +1142,10 @@ Sends a notification (email) to the list or recipients defined in the request.
 | showToAssignee     | Boolean    | Show to assignee.
 | showToWatchers     | Boolean    | Show to watchers.
 | showToVoters       | Boolean    | Show to voters.
-| showToUsers        | Array      | Show to users.
-| showToGroups       | Array      | Show to groups.
-| restrictGroups     | Array      | Restrict groups.
-| restrictPermissions| Array      | Restrict groups.
+| showToUsers        | Array      | Array of JSON objects, show to users.
+| showToGroups       | Array      | Array of JSON objects, show to groups.
+| restrictGroups     | Array      | Array of JSON objects, restrict groups.
+| restrictPermissions| Array      | Array of JSON objects, restrict groups.
 
 #### Example of 'showToUsers' field
 ```json
@@ -1290,11 +1290,11 @@ Perform a transition on an issue.When performing the transition you can update o
 | jiraPassword   | credentials| Password in JIRA.
 | jiraName       | String     | Name of JIRA.
 | issueIdOrKey   | String     | Issue identifier or key.
-| transition     | JSON       | Issue transition.
-| update         | JSON       | Issue update parameters.
-| fields         | JSON       | Issue fields.
-| historyMetadata| JSON       | Issue history metadata.
-| properties     | Array      | Issue properties.
+| transition     | JSON       | JSON Object, issue transition.
+| update         | JSON       | JSON Object, issue update parameters.
+| fields         | JSON       | JSON Object, issue fields.
+| historyMetadata| JSON       | JSON Object, issue history metadata.
+| properties     | Array      | Array of JSON objects, issue properties.
 
 ## JIRA.deleteIssueVote
 Remove your vote from an issue. (i.e. "unvote").
@@ -1577,14 +1577,14 @@ Creates an issue link between two issues.
 | typeId                | String     | Type identifier.
 | typeInward            | String     | Type inward.
 | typeOutward           | String     | Type outward.
-| inwardIssue           | JSON       | Inward issue.
-| outwardIssue          | JSON       | Outward issue.
-| commentAuthor         | JSON       | Comment author.
+| inwardIssue           | JSON       | JSON Object, inward issue.
+| outwardIssue          | JSON       | JSON Object, outward issue.
+| commentAuthor         | JSON       | JSON Object, comment author.
 | commentBody           | String     | Comment body.
 | commentRenderedBody   | String     | Comment rendered body.
 | commentVisibilityType | String     | Comment visibility type. One of "group", "role".
 | commentVisibilityValue| String     | Comment visibility value.
-| commentProperties     | Array      | Comment entity property.
+| commentProperties     | Array      | Array of JSON objects, comment entity property.
 
 #### Example of 'inwardIssue' field
 ```json
@@ -2001,7 +2001,7 @@ Create a new permission scheme.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | name        | String     | Permission scheme name.
-| permissions | Array      | Permissions.
+| permissions | Array      | Array of JSON objects, permissions.
 | description | String     | Permission scheme description.
 | expand      | String     | The parameters to expand.
 
@@ -2046,7 +2046,7 @@ Updates a permission scheme.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | schemeId    | String     | Permission scheme identifier.
-| permissions | Array      | Permissions.
+| permissions | Array      | Array of JSON objects, permissions.
 | name        | String     | Permission scheme name.
 | description | String     | Permission scheme description.
 | expand      | String     | The parameters to expand.
@@ -2222,7 +2222,7 @@ Update project avatar
 | isSelected    | Boolean    | Is selected.
 | isDeletable   | Boolean    | Is deletable.
 | selected      | Boolean    | Project avatar selected.
-| urls          | JSON       | Urls.
+| urls          | JSON       | JSON Object, urls.
 
 #### Example of 'urls' field
 ```json
@@ -2377,7 +2377,7 @@ Updates a project role to include the specified actors (users or groups).
 | jiraName         | String     | Name of JIRA.
 | projectIdOrKey   | String     | Project identifier or key.
 | roleId           | Number     | Role identifier.
-| categorisedActors| JSON       | Categorised actors.
+| categorisedActors| JSON       | JSON Object, categorised actors.
 
 #### Example of 'categorisedActors' field
 ```json
