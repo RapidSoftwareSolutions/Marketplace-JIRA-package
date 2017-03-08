@@ -8908,7 +8908,7 @@ return array (
                 ),
                 array (
                     'name' => 'image',
-                    'type' => 'String',
+                    'type' => 'File',
                     'info' => 'Avatar image file.',
                     'required' => true,
                 ),
