@@ -9851,13 +9851,13 @@ return array (
                 array (
                     'name' => 'operations',
                     'type' => 'Array',
-                    'info' => 'Array of JSON objects, simple Links. Example [{"styleClass": "style_class","iconClass": "icon_class","label": "Operation label","title": "Operation title","href": "http://www.example.com/","weight": "10"}].',
+                    'info' => 'Array of JSON objects, simple Links.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'remotelinks',
                     'type' => 'Array',
-                    'info' => 'Array of JSON objects, remote Entity Links. Example [{"name": "string","link": "http://www.example.com/"}].',
+                    'info' => 'Array of JSON objects, remote Entity Links.',
                     'required' => false,
                 ),
             ),
@@ -10067,13 +10067,13 @@ return array (
                 array (
                     'name' => 'operations',
                     'type' => 'Array',
-                    'info' => 'Array of JSON objects, simple Links. Example [{"styleClass": "style_class","iconClass": "icon_class","label": "Operation label","title": "Operation title","href": "http://www.example.com/","weight": "10"}].',
+                    'info' => 'Array of JSON objects, simple Links.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'remotelinks',
                     'type' => 'Array',
-                    'info' => 'Array of JSON objects, remote Entity Links. Example [{"name": "string","link": "http://www.example.com/"}].',
+                    'info' => 'Array of JSON objects, remote Entity Links.',
                     'required' => false,
                 ),
             ),
@@ -10769,7 +10769,7 @@ return array (
                 array (
                     'name' => 'issueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue type mappings. Example {"IsueTypeId":"WorkflowName"}.',
+                    'info' => 'JSON Object, issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -10781,7 +10781,7 @@ return array (
                 array (
                     'name' => 'originalIssueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, original issue type mappings. Example {"IssueTypeId": "WorkflowName2"}.',
+                    'info' => 'JSON Object, original issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -10805,13 +10805,13 @@ return array (
                 array (
                     'name' => 'lastModifiedUser',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, last modified user. Example {"key": "fred","name": "Fred","displayName": "Fred F. User","accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e","emailAddress": "fred@example.com","avatarUrls": {"32x32": "http://example.com/jira/images/fred.png"},"active": true,"timeZone": "Australia/Sydney","locale": "en-AU","groups": {"size": 331,"max-results": 50,"items": [{"name": "Group1"}]},"applicationRoles": {"size": 331,"max-results": 50,"items": [{"name": "Role1"}]}}.',
+                    'info' => 'JSON Object, last modified user.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'issueTypes',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue types. Example {"issuetype1": {"name": "issuetypeName","description": "issuetypeDescription","subtask": true,"avatarId": 10002,"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"}}.',
+                    'info' => 'JSON Object, issue types.',
                     'required' => false,
                 ),
             ),
@@ -10931,7 +10931,7 @@ return array (
                 array (
                     'name' => 'issueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue type mappings. Example {"IsueTypeId":"WorkflowName"}.',
+                    'info' => 'JSON Object, issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -10949,7 +10949,7 @@ return array (
                 array (
                     'name' => 'originalIssueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, original issue type mappings. Example {"IssueTypeId": "WorkflowName2"}.',
+                    'info' => 'JSON Object, original issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -10961,7 +10961,7 @@ return array (
                 array (
                     'name' => 'lastModifiedUser',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, last modified user. Example {"key": "fred","name": "Fred","displayName": "Fred F. User","accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e","emailAddress": "fred@example.com","avatarUrls": {"32x32": "http://example.com/jira/images/fred.png"},"active": true,"timeZone": "Australia/Sydney","locale": "en-AU","groups": {"size": 331,"max-results": 50,"items": [{"name": "Group1"}]},"applicationRoles": {"size": 331,"max-results": 50,"items": [{"name": "Role1"}]}}.',
+                    'info' => 'JSON Object, last modified user.',
                     'required' => false,
                 ),
                 array (
@@ -10973,7 +10973,7 @@ return array (
                 array (
                     'name' => 'issueTypes',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue types. Example {"issuetype1": {"name": "issuetypeName","description": "issuetypeDescription","subtask": true,"avatarId": 10002,"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"}}.',
+                    'info' => 'JSON Object, issue types.',
                     'required' => false,
                 ),
             ),
@@ -11231,7 +11231,7 @@ return array (
                 array (
                     'name' => 'issueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue type mappings. Example {"IsueTypeId":"WorkflowName"}.',
+                    'info' => 'JSON Object, issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -11249,7 +11249,7 @@ return array (
                 array (
                     'name' => 'originalIssueTypeMappings',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, original issue type mappings. Example {"IssueTypeId": "WorkflowName2"}.',
+                    'info' => 'JSON Object, original issue type mappings.',
                     'required' => false,
                 ),
                 array (
@@ -11267,13 +11267,13 @@ return array (
                 array (
                     'name' => 'lastModifiedUser',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, last modified user. Example {"key": "fred","name": "Fred","displayName": "Fred F. User","accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e","emailAddress": "fred@example.com","avatarUrls": {"32x32": "http://example.com/jira/images/fred.png"},"active": true,"timeZone": "Australia/Sydney","locale": "en-AU","groups": {"size": 331,"max-results": 50,"items": [{"name": "Group1"}]},"applicationRoles": {"size": 331,"max-results": 50,"items": [{"name": "Role1"}]}}.',
+                    'info' => 'JSON Object, last modified user.',
                     'required' => false,
                 ),
                 array (
                     'name' => 'issueTypes',
                     'type' => 'JSON',
-                    'info' => 'JSON Object, issue types. Example {"issuetype1": {"name": "issuetypeName","description": "issuetypeDescription","subtask": true,"avatarId": 10002,"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"}}.',
+                    'info' => 'JSON Object, issue types.',
                     'required' => false,
                 ),
             ),
@@ -11615,7 +11615,7 @@ return array (
                 array (
                     'name' => 'issueTypes',
                     'type' => 'Array',
-                    'info' => 'Array of Strings, issue types array. Example ["IssueTypeId"].',
+                    'info' => 'Array of Strings, issue types array.',
                     'required' => false,
                 ),
                 array (

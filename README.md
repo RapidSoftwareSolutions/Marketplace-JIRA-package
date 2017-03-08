@@ -2670,3 +2670,1342 @@ Removes default actor from the given role.
 | user        | String     | If given, removes an actor from given role.
 | group       | String     | If given, removes an actor from given role.
 
+## JIRA.getScreenFieldsToAdd
+Gets available fields for screen.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+
+## JIRA.getAllScreenTabs
+Returns a list of all tabs for the given screen.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| projectKey  | String     | The key of the project.
+
+## JIRA.addScreenTab
+Creates tab for given screen.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| name        | String     | Tab name.
+
+## JIRA.renameScreenTab
+Renames tab on given screen.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| name        | String     | Tab name.
+
+## JIRA.deleteScreenTab
+Deletes tab to give screen.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+
+## JIRA.getAllScreenFields
+Gets all fields for a given tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| projectKey  | String     | The key of the project.
+
+## JIRA.addScreenField
+Adds field to the given tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| fieldId     | String     | Field identifier.
+
+## JIRA.removeScreenField
+Removes field from given tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| fieldId     | String     | Field identifier.
+
+## JIRA.moveScreenFieldByNeighbours
+Moves field on the given tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| fieldId     | String     | Field identifier.
+| after       | String     | A field to place this field after. The value should be the self link of another field.
+
+## JIRA.moveScreenFieldByPosition
+Moves field on the given tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| fieldId     | String     | Field identifier.
+| position    | String     | An absolute position, one of "Earlier", "Later", "First", "Last".
+
+## JIRA.moveScreenTab
+Moves tab position.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| screenId    | String     | Screen identifier.
+| tabId       | String     | Tab identifier.
+| position    | String     | New screen tab position.
+
+## JIRA.addFieldToDefaultScreen
+Adds field or custom field to the default tab.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| fieldId     | String     | Field identifier.
+
+## JIRA.search
+Performs a search using JQL.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| jiraUsername | credentials| Username in JIRA.
+| jiraPassword | credentials| Password in JIRA.
+| jiraName     | String     | Name of JIRA.
+| jql          | String     | JQL expression.
+| fieldsByKeys | Boolean    | Fields by keys.
+| validateQuery| String     | Validate query.
+| fields       | String     | Comma-separated list of fields.
+| properties   | String     | Comma-separated list of properties.
+| startAt      | Number     | Start at element.
+| maxResults   | Number     | Max retrieving results.
+
+## JIRA.getIssuesecuritylevel
+Returns a full representation of the security level that has the given identifier.
+
+| Field          | Type       | Description
+|----------------|------------|----------
+| jiraUsername   | credentials| Username in JIRA.
+| jiraPassword   | credentials| Password in JIRA.
+| jiraName       | String     | Name of JIRA.
+| securityLevelId| String     | Security level identifier.
+
+## JIRA.getServerInfo
+Returns general information about the current JIRA server.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| jiraUsername | credentials| Username in JIRA.
+| jiraPassword | credentials| Password in JIRA.
+| jiraName     | String     | Name of JIRA.
+| doHealthCheck| Boolean    | Do health check.
+
+## JIRA.setBaseURL
+Sets the base URL that is configured for this JIRA instance.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| value       | String     | Base URL.
+
+## JIRA.getIssueNavigatorDefaultColumns
+Returns the default system columns for issue navigator.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+
+## JIRA.setIssueNavigatorDefaultColumns
+Sets the default system columns for issue navigator.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| columns     | String     | Comma separated list of columns.
+
+## JIRA.getStatuses
+Returns a list of all statuses.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+
+## JIRA.getSingleStatus
+Returns a full representation of the Status having the given id or name.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| idOrName    | String     | Identifier or name of status.
+
+## JIRA.getStatusCategories
+Returns a list of all status categories.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+
+## JIRA.getStatusCategory
+Returns a full representation of the StatusCategory having the given id or key.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| idOrKey     | String     | Identifier or key of status category.
+
+## JIRA.createAvatar
+Creates an avatar for a given entity.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| type        | String     | Universal avatar type. Example project, user, issuetype.
+| entityId    | String     | Entity identifier.
+| image       | File       | Avatar image file.
+| x           | Number     | The X coordinate of the top-left corner of the crop region.
+| y           | Number     | The Y coordinate of the top-left corner of the crop region.
+| size        | Number     | The length of each side of the crop region. The crop region can only be a square.
+
+## JIRA.getAvatars
+Get avatars.
+
+| Field         | Type       | Description
+|---------------|------------|----------
+| jiraUsername  | credentials| Username in JIRA.
+| jiraPassword  | credentials| Password in JIRA.
+| jiraName      | String     | Name of JIRA.
+| type          | String     | Universal avatar type. Example project, user, issuetype.
+| owningObjectId| String     | Universal avatar owning object identifier.
+
+## JIRA.deleteAvatar
+Deletes avatar.
+
+| Field         | Type       | Description
+|---------------|------------|----------
+| jiraUsername  | credentials| Username in JIRA.
+| jiraPassword  | credentials| Password in JIRA.
+| jiraName      | String     | Name of JIRA.
+| type          | String     | Universal avatar type. Example project, user, issuetype.
+| owningObjectId| String     | Universal avatar owning object identifier.
+| avatarId      | String     | Avatar identifier.
+
+## JIRA.getUser
+Returns a user.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| username    | String     | The username.
+| key         | String     | User key.
+| expand      | String     | Expand result, use "groups", "applicationRoles".
+
+## JIRA.findBulkAssignableUsers
+Returns a list of users that match the search string and can be assigned issues for all the given projects.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| projectKeys | String     | Comma-separated list of the projects keys we are finding assignable users for.
+| username    | String     | The username.
+| startAt     | Number     | The index of the first user to return.
+| maxResults  | Number     | The maximum number of users to return.
+
+## JIRA.findAssignableUsers
+Returns a list of users that match the search string.
+
+| Field             | Type       | Description
+|-------------------|------------|----------
+| jiraUsername      | credentials| Username in JIRA.
+| jiraPassword      | credentials| Password in JIRA.
+| jiraName          | String     | Name of JIRA.
+| project           | String     | The key of the project we are finding assignable users for.
+| issueKey          | String     | The issue key for the issue being edited we need to find assignable users for.
+| username          | String     | The username.
+| startAt           | Number     | The index of the first user to return.
+| maxResults        | Number     | The maximum number of users to return.
+| actionDescriptorId| Number     | Action descriptor identifier.
+
+## JIRA.getDefaultColumns
+Returns the default columns for the given user.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| username    | String     | Username.
+
+## JIRA.setColumns
+Sets the default columns for the given user.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| columns     | String     | Comma separated list of columns.
+
+## JIRA.resetDefaultColumns
+Reset the default columns for the given user to the system default.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| username    | String     | Username.
+
+## JIRA.findUsersWithAllPermissions
+Returns a list of active users that match the search string and have all specified permissions for the project or issue.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| permissions | String     | Comma-separated list of permissions for project or issue returned users must have.
+| projectKey  | String     | The optional project key to search for users with if no issueKey is supplied.
+| issueKey    | String     | The issue key for the issue for which returned users have specified permissions.
+| username    | String     | The username filter, list includes all users if unspecified.
+| startAt     | Number     | The index of the first user to return.
+| maxResults  | Number     | The maximum number of users to return.
+
+## JIRA.findUsersByProperty
+Returns a list of users that match the search string and/or property.
+
+| Field          | Type       | Description
+|----------------|------------|----------
+| jiraUsername   | credentials| Username in JIRA.
+| jiraPassword   | credentials| Password in JIRA.
+| jiraName       | String     | Name of JIRA.
+| property       | String     | A query string used to search by property. Example: propertyKey.something.nested=1.
+| username       | String     | A query string used to search username, name or e-mail address.
+| includeActive  | Boolean    | If true, then active users are included in the results.
+| includeInactive| Boolean    | If true, then inactive users are included in the results.
+| startAt        | Number     | The index of the first user to return.
+| maxResults     | Number     | The maximum number of users to return.
+
+## JIRA.findUsersByUsername
+Returns a list of users that match the search string and/or property.
+
+| Field          | Type       | Description
+|----------------|------------|----------
+| jiraUsername   | credentials| Username in JIRA.
+| jiraPassword   | credentials| Password in JIRA.
+| jiraName       | String     | Name of JIRA.
+| username       | String     | A query string used to search username, name or e-mail address.
+| property       | String     | A query string used to search by property. Example: propertyKey.something.nested=1.
+| includeActive  | Boolean    | If true, then active users are included in the results.
+| includeInactive| Boolean    | If true, then inactive users are included in the results.
+| startAt        | Number     | The index of the first user to return.
+| maxResults     | Number     | The maximum number of users to return.
+
+## JIRA.findUsersWithBrowsePermission
+Returns a list of active users that match the search string.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| username    | String     | The username filter, no users returned if left blank.
+| projectKey  | String     | Project key to search for users with if no issueKey is supplied.
+| issueKey    | String     | The issue key for the issue being edited we need to find viewable users for.
+| startAt     | Number     | The index of the first user to return.
+| maxResults  | Number     | The maximum number of users to return.
+
+## JIRA.getUserPropertiesKeysByUserKey
+Returns the keys of all properties for the user identified by the key.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| userKey     | String     | Key of the user whose properties are to be returned.
+
+## JIRA.getUserPropertiesKeysByUsername
+Returns the keys of all properties for the user identified by the username.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| username    | String     | Username of the user whose properties are to be returned.
+
+## JIRA.deleteUserPropertyByUserKey
+Removes the property from the user identified by the key.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| propertyKey | String     | Property key.
+| userKey     | String     | Key of the user whose property is to be removed.
+
+## JIRA.deleteUserPropertyByUsername
+Removes the property from the user identified by the username.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| propertyKey | String     | Property key.
+| username    | String     | Username of the user whose property is to be removed.
+
+## JIRA.setUserPropertyByUserKey
+Sets the value of the specified user's property.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| jiraUsername | credentials| Username in JIRA.
+| jiraPassword | credentials| Password in JIRA.
+| jiraName     | String     | Name of JIRA.
+| propertyKey  | String     | Property key.
+| propertyValue| String     | Property value.
+| userKey      | String     | Key of the user whose property is to be set.
+
+## JIRA.setUserPropertyByUsername
+Sets the value of the specified user's property.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| jiraUsername | credentials| Username in JIRA.
+| jiraPassword | credentials| Password in JIRA.
+| jiraName     | String     | Name of JIRA.
+| propertyKey  | String     | Property key.
+| propertyValue| String     | Property value.
+| username     | String     | Username of the user whose property is to be set.
+
+## JIRA.getUserPropertyByUserKey
+Returns the value of the property with a given key from the user identified by the key or by the id.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| propertyKey | String     | Property key.
+| userKey     | String     | Key of the user whose property is to be returned.
+
+## JIRA.getUserPropertyByUsername
+Returns the value of the property with a given key from the user identified by the username.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| propertyKey | String     | Property key.
+| username    | String     | Username of the user whose property is to be returned.
+
+## JIRA.createVersion
+Create a version.
+
+| Field        | Type       | Description
+|--------------|------------|----------
+| jiraUsername | credentials| Username in JIRA.
+| jiraPassword | credentials| Password in JIRA.
+| jiraName     | String     | Name of JIRA.
+| name         | String     | New version name.
+| project      | String     | Project name.
+| description  | String     | New version description.
+| archived     | Boolean    | is archived.
+| released     | Boolean    | Is released.
+| releaseDate  | String     | Release date. Example "2017-06-07".
+| projectId    | Number     | Project identifier.
+| userStartDate| String     | User start date.
+| operations   | Array      | Array of JSON objects, simple Links.
+| remotelinks  | Array      | Array of JSON objects, remote Entity Links.
+
+#### Example of 'operations' field
+```json
+[{
+	"styleClass": "style_class",
+	"iconClass": "icon_class",
+	"label": "Operation label",
+	"title": "Operation title",
+	"href": "http://www.example.com/",
+	"weight": "10"
+}]
+```
+
+#### Example of 'remotelinks' field
+```json
+[{
+	"name": "string",
+	"link": "http://www.example.com/"
+}]
+```
+
+## JIRA.moveVersionByNeighbours
+Modify a version's sequence within a project.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| after       | String     | A version to place this version after. The value should be the self link of another version.
+
+## JIRA.moveVersionByPosition
+Modify a version's sequence within a project.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| position    | String     | An absolute position, one of "Earlier","Later","First","Last".
+
+## JIRA.getVersion
+Returns a project version.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| expand      | String     | Expand parameters.
+
+## JIRA.updateVersion
+Modify a version.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| versionId          | String     | Version identifier.
+| name               | String     | New version name.
+| description        | String     | New version description.
+| archived           | Boolean    | is archived.
+| released           | Boolean    | Is released.
+| releaseDate        | String     | Release date. Example "2010-07-06".
+| overdue            | Boolean    | Is overdue.
+| project            | String     | Project name.
+| projectId          | Number     | Project identifier.
+| userStartDate      | String     | User start date.
+| userReleaseDate    | String     | User release date. Example "6/Jul/2010".
+| moveUnfixedIssuesTo| String     | Move unfixed issues to. The value should be the link.
+| operations         | Array      | Array of JSON objects, simple Links.
+| remotelinks        | Array      | Array of JSON objects, remote Entity Links.
+
+#### Example of 'operations' field
+```json
+[{
+	"styleClass": "style_class",
+	"iconClass": "icon_class",
+	"label": "Operation label",
+	"title": "Operation title",
+	"href": "http://www.example.com/",
+	"weight": "10"
+}]
+```
+
+#### Example of 'remotelinks' field
+```json
+[{
+	"name": "string",
+	"link": "http://www.example.com/"
+}]
+```
+
+## JIRA.deleteVersion
+Delete a project version.
+
+| Field               | Type       | Description
+|---------------------|------------|----------
+| jiraUsername        | credentials| Username in JIRA.
+| jiraPassword        | credentials| Password in JIRA.
+| jiraName            | String     | Name of JIRA.
+| versionId           | String     | Version identifier.
+| moveFixIssuesTo     | String     | The version to set fixVersion to on issues where the deleted version is the fix version.
+| moveAffectedIssuesTo| String     | The version to set affectedVersion to on issues where the deleted version is the affected version.
+
+## JIRA.mergeVersion
+Merge versions.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| moveIssuesTo| String     | Move issues to.
+
+## JIRA.getVersionRelatedIssues
+Returns a bean containing the number of fixed in and affected issues for the given version.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+
+## JIRA.getVersionUnresolvedIssues
+Returns the number of unresolved issues for the given version.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+
+## JIRA.getRemoteVersionLinksByVersionId
+Returns the remote version links associated with the given version ID.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+
+## JIRA.createRemoteVersionLink
+Create a remote version link.
+
+| Field               | Type       | Description
+|---------------------|------------|----------
+| jiraUsername        | credentials| Username in JIRA.
+| jiraPassword        | credentials| Password in JIRA.
+| jiraName            | String     | Name of JIRA.
+| versionId           | String     | Version identifier.
+| globalId            | String     | Link global identifier.
+| myCustomLinkProperty| String     | Custom link property.
+| colors              | String     | Comma-separated list of colors.
+| notes               | Array      | Array of Strings, notes.
+
+## JIRA.updateRemoteVersionLink
+Update a remote version link.
+
+| Field               | Type       | Description
+|---------------------|------------|----------
+| jiraUsername        | credentials| Username in JIRA.
+| jiraPassword        | credentials| Password in JIRA.
+| jiraName            | String     | Name of JIRA.
+| versionId           | String     | Version identifier.
+| globalId            | String     | Remote link global identifier.
+| myCustomLinkProperty| String     | Custom link property.
+| colors              | String     | Comma-separated list of colors.
+| notes               | Array      | Array of Strings, notes.
+
+## JIRA.deleteRemoteVersionLinks
+Delete all remote version links for a given version ID.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+
+## JIRA.getRemoteVersionLink
+A REST sub-resource representing a remote version link.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| globalId    | String     | Remote link global identifier.
+
+## JIRA.deleteSingleRemoteVersionLink
+Delete a specific remote version link with the given version ID and global ID.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| versionId   | String     | Version identifier.
+| globalId    | String     | Remote link global identifier.
+
+## JIRA.getRemoteVersionLinks
+Returns the remote version links for a given global ID.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| globalId    | String     | The global ID of the remote resource that is linked to the versions.
+
+## JIRA.getAllWorkflows
+Returns all workflows.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| workflowName| String     | Workflow name.
+
+## JIRA.deleteWorkflowProperty
+Delete a property from the passed transition on the passed workflow.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| transitionId| String     | Transition identifier.
+| key         | String     | The name of the property to add.
+| workflowName| String     | The name of the workflow to use.
+| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+
+## JIRA.createWorkflowProperty
+Add a new property to a transition.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| transitionId| String     | Transition identifier.
+| key         | String     | The name of the property to add.
+| value       | String     | Value.
+| workflowName| String     | The name of the workflow to use.
+| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+
+## JIRA.updateWorkflowProperty
+Update property to a transition.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| transitionId| String     | Transition identifier.
+| key         | String     | The name of the property to add.
+| value       | String     | The value of the property to add.
+| workflowName| String     | The name of the workflow to use.
+| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+
+## JIRA.getWorkflowProperties
+Return the property or properties associated with a transition.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| transitionId       | String     | Transition identifier.
+| workflowName       | String     | The name of the workflow to use.
+| key                | String     | The name of the property key to query.
+| workflowMode       | String     | The type of workflow to use. One of "live", "draft".
+| includeReservedKeys| Boolean    | Set this to true in order to include the non-editable keys in the response.
+
+## JIRA.createWorkflowScheme
+Create a new workflow scheme.
+
+| Field                    | Type       | Description
+|--------------------------|------------|----------
+| jiraUsername             | credentials| Username in JIRA.
+| jiraPassword             | credentials| Password in JIRA.
+| jiraName                 | String     | Name of JIRA.
+| name                     | String     | New workflow scheme name.
+| description              | String     | New workflow scheme description.
+| defaultWorkflow          | String     | Default workflow name.
+| issueTypeMappings        | JSON       | JSON Object, issue type mappings.
+| originalDefaultWorkflow  | String     | Original default workflow.
+| originalIssueTypeMappings| JSON       | JSON Object, original issue type mappings.
+| draft                    | Boolean    | Draft.
+| lastModified             | String     | Last modified.
+| updateDraftIfNeeded      | Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+| lastModifiedUser         | JSON       | JSON Object, last modified user.
+| issueTypes               | JSON       | JSON Object, issue types.
+
+#### Example of 'issueTypeMappings' field
+```json
+{
+	"IsueTypeId": "WorkflowName"
+}
+```
+
+#### Example of 'originalIssueTypeMappings' field
+```json
+{
+	"IssueTypeId": "WorkflowName2"
+}
+```
+
+#### Example of 'lastModifiedUser' field
+```json
+{
+	"key": "fred",
+	"name": "Fred",
+	"displayName": "Fred F. User",
+	"accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+	"emailAddress": "fred@example.com",
+	"avatarUrls": {
+		"32x32": "http://example.com/jira/images/fred.png"
+	},
+	"active": true,
+	"timeZone": "Australia/Sydney",
+	"locale": "en-AU",
+	"groups": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Group1"
+		}]
+	},
+	"applicationRoles": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Role1"
+		}]
+	}
+}
+```
+
+#### Example of 'issueTypes' field
+```json
+{
+	"issuetype1": {
+		"name": "issuetypeName",
+		"description": "issuetypeDescription",
+		"subtask": true,
+		"avatarId": 10002,
+		"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"
+	}
+}
+```
+
+## JIRA.deleteWorkflowScheme
+Delete the passed workflow scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.getWorkflowScheme
+Returns the requested workflow scheme to the caller.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| returnDraftIfExists| Boolean    | When true indicates that a scheme's draft.
+
+## JIRA.updateWorkflowScheme
+Update the passed workflow scheme.
+
+| Field                    | Type       | Description
+|--------------------------|------------|----------
+| jiraUsername             | credentials| Username in JIRA.
+| jiraPassword             | credentials| Password in JIRA.
+| jiraName                 | String     | Name of JIRA.
+| workflowSchemeId         | Number     | Workflow scheme identifier.
+| name                     | String     | New workflow scheme name.
+| description              | String     | New workflow scheme description.
+| defaultWorkflow          | String     | Default workflow name.
+| issueTypeMappings        | JSON       | JSON Object, issue type mappings.
+| updateDraftIfNeeded      | Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+| originalDefaultWorkflow  | String     | Original default workflow.
+| originalIssueTypeMappings| JSON       | JSON Object, original issue type mappings.
+| draft                    | Boolean    | Draft.
+| lastModifiedUser         | JSON       | JSON Object, last modified user.
+| lastModified             | String     | Last modified.
+| issueTypes               | JSON       | JSON Object, issue types.
+
+#### Example of 'issueTypeMappings' field
+```json
+{
+	"IsueTypeId": "WorkflowName"
+}
+```
+
+#### Example of 'originalIssueTypeMappings' field
+```json
+{
+	"IssueTypeId": "WorkflowName2"
+}
+```
+
+#### Example of 'lastModifiedUser' field
+```json
+{
+	"key": "fred",
+	"name": "Fred",
+	"displayName": "Fred F. User",
+	"accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+	"emailAddress": "fred@example.com",
+	"avatarUrls": {
+		"32x32": "http://example.com/jira/images/fred.png"
+	},
+	"active": true,
+	"timeZone": "Australia/Sydney",
+	"locale": "en-AU",
+	"groups": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Group1"
+		}]
+	},
+	"applicationRoles": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Role1"
+		}]
+	}
+}
+```
+
+#### Example of 'issueTypes' field
+```json
+{
+	"issuetype1": {
+		"name": "issuetypeName",
+		"description": "issuetypeDescription",
+		"subtask": true,
+		"avatarId": 10002,
+		"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"
+	}
+}
+```
+
+## JIRA.createDraftForScheme
+Create a draft for the passed scheme. The draft will be a copy of the state of the parent.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.deleteDefaultWorkflowScheme
+Remove the default workflow from the passed workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| updateDraftIfNeeded| Boolean    | When true will create and return a draft when the workflow scheme cannot be edited.
+
+## JIRA.updateDefaultWorkflowScheme
+Set the default workflow for the passed workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflow           | String     | Workflow name.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+
+## JIRA.getDefaultWorkflowScheme
+Return the default workflow from the passed workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| returnDraftIfExists| Boolean    | When true indicates that a scheme's draft.
+
+## JIRA.getDraftWorkflowScheme
+Returns the requested draft workflow scheme to the caller.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.deleteDraftWorkflowScheme
+Delete the passed draft workflow scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.updateDraftWorkflowScheme
+Update a draft workflow scheme.
+
+| Field                    | Type       | Description
+|--------------------------|------------|----------
+| jiraUsername             | credentials| Username in JIRA.
+| jiraPassword             | credentials| Password in JIRA.
+| jiraName                 | String     | Name of JIRA.
+| workflowSchemeId         | Number     | Workflow scheme identifier.
+| name                     | String     | Updated workflow scheme name.
+| description              | String     | Updated workflow scheme description.
+| defaultWorkflow          | String     | Default workflow name.
+| issueTypeMappings        | JSON       | JSON Object, issue type mappings.
+| updateDraftIfNeeded      | Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+| originalDefaultWorkflow  | String     | Original default workflow.
+| originalIssueTypeMappings| JSON       | JSON Object, original issue type mappings.
+| draft                    | Boolean    | Draft.
+| lastModified             | String     | Last modified.
+| lastModifiedUser         | JSON       | JSON Object, last modified user.
+| issueTypes               | JSON       | JSON Object, issue types.
+
+#### Example of 'issueTypeMappings' field
+```json
+{
+	"IsueTypeId": "WorkflowName"
+}
+```
+
+#### Example of 'originalIssueTypeMappings' field
+```json
+{
+	"IssueTypeId": "WorkflowName2"
+}
+```
+
+#### Example of 'lastModifiedUser' field
+```json
+{
+	"key": "fred",
+	"name": "Fred",
+	"displayName": "Fred F. User",
+	"accountId": "99:27935d01-92a7-4687-8272-a9b8d3b2ae2e",
+	"emailAddress": "fred@example.com",
+	"avatarUrls": {
+		"32x32": "http://example.com/jira/images/fred.png"
+	},
+	"active": true,
+	"timeZone": "Australia/Sydney",
+	"locale": "en-AU",
+	"groups": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Group1"
+		}]
+	},
+	"applicationRoles": {
+		"size": 331,
+		"max-results": 50,
+		"items": [{
+			"name": "Role1"
+		}]
+	}
+}
+```
+
+#### Example of 'issueTypes' field
+```json
+{
+	"issuetype1": {
+		"name": "issuetypeName",
+		"description": "issuetypeDescription",
+		"subtask": true,
+		"avatarId": 10002,
+		"iconUrl": "http://example.com/jira/images/icons/issuetypes/task.png"
+	}
+}
+```
+
+## JIRA.getDefaultDraftWorkflowScheme
+Return the default workflow from the passed draft workflow scheme to the caller.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.deleteDefaultDraftWorkflowScheme
+Remove the default workflow from the passed draft workflow scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+
+## JIRA.updateDefaultDraftWorkflowScheme
+Set the default workflow for the passed draft workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflow           | String     | Workflow name.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+
+## JIRA.getDraftSchemeIssueType
+Returns the issue type mapping for the passed draft workflow scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+| issueType       | String     | Issue type.
+
+## JIRA.deleteDraftSchemeIssueType
+Remove the specified issue type mapping from the draft scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+| issueType       | String     | Issue type.
+
+## JIRA.setDraftSchemeIssueType
+Set the issue type mapping for the passed draft scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| issueType          | String     | Issue type.
+| workflow           | String     | Workflow name.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+
+## JIRA.getDraftWorkflow
+Returns the draft workflow mappings or requested mapping to the caller.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+| workflowName    | String     | The workflow mapping to return.
+
+## JIRA.deleteDraftWorkflowMapping
+Delete the passed workflow from the draft workflow scheme.
+
+| Field           | Type       | Description
+|-----------------|------------|----------
+| jiraUsername    | credentials| Username in JIRA.
+| jiraPassword    | credentials| Password in JIRA.
+| jiraName        | String     | Name of JIRA.
+| workflowSchemeId| String     | Workflow scheme identifier.
+| workflowName    | String     | The name of the workflow to delete.
+
+## JIRA.updateDraftWorkflowMapping
+Update the draft scheme to include the passed mapping.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflowName       | String     | The name of the workflow mapping to update.
+| workflow           | String     | Workflow name.
+| issueTypes         | Array      | Array of Strings, issue types array.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+| defaultMapping     | Boolean    | Use default mapping.
+
+#### Example of 'issueTypes' field
+```json
+[
+	"IssueTypeId"
+]
+```
+
+## JIRA.getWorkflowSchemeIssueType
+Returns the issue type mapping for the passed workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| issueType          | String     | Issue type.
+| returnDraftIfExists| Boolean    | When true indicates that a scheme's draft.
+
+## JIRA.deleteWorkflowSchemeIssueType
+Remove the specified issue type mapping from the scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| issueType          | String     | Issue type.
+| updateDraftIfNeeded| Boolean    | When true will create and return a draft when the workflow scheme cannot be edited.
+
+## JIRA.setWorkflowSchemeIssueType
+Set the issue type mapping for the passed scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| issueType          | String     | Issue type.
+| workflow           | String     | Workflow name.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+
+## JIRA.getWorkflow
+Returns the workflow mappings or requested mapping to the caller for the passed scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflowName       | String     | The workflow mapping to return.
+| returnDraftIfExists| Boolean    | When true indicates that a scheme's draft.
+
+## JIRA.deleteWorkflow
+Delete the passed workflow from the workflow scheme.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflowName       | String     | The name of the workflow to delete.
+| updateDraftIfNeeded| Boolean    | Flag to indicate if a draft should be created if necessary to delete the workflowfrom the scheme.
+
+## JIRA.updateWorkflowMapping
+Update the scheme to include the passed mapping.
+
+| Field              | Type       | Description
+|--------------------|------------|----------
+| jiraUsername       | credentials| Username in JIRA.
+| jiraPassword       | credentials| Password in JIRA.
+| jiraName           | String     | Name of JIRA.
+| workflowSchemeId   | String     | Workflow scheme identifier.
+| workflowName       | String     | The name of the workflow mapping to update.
+| workflow           | String     | Workflow name.
+| issueTypes         | Array      | Array of Strings, issue types.
+| updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
+| defaultMapping     | Boolean    | Default mapping.
+
+## JIRA.getWorklogsDeletedSince
+Returns worklogs id and delete time of worklogs that was deleted since given time.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| since       | Number     | A date time in unix timestamp format since when deleted worklogs will be returned.
+
+## JIRA.getWorklogs
+Returns worklogs for given worklog ids. Only worklogs to which the calling user has permissions, will be included in the result.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| ids         | String     | Comma-separated list of identifiers.
+| expand      | String     | Comma-separated list of parameters to expand.
+
+## JIRA.getWorklogsModifiedSince
+Returns worklogs id and update time of worklogs that was updated since given time.
+
+| Field       | Type       | Description
+|-------------|------------|----------
+| jiraUsername| credentials| Username in JIRA.
+| jiraPassword| credentials| Password in JIRA.
+| jiraName    | String     | Name of JIRA.
+| since       | Number     | A date time in unix timestamp format since when updated worklogs will be returned.
+| expand      | String     | Optional comma-separated list of parameters to expand.
