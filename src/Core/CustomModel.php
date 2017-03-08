@@ -381,6 +381,16 @@ class CustomModel
     public static function setBaseURL($param, &$blockCustom, $vendorUrl){
         return json_encode($param['value']);
     }
+    public static function setIssueNavigatorDefaultColumns($param, &$blockCustom, $vendorUrl){
+        $result = [];
+        $columns = explode(',', trim($param['columns']));
+        if(count($columns)>0){
+            $result['columns'] = [];
+            foreach ($columns as $oneColumn) $result['columns'][] = trim($oneColumn);
+        }
+
+        return json_encode($result);
+    }
     public static function createVersion($param, &$blockCustom, $vendorUrl){
         return stripcslashes(json_encode($param));
     }
