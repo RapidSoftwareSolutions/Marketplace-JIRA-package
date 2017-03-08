@@ -8897,7 +8897,7 @@ return array (
                 array (
                     'name' => 'type',
                     'type' => 'String',
-                    'info' => 'Universal avatar type.',
+                    'info' => 'Universal avatar type. Example project, user, issuetype.',
                     'required' => true,
                 ),
                 array (
@@ -8957,7 +8957,7 @@ return array (
                 array (
                     'name' => 'type',
                     'type' => 'String',
-                    'info' => 'Universal avatar type.',
+                    'info' => 'Universal avatar type. Example project, user, issuetype.',
                     'required' => true,
                 ),
                 array (
@@ -8993,7 +8993,7 @@ return array (
                 array (
                     'name' => 'type',
                     'type' => 'String',
-                    'info' => 'Universal avatar type.',
+                    'info' => 'Universal avatar type. Example project, user, issuetype.',
                     'required' => true,
                 ),
                 array (
@@ -9851,7 +9851,7 @@ return array (
             ),
         ),
         array (
-            'name' => 'moveVersion',
+            'name' => 'moveVersionByNeighbours',
             'description' => 'Modify a version\'s sequence within a project.',
             'args' => array (
                 array (
@@ -9882,6 +9882,36 @@ return array (
                     'name' => 'after',
                     'type' => 'String',
                     'info' => 'A version to place this version after. The value should be the self link of another version.',
+                    'required' => true,
+                ),
+            ),
+        ),
+        array (
+            'name' => 'moveVersionByPosition',
+            'description' => 'Modify a version\'s sequence within a project.',
+            'args' => array (
+                array (
+                    'name' => 'jiraUsername',
+                    'type' => 'credentials',
+                    'info' => 'Username in JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'jiraPassword',
+                    'type' => 'credentials',
+                    'info' => 'Password in JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'jiraName',
+                    'type' => 'String',
+                    'info' => 'Name of JIRA.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'versionId',
+                    'type' => 'String',
+                    'info' => 'Version identifier.',
                     'required' => true,
                 ),
                 array (
@@ -15177,13 +15207,23 @@ return array (
             'method' => 'POST',
             'custom' => true,
         ),
-        'moveVersion' => array (
+        'moveVersionByNeighbours' => array (
             'dictionary' => array (
                 'jiraUsername' => 'jiraUsername',
                 'jiraPassword' => 'jiraPassword',
                 'jiraName' => 'jiraName',
                 'versionId' => 'versionId',
                 'after' => 'after',
+            ),
+            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/version/{{versionId}}/move',
+            'method' => 'POST',
+        ),
+        'moveVersionByPosition' => array (
+            'dictionary' => array (
+                'jiraUsername' => 'jiraUsername',
+                'jiraPassword' => 'jiraPassword',
+                'jiraName' => 'jiraName',
+                'versionId' => 'versionId',
                 'position' => 'position',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/version/{{versionId}}/move',

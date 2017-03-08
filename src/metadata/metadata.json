@@ -8861,7 +8861,7 @@
                 {
                     "name": "type",
                     "type": "String",
-                    "info": "Universal avatar type.",
+                    "info": "Universal avatar type. Example project, user, issuetype.",
                     "required": true
                 },
                 {
@@ -8921,7 +8921,7 @@
                 {
                     "name": "type",
                     "type": "String",
-                    "info": "Universal avatar type.",
+                    "info": "Universal avatar type. Example project, user, issuetype.",
                     "required": true
                 },
                 {
@@ -8957,7 +8957,7 @@
                 {
                     "name": "type",
                     "type": "String",
-                    "info": "Universal avatar type.",
+                    "info": "Universal avatar type. Example project, user, issuetype.",
                     "required": true
                 },
                 {
@@ -9815,7 +9815,7 @@
             ]
         },
         {
-            "name": "moveVersion",
+            "name": "moveVersionByNeighbours",
             "description": "Modify a version's sequence within a project.",
             "args": [
                 {
@@ -9846,6 +9846,36 @@
                     "name": "after",
                     "type": "String",
                     "info": "A version to place this version after. The value should be the self link of another version.",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "name": "moveVersionByPosition",
+            "description": "Modify a version's sequence within a project.",
+            "args": [
+                {
+                    "name": "jiraUsername",
+                    "type": "credentials",
+                    "info": "Username in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraPassword",
+                    "type": "credentials",
+                    "info": "Password in JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "jiraName",
+                    "type": "String",
+                    "info": "Name of JIRA.",
+                    "required": true
+                },
+                {
+                    "name": "versionId",
+                    "type": "String",
+                    "info": "Version identifier.",
                     "required": true
                 },
                 {

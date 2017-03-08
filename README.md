@@ -166,7 +166,7 @@ Returns all system avatars of the given type.
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| avatarType  | String     | System avatar type.
+| avatarType  | String     | System avatar type. Example project, user, issuetype.
 
 ## JIRA.getCommentPropertiesKeys
 Returns the keys of all properties for the comment identified by the key or by the id.
