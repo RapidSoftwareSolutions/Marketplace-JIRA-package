@@ -14818,7 +14818,7 @@ return array (
                 'jiraName' => 'jiraName',
                 'type' => 'type',
                 'entityId' => 'entityId',
-                'image' => 'image',
+                'image' => 'file',
                 'x' => 'x',
                 'y' => 'y',
                 'size' => 'size',
@@ -14828,7 +14828,7 @@ return array (
                 'y',
                 'size',
             ),
-            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/universal_avatar/type/{{type}}/owner/{{entityId}}',
+                'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/universal_avatar/type/{{type}}/owner/{{entityId}}',
             'method' => 'POST-IMAGE',
         ),
         'getAvatars' => array (
