@@ -391,6 +391,9 @@ class CustomModel
 
         return json_encode($result);
     }
+    public static function setColumns($param, &$blockCustom, $vendorUrl){
+        return self::setIssueNavigatorDefaultColumns($param, $blockCustom, $vendorUrl);
+    }
     public static function createVersion($param, &$blockCustom, $vendorUrl){
         return stripcslashes(json_encode($param));
     }

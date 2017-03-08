@@ -9181,6 +9181,12 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                },
+                {
+                    "name": "columns",
+                    "type": "String",
+                    "info": "Comma separated list of columns.",
+                    "required": true
                 }
             ]
         },

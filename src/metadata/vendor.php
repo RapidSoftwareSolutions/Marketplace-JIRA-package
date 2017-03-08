@@ -9218,6 +9218,12 @@ return array (
                     'info' => 'Name of JIRA.',
                     'required' => true,
                 ),
+                array (
+                    'name' => 'columns',
+                    'type' => 'String',
+                    'info' => 'Comma separated list of columns.',
+                    'required' => true,
+                ),
             ),
         ),
         array (
@@ -14968,9 +14974,11 @@ return array (
                 'jiraUsername' => 'jiraUsername',
                 'jiraPassword' => 'jiraPassword',
                 'jiraName' => 'jiraName',
+                'columns' => 'columns',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/user/columns',
             'method' => 'PUT',
+            'custom' => true,
         ),
         'resetDefaultColumns' => array (
             'dictionary' => array (
