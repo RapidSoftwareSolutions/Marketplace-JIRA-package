@@ -62,6 +62,16 @@
                     "info": "Id of the issue to scope returned permissions for.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -85,6 +95,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -128,6 +148,16 @@
                     "info": "When fetching a list allows the list to be filtered by the property's start of key e.g.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -164,6 +194,16 @@
                     "info": "If present in the PUT will override the existing value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -188,6 +228,16 @@
                     "info": "Name of JIRA.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -211,6 +261,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -242,6 +302,16 @@
                     "info": "ApplicationRole key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -272,6 +342,16 @@
                     "info": "Attachment identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -301,6 +381,16 @@
                     "type": "String",
                     "info": "Attachment identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -355,6 +445,16 @@
                     "type": "String",
                     "info": "Timestamp in past; 'from' must be less or equal 'to'.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -464,6 +564,16 @@
                     "info": "Array of JSON objects, record associated items.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -494,6 +604,16 @@
                     "info": "System avatar type.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -523,6 +643,16 @@
                     "type": "String",
                     "info": "Comment identified.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -559,6 +689,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -602,6 +742,16 @@
                     "info": "Property value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -637,6 +787,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -727,6 +887,16 @@
                     "type": "String",
                     "info": "Component real assignee.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -824,6 +994,16 @@
                     "info": "Real assignee.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -853,6 +1033,16 @@
                     "type": "String",
                     "info": "Component identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -890,6 +1080,16 @@
                     "info": "The new component applied to issues whose 'id' component will be deleted. If this value is null, then the 'id' component is simply removed from the related isues.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -920,6 +1120,16 @@
                     "info": "Component identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -944,6 +1154,16 @@
                     "info": "Name of JIRA.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -967,6 +1187,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1010,6 +1240,16 @@
                     "info": "Implementation Url.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1033,6 +1273,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1058,6 +1308,16 @@
                     "info": "Name of JIRA.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1081,6 +1341,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1130,6 +1400,16 @@
                     "info": "Default unit. One of \"minute\",\"hour\",\"day\",\"week\".",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1159,6 +1439,16 @@
                     "type": "String",
                     "info": "Option identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1202,6 +1492,16 @@
                     "info": "A hint as to the the maximum number of dashboards to return in each call.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1231,6 +1531,16 @@
                     "type": "String",
                     "info": "Dashboard identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1267,6 +1577,16 @@
                     "type": "String",
                     "info": "Item identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1310,6 +1630,16 @@
                     "info": "Property key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1352,6 +1682,16 @@
                     "info": "Property key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1393,6 +1733,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1442,6 +1792,16 @@
                     "info": "Custom field searcher key.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1465,6 +1825,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1501,6 +1871,16 @@
                     "type": "String",
                     "info": "Option value.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1543,6 +1923,16 @@
                     "type": "Number",
                     "info": "The maximum number of items to return per page. Default: 50.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1628,6 +2018,16 @@
                     "info": "Array of Strings, options config attributes.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1664,6 +2064,16 @@
                     "info": "Option identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1699,6 +2109,16 @@
                     "type": "String",
                     "info": "Option identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1748,6 +2168,16 @@
                     "info": "Only options available for this project will be returned.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -1795,6 +2225,16 @@
                     "type": "Number",
                     "info": "Only options available for this project will be returned.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1885,6 +2325,16 @@
                     "type": "JSON",
                     "info": "JSON Object, filter Subscription Bean List Wrapper.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -1982,6 +2432,16 @@
                     "info": "JSON Object, filter Subscription Bean List Wrapper.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2011,6 +2471,16 @@
                     "type": "String",
                     "info": "Filter identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2048,6 +2518,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2077,6 +2557,16 @@
                     "type": "String",
                     "info": "Filter identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2108,6 +2598,16 @@
                     "info": "Filter identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2138,6 +2638,16 @@
                     "info": "Filter identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2167,6 +2677,16 @@
                     "type": "String",
                     "info": "Filter identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2222,6 +2742,16 @@
                     "info": "Filter project role identifier.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2257,6 +2787,16 @@
                     "type": "String",
                     "info": "Permission identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2294,6 +2834,16 @@
                     "info": "Permission identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2317,6 +2867,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2348,6 +2908,16 @@
                     "info": "Share scope. One of \"GLOBAL\",\"AUTHENTICATED\",\"PRIVATE\".",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2377,6 +2947,16 @@
                     "type": "String",
                     "info": "The parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2414,6 +2994,16 @@
                     "info": "Include favourites.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2443,6 +3033,16 @@
                     "type": "String",
                     "info": "Group name.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2479,6 +3079,16 @@
                     "type": "String",
                     "info": "Specify a different group to transfer the restrictions comments and worklogs to.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2528,6 +3138,16 @@
                     "info": "The maximum number of users to return (max 50).",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2564,6 +3184,16 @@
                     "info": "User name.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2599,6 +3229,16 @@
                     "type": "String",
                     "info": "User to remove from a group.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2647,6 +3287,16 @@
                     "type": "String",
                     "info": "User name.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2708,6 +3358,16 @@
                     "info": "The list of issue type ids to further restrict the search.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2762,6 +3422,16 @@
                     "info": "Array of JSON objects, entity properties.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2791,6 +3461,16 @@
                     "type": "Array",
                     "info": "Array of JSON objects, issue updates Object.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2852,6 +3532,16 @@
                     "info": "Update history.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -2881,6 +3571,16 @@
                     "type": "String",
                     "info": "Issue identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -2959,6 +3659,16 @@
                     "type": "Array",
                     "info": "Array of JSON objects, issue properties.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3056,6 +3766,16 @@
                     "info": "Application roles.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3103,6 +3823,16 @@
                     "type": "String",
                     "info": "Optional flags: renderedBody (provides body rendered in HTML).",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3157,6 +3887,16 @@
                     "type": "String",
                     "info": "Visibility value.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3218,6 +3958,16 @@
                     "info": "Visibility value.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3253,6 +4003,16 @@
                     "type": "String",
                     "info": "Comment identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3295,6 +4055,16 @@
                     "type": "String",
                     "info": "Optional flags: renderedBody (provides body rendered in HTML).",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3392,6 +4162,16 @@
                     "info": "Array of JSON objects, restrict groups.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3427,6 +4207,16 @@
                     "type": "String",
                     "info": "The id of the remote issue link to be returned.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3530,6 +4320,16 @@
                     "info": "Remote issue link status icon link.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3566,6 +4366,16 @@
                     "info": "The global id of the remote issue link.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3601,6 +4411,16 @@
                     "type": "String",
                     "info": "Link identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3716,6 +4536,16 @@
                     "info": "Remote issue link status icon link.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3751,6 +4581,16 @@
                     "type": "String",
                     "info": "Link identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3793,6 +4633,16 @@
                     "type": "Boolean",
                     "info": "Flag to skip evaluation of {@link RemoteOnlyCondition}, can only be used by add-on users.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3854,6 +4704,16 @@
                     "info": "Array of JSON objects, issue properties.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3883,6 +4743,16 @@
                     "type": "String",
                     "info": "Issue identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -3914,6 +4784,16 @@
                     "info": "Issue identifier or key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3944,6 +4824,16 @@
                     "info": "Issue identifier or key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -3973,6 +4863,16 @@
                     "type": "String",
                     "info": "Issue identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4010,6 +4910,16 @@
                     "info": "User name.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4045,6 +4955,16 @@
                     "type": "String",
                     "info": "A String containing the name of the user to remove from the watcher list.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4087,6 +5007,16 @@
                     "type": "String",
                     "info": "Comma separated list of parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4172,6 +5102,16 @@
                     "info": "Visibility value.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4207,6 +5147,16 @@
                     "type": "String",
                     "info": "Comma separated list of parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4298,6 +5248,16 @@
                     "info": "Time spent in seconds.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4352,6 +5312,16 @@
                     "info": "The amount to increase the remaining estimate by e.g.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4399,6 +5369,16 @@
                     "type": "String",
                     "info": "Comma-separated list, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4460,6 +5440,16 @@
                     "info": "If set to false and request is executed in context of a subtask, the parent issue will not be included in the auto-completion result, even if it matches the query.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4496,6 +5486,16 @@
                     "info": "Issue attachment file.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4525,6 +5525,16 @@
                     "type": "String",
                     "info": "Issue identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4561,6 +5571,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4604,6 +5624,16 @@
                     "info": "Property value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4640,6 +5670,16 @@
                     "info": "Property key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4675,6 +5715,16 @@
                     "type": "String",
                     "info": "Worklog identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4717,6 +5767,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4766,6 +5826,16 @@
                     "info": "Property value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4807,6 +5877,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4904,6 +5984,16 @@
                     "info": "Array of JSON objects, comment entity property.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4933,6 +6023,16 @@
                     "type": "String",
                     "info": "Link identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -4964,6 +6064,16 @@
                     "info": "Link identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -4987,6 +6097,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5030,6 +6150,16 @@
                     "info": "Outward issues.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5060,6 +6190,16 @@
                     "info": "Issue link type identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5089,6 +6229,16 @@
                     "type": "String",
                     "info": "Issue link type identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5138,6 +6288,16 @@
                     "info": "Outward issues.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5161,6 +6321,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5192,6 +6362,16 @@
                     "info": "Issue security schemes identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5215,6 +6395,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5258,6 +6448,16 @@
                     "info": "Description.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5287,6 +6487,16 @@
                     "type": "String",
                     "info": "Issue type identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5323,6 +6533,16 @@
                     "type": "String",
                     "info": "The identifier of an issue type to which issues associated with the removed issue type will be migrated.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5372,6 +6592,16 @@
                     "info": "Avatar identifier.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5401,6 +6631,16 @@
                     "type": "String",
                     "info": "Issue type identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5456,6 +6696,16 @@
                     "info": "The length of each side of the crop region. The crop region can only be a square.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5485,6 +6735,16 @@
                     "type": "String",
                     "info": "Issue type identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5521,6 +6781,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5564,6 +6834,16 @@
                     "info": "Property value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5600,6 +6880,16 @@
                     "info": "Property key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5623,6 +6913,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5672,6 +6972,16 @@
                     "info": "The portion of the predicate value that has already been provided by the user.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5701,6 +7011,16 @@
                     "type": "String",
                     "info": "Key of the preference to be returned.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5738,6 +7058,16 @@
                     "info": "Preference value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5768,6 +7098,16 @@
                     "info": "Key of the preference to be removed.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5791,6 +7131,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5834,6 +7184,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5870,6 +7230,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5899,6 +7269,16 @@
                     "type": "String",
                     "info": "The parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -5948,6 +7328,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -5984,6 +7374,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6013,6 +7413,16 @@
                     "type": "String",
                     "info": "Scheme identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6068,6 +7478,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6103,6 +7523,16 @@
                     "type": "String",
                     "info": "The parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6158,6 +7588,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6193,6 +7633,16 @@
                     "type": "String",
                     "info": "Permission identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6236,6 +7686,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6259,6 +7719,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6289,6 +7759,16 @@
                     "type": "String",
                     "info": "Priority identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6325,6 +7805,16 @@
                     "type": "Number",
                     "info": "If this parameter is set then only projects recently accessed by the current user.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6427,6 +7917,16 @@
                     "type": "Number",
                     "info": "Category identifier.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6542,6 +8042,16 @@
                     "info": "Category identifier.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6571,6 +8081,16 @@
                     "type": "String",
                     "info": "Project identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6607,6 +8127,16 @@
                     "type": "String",
                     "info": "The parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6680,6 +8210,16 @@
                     "info": "JSON Object, urls.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6715,6 +8255,16 @@
                     "type": "String",
                     "info": "Avatar identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6770,6 +8320,16 @@
                     "info": "The length of each side of the crop region. The crop region can only be a square.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6800,6 +8360,16 @@
                     "info": "Project identifier or key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6829,6 +8399,16 @@
                     "type": "String",
                     "info": "Project identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6865,6 +8445,16 @@
                     "type": "String",
                     "info": "New project type key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6920,6 +8510,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -6949,6 +8549,16 @@
                     "type": "String",
                     "info": "Project identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -6985,6 +8595,16 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7028,6 +8648,16 @@
                     "info": "Property value.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7064,6 +8694,16 @@
                     "info": "Property key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7093,6 +8733,16 @@
                     "type": "String",
                     "info": "Project identifier or key.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7129,6 +8779,16 @@
                     "type": "String",
                     "info": "Role identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7172,6 +8832,16 @@
                     "info": "JSON Object, categorised actors.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7213,6 +8883,16 @@
                     "type": "String",
                     "info": "Categorised actors.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7262,6 +8942,16 @@
                     "info": "The groupname to remove from the project role.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7291,6 +8981,16 @@
                     "type": "String",
                     "info": "Project key or identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7328,6 +9028,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7363,6 +9073,16 @@
                     "type": "String",
                     "info": "The parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7406,6 +9126,16 @@
                     "info": "The parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7436,6 +9166,16 @@
                     "info": "Project key or identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7459,6 +9199,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7490,6 +9240,16 @@
                     "info": "Project type key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7520,6 +9280,16 @@
                     "info": "Project type key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7543,6 +9313,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7580,6 +9360,16 @@
                     "info": "Project category description.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7610,6 +9400,16 @@
                     "info": "Project category identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7639,6 +9439,16 @@
                     "type": "String",
                     "info": "Project category identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7682,6 +9492,16 @@
                     "info": "Project category description.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7712,6 +9532,16 @@
                     "info": "The project key.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7735,6 +9565,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7766,6 +9606,16 @@
                     "info": "Resolution identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7789,6 +9639,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7826,6 +9686,16 @@
                     "info": "Project role description.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7855,6 +9725,16 @@
                     "type": "String",
                     "info": "Role identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -7898,6 +9778,16 @@
                     "info": "Project role description.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7934,6 +9824,16 @@
                     "info": "If given, removes a role even if it is used in scheme by replacing the role with the given one.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -7963,6 +9863,16 @@
                     "type": "String",
                     "info": "Role identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8006,6 +9916,16 @@
                     "info": "Comma separated list of groups.  ",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8048,6 +9968,16 @@
                     "info": "If given, removes an actor from given role.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8077,6 +10007,16 @@
                     "type": "String",
                     "info": "Screen identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8114,6 +10054,16 @@
                     "info": "The key of the project.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8149,6 +10099,16 @@
                     "type": "String",
                     "info": "Tab name.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8192,6 +10152,16 @@
                     "info": "Tab name.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8227,6 +10197,16 @@
                     "type": "String",
                     "info": "Tab identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8270,6 +10250,16 @@
                     "info": "The key of the project.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8312,6 +10302,16 @@
                     "info": "Field identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8353,6 +10353,16 @@
                     "type": "String",
                     "info": "Field identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8402,6 +10412,16 @@
                     "info": "A field to place this field after. The value should be the self link of another field.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8450,6 +10470,16 @@
                     "info": "An absolute position, one of \"Earlier\", \"Later\", \"First\", \"Last\".",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8492,6 +10522,16 @@
                     "info": "New screen tab position.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8521,6 +10561,16 @@
                     "type": "String",
                     "info": "Field identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8588,6 +10638,16 @@
                     "info": "Max retrieving results.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8617,6 +10677,16 @@
                     "type": "String",
                     "info": "Security level identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8648,6 +10718,16 @@
                     "info": "Do health check.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8678,6 +10758,16 @@
                     "info": "Base URL.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8701,6 +10791,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8732,6 +10832,16 @@
                     "info": "Comma separated list of columns.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8755,6 +10865,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8786,6 +10906,16 @@
                     "info": "Identifier or name of status.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8809,6 +10939,16 @@
                     "type": "String",
                     "info": "Name of JIRA.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8839,6 +10979,16 @@
                     "type": "String",
                     "info": "Identifier or key of status category.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8900,6 +11050,16 @@
                     "info": "The length of each side of the crop region. The crop region can only be a square.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -8935,6 +11095,16 @@
                     "type": "String",
                     "info": "Universal avatar owning object identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -8978,6 +11148,16 @@
                     "info": "Avatar identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9019,6 +11199,16 @@
                     "type": "String",
                     "info": "Expand result, use \"groups\", \"applicationRoles\".",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9067,6 +11257,16 @@
                     "type": "Number",
                     "info": "The maximum number of users to return.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9128,6 +11328,16 @@
                     "info": "Action descriptor identifier.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9157,6 +11367,16 @@
                     "type": "String",
                     "info": "Username.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9188,6 +11408,16 @@
                     "info": "Comma separated list of columns.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9217,6 +11447,16 @@
                     "type": "String",
                     "info": "Username.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9278,6 +11518,16 @@
                     "info": "The maximum number of users to return.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9337,6 +11587,16 @@
                     "type": "Number",
                     "info": "The maximum number of users to return.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9398,6 +11658,16 @@
                     "info": "The maximum number of users to return.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9452,6 +11722,16 @@
                     "info": "The maximum number of users to return.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9482,6 +11762,16 @@
                     "info": "Key of the user whose properties are to be returned.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9511,6 +11801,16 @@
                     "type": "String",
                     "info": "Username of the user whose properties are to be returned.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9548,6 +11848,16 @@
                     "info": "Key of the user whose property is to be removed.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9583,6 +11893,16 @@
                     "type": "String",
                     "info": "Username of the user whose property is to be removed.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9626,6 +11946,16 @@
                     "info": "Key of the user whose property is to be set.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9668,6 +11998,16 @@
                     "info": "Username of the user whose property is to be set.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9704,6 +12044,16 @@
                     "info": "Key of the user whose property is to be returned.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9739,6 +12089,16 @@
                     "type": "String",
                     "info": "Username of the user whose property is to be returned.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9824,6 +12184,16 @@
                     "info": "Array of JSON objects, remote Entity Links.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9859,6 +12229,16 @@
                     "type": "String",
                     "info": "A version to place this version after. The value should be the self link of another version.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -9896,6 +12276,16 @@
                     "info": "An absolute position, one of \"Earlier\",\"Later\",\"First\",\"Last\".",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -9931,6 +12321,16 @@
                     "type": "String",
                     "info": "Expand parameters.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10040,6 +12440,16 @@
                     "info": "Array of JSON objects, remote Entity Links.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10082,6 +12492,16 @@
                     "info": "The version to set affectedVersion to on issues where the deleted version is the affected version.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10118,6 +12538,16 @@
                     "info": "Move issues to.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10147,6 +12577,16 @@
                     "type": "String",
                     "info": "Version identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10178,6 +12618,16 @@
                     "info": "Version identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10207,6 +12657,16 @@
                     "type": "String",
                     "info": "Version identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10262,6 +12722,16 @@
                     "info": "Array of Strings, notes.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10316,6 +12786,16 @@
                     "info": "Array of Strings, notes.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10345,6 +12825,16 @@
                     "type": "String",
                     "info": "Version identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10382,6 +12872,16 @@
                     "info": "Remote link global identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10418,6 +12918,16 @@
                     "info": "Remote link global identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10448,6 +12958,16 @@
                     "info": "The global ID of the remote resource that is linked to the versions.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10477,6 +12997,16 @@
                     "type": "String",
                     "info": "Workflow name.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10525,6 +13055,16 @@
                     "type": "String",
                     "info": "The type of workflow to use. One of \"live\", \"draft\".",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10580,6 +13120,16 @@
                     "info": "The type of workflow to use. One of \"live\", \"draft\".",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10634,6 +13184,16 @@
                     "info": "The type of workflow to use. One of \"live\", \"draft\".",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10687,6 +13247,16 @@
                     "type": "Boolean",
                     "info": "Set this to true in order to include the non-editable keys in the response.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10778,6 +13348,16 @@
                     "info": "JSON Object, issue types.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10807,6 +13387,16 @@
                     "type": "String",
                     "info": "Workflow scheme identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10843,6 +13433,16 @@
                     "type": "Boolean",
                     "info": "When true indicates that a scheme's draft.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -10940,6 +13540,16 @@
                     "info": "JSON Object, issue types.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -10969,6 +13579,16 @@
                     "type": "String",
                     "info": "Workflow scheme identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11005,6 +13625,16 @@
                     "type": "Boolean",
                     "info": "When true will create and return a draft when the workflow scheme cannot be edited.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11048,6 +13678,16 @@
                     "info": "If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11084,6 +13724,16 @@
                     "info": "When true indicates that a scheme's draft.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11114,6 +13764,16 @@
                     "info": "Workflow scheme identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11143,6 +13803,16 @@
                     "type": "String",
                     "info": "Workflow scheme identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11240,6 +13910,16 @@
                     "info": "JSON Object, issue types.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11270,6 +13950,16 @@
                     "info": "Workflow scheme identifier.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11299,6 +13989,16 @@
                     "type": "String",
                     "info": "Workflow scheme identifier.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11342,6 +14042,16 @@
                     "info": "If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11378,6 +14088,16 @@
                     "info": "Issue type.",
                     "required": true
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11413,6 +14133,16 @@
                     "type": "String",
                     "info": "Issue type.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11462,6 +14192,16 @@
                     "info": "If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11498,6 +14238,16 @@
                     "info": "The workflow mapping to return.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11533,6 +14283,16 @@
                     "type": "String",
                     "info": "The name of the workflow to delete.",
                     "required": true
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11594,6 +14354,16 @@
                     "info": "Use default mapping.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11636,6 +14406,16 @@
                     "info": "When true indicates that a scheme's draft.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11677,6 +14457,16 @@
                     "type": "Boolean",
                     "info": "When true will create and return a draft when the workflow scheme cannot be edited.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11726,6 +14516,16 @@
                     "info": "If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11768,6 +14568,16 @@
                     "info": "When true indicates that a scheme's draft.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11809,6 +14619,16 @@
                     "type": "Boolean",
                     "info": "Flag to indicate if a draft should be created if necessary to delete the workflowfrom the scheme.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11870,6 +14690,16 @@
                     "info": "Default mapping.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11899,6 +14729,16 @@
                     "type": "Number",
                     "info": "A date time in unix timestamp format since when deleted worklogs will be returned.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         },
@@ -11936,6 +14776,16 @@
                     "info": "Comma-separated list of parameters to expand.",
                     "required": false
                 }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
+                }
             ]
         },
         {
@@ -11971,6 +14821,16 @@
                     "type": "String",
                     "info": "Optional comma-separated list of parameters to expand.",
                     "required": false
+                }
+            ],
+            "callbacks": [
+                {
+                    "name": "error",
+                    "info": "Error"
+                },
+                {
+                    "name": "success",
+                    "info": "Success"
                 }
             ]
         }
