@@ -10548,13 +10548,13 @@ return array (
                     'name' => 'key',
                     'type' => 'String',
                     'info' => 'The name of the property to add.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow to use.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflowMode',
@@ -10608,7 +10608,7 @@ return array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow to use.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflowMode',
@@ -10662,7 +10662,7 @@ return array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow to use.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflowMode',
@@ -10914,7 +10914,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'New workflow scheme name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'description',
@@ -11214,7 +11214,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'Updated workflow scheme name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'description',
@@ -11604,13 +11604,13 @@ return array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow mapping to update.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflow',
                     'type' => 'String',
                     'info' => 'Workflow name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'issueTypes',
@@ -11754,7 +11754,7 @@ return array (
                     'name' => 'workflow',
                     'type' => 'String',
                     'info' => 'Workflow name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'updateDraftIfNeeded',
@@ -11880,13 +11880,13 @@ return array (
                     'name' => 'workflowName',
                     'type' => 'String',
                     'info' => 'The name of the workflow mapping to update.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workflow',
                     'type' => 'String',
                     'info' => 'Workflow name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'issueTypes',

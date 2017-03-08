@@ -10512,13 +10512,13 @@
                     "name": "key",
                     "type": "String",
                     "info": "The name of the property to add.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow to use.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflowMode",
@@ -10572,7 +10572,7 @@
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow to use.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflowMode",
@@ -10626,7 +10626,7 @@
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow to use.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflowMode",
@@ -10878,7 +10878,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "New workflow scheme name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
@@ -11178,7 +11178,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "Updated workflow scheme name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
@@ -11568,13 +11568,13 @@
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow mapping to update.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflow",
                     "type": "String",
                     "info": "Workflow name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "issueTypes",
@@ -11718,7 +11718,7 @@
                     "name": "workflow",
                     "type": "String",
                     "info": "Workflow name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "updateDraftIfNeeded",
@@ -11844,13 +11844,13 @@
                     "name": "workflowName",
                     "type": "String",
                     "info": "The name of the workflow mapping to update.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workflow",
                     "type": "String",
                     "info": "Workflow name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "issueTypes",
