@@ -459,124 +459,6 @@
             ]
         },
         {
-            "name": "addAuditingRecord",
-            "description": "Store a record in Audit Log.",
-            "args": [
-                {
-                    "name": "jiraUsername",
-                    "type": "credentials",
-                    "info": "Username in JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "jiraPassword",
-                    "type": "credentials",
-                    "info": "Password in JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "jiraName",
-                    "type": "String",
-                    "info": "Name of JIRA.",
-                    "required": true
-                },
-                {
-                    "name": "remoteAddress",
-                    "type": "String",
-                    "info": "Record remote address.",
-                    "required": false
-                },
-                {
-                    "name": "authorKey",
-                    "type": "String",
-                    "info": "Record authorkey.",
-                    "required": false
-                },
-                {
-                    "name": "eventSource",
-                    "type": "String",
-                    "info": "Record event source.",
-                    "required": false
-                },
-                {
-                    "name": "description",
-                    "type": "String",
-                    "info": "Record description.",
-                    "required": false
-                },
-                {
-                    "name": "summary",
-                    "type": "String",
-                    "info": "Record summary.",
-                    "required": false
-                },
-                {
-                    "name": "created",
-                    "type": "String",
-                    "info": "Record created.",
-                    "required": false
-                },
-                {
-                    "name": "category",
-                    "type": "String",
-                    "info": "Record category.",
-                    "required": false
-                },
-                {
-                    "name": "objectItemId",
-                    "type": "String",
-                    "info": "Record ObjectItem identifier.",
-                    "required": false
-                },
-                {
-                    "name": "objectItemName",
-                    "type": "String",
-                    "info": "Record ObjectItem name.",
-                    "required": false
-                },
-                {
-                    "name": "objectItemTypeName",
-                    "type": "String",
-                    "info": "Record ObjectItem type name.",
-                    "required": false
-                },
-                {
-                    "name": "objectItemParentId",
-                    "type": "String",
-                    "info": "Record ObjectItem parent identifier.",
-                    "required": false
-                },
-                {
-                    "name": "objectItemParentName",
-                    "type": "String",
-                    "info": "Record ObjectItem parent name.",
-                    "required": false
-                },
-                {
-                    "name": "changedValues",
-                    "type": "Array",
-                    "info": "Array of JSON objects, record changed values.",
-                    "required": false
-                },
-                {
-                    "name": "associatedItems",
-                    "type": "Array",
-                    "info": "Array of JSON objects, record associated items.",
-                    "required": false
-                }
-            ],
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
             "name": "getAllSystemAvatars",
             "description": "Returns all system avatars of the given type.",
             "args": [
@@ -1380,25 +1262,25 @@
                     "name": "workingHoursPerDay",
                     "type": "Number",
                     "info": "Working hours per day.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "workingDaysPerWeek",
                     "type": "Number",
                     "info": "Working days per week.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "timeFormat",
                     "type": "String",
                     "info": "Time format. One of \"pretty\",\"days\",\"hours\".",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "defaultUnit",
                     "type": "String",
                     "info": "Default unit. One of \"minute\",\"hour\",\"day\",\"week\".",
-                    "required": false
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -1681,6 +1563,12 @@
                     "type": "String",
                     "info": "Property key.",
                     "required": true
+                },
+                {
+                    "name": "propertyValue",
+                    "type": "String",
+                    "info": "Property value.",
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -1775,15 +1663,15 @@
                     "required": true
                 },
                 {
-                    "name": "description",
-                    "type": "String",
-                    "info": "Custom field description.",
-                    "required": false
-                },
-                {
                     "name": "type",
                     "type": "String",
                     "info": "Custom field type.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Custom field description.",
                     "required": false
                 },
                 {
@@ -2267,15 +2155,15 @@
                     "required": true
                 },
                 {
-                    "name": "description",
-                    "type": "String",
-                    "info": "New filter description.",
-                    "required": false
-                },
-                {
                     "name": "jql",
                     "type": "String",
                     "info": "New filter Jql string.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "New filter description.",
                     "required": false
                 },
                 {
@@ -2597,6 +2485,12 @@
                     "type": "String",
                     "info": "Filter identifier.",
                     "required": true
+                },
+                {
+                    "name": "columns",
+                    "type": "String",
+                    "info": "Comma separated list of columns.",
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -2722,7 +2616,7 @@
                     "name": "type",
                     "type": "String",
                     "info": "Filter type.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "groupname",
@@ -2906,7 +2800,7 @@
                     "name": "scope",
                     "type": "String",
                     "info": "Share scope. One of \"GLOBAL\",\"AUTHENTICATED\",\"PRIVATE\".",
-                    "required": false
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -3326,7 +3220,7 @@
                     "name": "query",
                     "type": "String",
                     "info": "A string used to search username, Name or e-mail address.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "maxResults",
@@ -3393,15 +3287,15 @@
                     "required": true
                 },
                 {
-                    "name": "update",
-                    "type": "JSON",
-                    "info": "JSON Object, update.",
-                    "required": false
-                },
-                {
                     "name": "fields",
                     "type": "JSON",
                     "info": "JSON Object, new issue fields.",
+                    "required": true
+                },
+                {
+                    "name": "update",
+                    "type": "JSON",
+                    "info": "JSON Object, update.",
                     "required": false
                 },
                 {
@@ -3460,7 +3354,7 @@
                     "name": "issueUpdates",
                     "type": "Array",
                     "info": "Array of JSON objects, issue updates Object.",
-                    "required": false
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -3613,6 +3507,12 @@
                     "required": true
                 },
                 {
+                    "name": "update",
+                    "type": "JSON",
+                    "info": "JSON Object, update properties.",
+                    "required": true
+                },
+                {
                     "name": "notifyUsers",
                     "type": "Boolean",
                     "info": "Send the email with notification that the issue was updated to users that watch it.",
@@ -3640,12 +3540,6 @@
                     "name": "fields",
                     "type": "JSON",
                     "info": "JSON Object, fields properties.",
-                    "required": false
-                },
-                {
-                    "name": "update",
-                    "type": "JSON",
-                    "info": "JSON Object, update properties.",
                     "required": false
                 },
                 {
@@ -3865,15 +3759,15 @@
                     "required": true
                 },
                 {
-                    "name": "expand",
-                    "type": "String",
-                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
-                    "required": false
-                },
-                {
                     "name": "body",
                     "type": "String",
                     "info": "Comment body.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
                     "required": false
                 },
                 {
@@ -3935,15 +3829,15 @@
                     "required": true
                 },
                 {
-                    "name": "expand",
-                    "type": "String",
-                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
-                    "required": false
-                },
-                {
                     "name": "body",
                     "type": "String",
                     "info": "Comment body.",
+                    "required": true
+                },
+                {
+                    "name": "expand",
+                    "type": "String",
+                    "info": "Optional flags: renderedBody (provides body rendered in HTML).",
                     "required": false
                 },
                 {
@@ -4676,8 +4570,8 @@
                 },
                 {
                     "name": "transition",
-                    "type": "JSON",
-                    "info": "JSON Object, issue transition.",
+                    "type": "Number",
+                    "info": "Issue transition.",
                     "required": true
                 },
                 {
@@ -5195,6 +5089,12 @@
                     "required": true
                 },
                 {
+                    "name": "timeSpentSeconds",
+                    "type": "Number",
+                    "info": "Time spent in seconds.",
+                    "required": true
+                },
+                {
                     "name": "adjustEstimate",
                     "type": "String",
                     "info": "Allows you to provide specific instructions to update the remaining time estimate of the issue.",
@@ -5240,12 +5140,6 @@
                     "name": "started",
                     "type": "String",
                     "info": "Started. Example \"2017-02-21T01:03:28.187+0000\".",
-                    "required": false
-                },
-                {
-                    "name": "timeSpentSeconds",
-                    "type": "Number",
-                    "info": "Time spent in seconds.",
                     "required": false
                 }
             ],

@@ -82,6 +82,16 @@ class CustomModel
 
         return json_encode($result);
     }
+    public static function setFilterDefaultColumns($param, &$blockCustom, $vendorUrl){
+        $result = [];
+        $columns = explode(',', trim($param['columns']));
+        if(count($columns)>0){
+            $result['columns'] = [];
+            foreach ($columns as $oneColumn) $result['columns'][] = trim($oneColumn);
+        }
+
+        return json_encode($result);
+    }
     public static function getIssueComments($param, &$blockCustom, $vendorUrl){
         $result = $param;
         $result['orderBy'] = 'created';

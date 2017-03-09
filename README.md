@@ -115,29 +115,6 @@ Returns auditing records filtered using provided parameters.
 | from        | String     | Timestamp in past. 'from' must be less or equal 'to'
 | to          | String     | Timestamp in past; 'from' must be less or equal 'to'.
 
-## JIRA.addAuditingRecord
-Store a record in Audit Log.
-
-| Field               | Type       | Description
-|---------------------|------------|----------
-| jiraUsername        | credentials| Username in JIRA.
-| jiraPassword        | credentials| Password in JIRA.
-| jiraName            | String     | Name of JIRA.
-| remoteAddress       | String     | Record remote address.
-| authorKey           | String     | Record authorkey.
-| eventSource         | String     | Record event source.
-| description         | String     | Record description.
-| summary             | String     | Record summary.
-| created             | String     | Record created.
-| category            | String     | Record category.
-| objectItemId        | String     | Record ObjectItem identifier.
-| objectItemName      | String     | Record ObjectItem name.
-| objectItemTypeName  | String     | Record ObjectItem type name.
-| objectItemParentId  | String     | Record ObjectItem parent identifier.
-| objectItemParentName| String     | Record ObjectItem parent name.
-| changedValues       | Array      | Array of JSON objects, record changed values.
-| associatedItems     | Array      | Array of JSON objects, record associated items.
-
 #### Example of 'changedValues' field
 ```json
 [{

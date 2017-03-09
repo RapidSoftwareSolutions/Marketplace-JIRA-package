@@ -362,114 +362,6 @@ return array (
             ),
         ),
         array (
-            'name' => 'addAuditingRecord',
-            'description' => 'Store a record in Audit Log.',
-            'args' => array (
-                array (
-                    'name' => 'jiraUsername',
-                    'type' => 'credentials',
-                    'info' => 'Username in JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'jiraPassword',
-                    'type' => 'credentials',
-                    'info' => 'Password in JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'jiraName',
-                    'type' => 'String',
-                    'info' => 'Name of JIRA.',
-                    'required' => true,
-                ),
-                array (
-                    'name' => 'remoteAddress',
-                    'type' => 'String',
-                    'info' => 'Record remote address.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'authorKey',
-                    'type' => 'String',
-                    'info' => 'Record authorkey.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'eventSource',
-                    'type' => 'String',
-                    'info' => 'Record event source.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'description',
-                    'type' => 'String',
-                    'info' => 'Record description.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'summary',
-                    'type' => 'String',
-                    'info' => 'Record summary.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'created',
-                    'type' => 'String',
-                    'info' => 'Record created.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'category',
-                    'type' => 'String',
-                    'info' => 'Record category.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'objectItemId',
-                    'type' => 'String',
-                    'info' => 'Record ObjectItem identifier.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'objectItemName',
-                    'type' => 'String',
-                    'info' => 'Record ObjectItem name.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'objectItemTypeName',
-                    'type' => 'String',
-                    'info' => 'Record ObjectItem type name.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'objectItemParentId',
-                    'type' => 'String',
-                    'info' => 'Record ObjectItem parent identifier.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'objectItemParentName',
-                    'type' => 'String',
-                    'info' => 'Record ObjectItem parent name.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'changedValues',
-                    'type' => 'Array',
-                    'info' => 'Array of JSON objects, record changed values.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'associatedItems',
-                    'type' => 'Array',
-                    'info' => 'Array of JSON objects, record associated items.',
-                    'required' => false,
-                ),
-            ),
-        ),
-        array (
             'name' => 'getAllSystemAvatars',
             'description' => 'Returns all system avatars of the given type.',
             'args' => array (
@@ -1113,25 +1005,25 @@ return array (
                     'name' => 'workingHoursPerDay',
                     'type' => 'Number',
                     'info' => 'Working hours per day.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'workingDaysPerWeek',
                     'type' => 'Number',
                     'info' => 'Working days per week.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'timeFormat',
                     'type' => 'String',
                     'info' => 'Time format. One of "pretty","days","hours".',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'defaultUnit',
                     'type' => 'String',
                     'info' => 'Default unit. One of "minute","hour","day","week".',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -1355,6 +1247,12 @@ return array (
                     'info' => 'Property key.',
                     'required' => true,
                 ),
+                array (
+                    'name' => 'propertyValue',
+                    'type' => 'String',
+                    'info' => 'Property value.',
+                    'required' => true,
+                ),
             ),
         ),
         array (
@@ -1428,15 +1326,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'description',
-                    'type' => 'String',
-                    'info' => 'Custom field description.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'type',
                     'type' => 'String',
                     'info' => 'Custom field type.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'description',
+                    'type' => 'String',
+                    'info' => 'Custom field description.',
                     'required' => false,
                 ),
                 array (
@@ -1830,15 +1728,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'description',
-                    'type' => 'String',
-                    'info' => 'New filter description.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'jql',
                     'type' => 'String',
                     'info' => 'New filter Jql string.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'description',
+                    'type' => 'String',
+                    'info' => 'New filter description.',
                     'required' => false,
                 ),
                 array (
@@ -2111,6 +2009,12 @@ return array (
                     'info' => 'Filter identifier.',
                     'required' => true,
                 ),
+                array (
+                    'name' => 'columns',
+                    'type' => 'String',
+                    'info' => 'Comma separated list of columns.',
+                    'required' => true,
+                ),
             ),
         ),
         array (
@@ -2205,7 +2109,7 @@ return array (
                     'name' => 'type',
                     'type' => 'String',
                     'info' => 'Filter type.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'groupname',
@@ -2349,7 +2253,7 @@ return array (
                     'name' => 'scope',
                     'type' => 'String',
                     'info' => 'Share scope. One of "GLOBAL","AUTHENTICATED","PRIVATE".',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -2679,7 +2583,7 @@ return array (
                     'name' => 'query',
                     'type' => 'String',
                     'info' => 'A string used to search username, Name or e-mail address.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'maxResults',
@@ -2736,15 +2640,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'update',
-                    'type' => 'JSON',
-                    'info' => 'JSON Object, update.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'fields',
                     'type' => 'JSON',
                     'info' => 'JSON Object, new issue fields.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'update',
+                    'type' => 'JSON',
+                    'info' => 'JSON Object, update.',
                     'required' => false,
                 ),
                 array (
@@ -2793,7 +2697,7 @@ return array (
                     'name' => 'issueUpdates',
                     'type' => 'Array',
                     'info' => 'Array of JSON objects, issue updates Object.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -2916,6 +2820,12 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'update',
+                    'type' => 'JSON',
+                    'info' => 'JSON Object, update properties.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'notifyUsers',
                     'type' => 'Boolean',
                     'info' => 'Send the email with notification that the issue was updated to users that watch it.',
@@ -2943,12 +2853,6 @@ return array (
                     'name' => 'fields',
                     'type' => 'JSON',
                     'info' => 'JSON Object, fields properties.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'update',
-                    'type' => 'JSON',
-                    'info' => 'JSON Object, update properties.',
                     'required' => false,
                 ),
                 array (
@@ -3138,15 +3042,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'expand',
-                    'type' => 'String',
-                    'info' => 'Optional flags: renderedBody (provides body rendered in HTML).',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'body',
                     'type' => 'String',
                     'info' => 'Comment body.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'expand',
+                    'type' => 'String',
+                    'info' => 'Optional flags: renderedBody (provides body rendered in HTML).',
                     'required' => false,
                 ),
                 array (
@@ -3198,15 +3102,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'expand',
-                    'type' => 'String',
-                    'info' => 'Optional flags: renderedBody (provides body rendered in HTML).',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'body',
                     'type' => 'String',
                     'info' => 'Comment body.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'expand',
+                    'type' => 'String',
+                    'info' => 'Optional flags: renderedBody (provides body rendered in HTML).',
                     'required' => false,
                 ),
                 array (
@@ -3829,8 +3733,8 @@ return array (
                 ),
                 array (
                     'name' => 'transition',
-                    'type' => 'JSON',
-                    'info' => 'JSON Object, issue transition.',
+                    'type' => 'Number',
+                    'info' => 'Issue transition.',
                     'required' => true,
                 ),
                 array (
@@ -4248,6 +4152,12 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'timeSpentSeconds',
+                    'type' => 'Number',
+                    'info' => 'Time spent in seconds.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'adjustEstimate',
                     'type' => 'String',
                     'info' => 'Allows you to provide specific instructions to update the remaining time estimate of the issue.',
@@ -4293,12 +4203,6 @@ return array (
                     'name' => 'started',
                     'type' => 'String',
                     'info' => 'Started. Example "2017-02-21T01:03:28.187+0000".',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'timeSpentSeconds',
-                    'type' => 'Number',
-                    'info' => 'Time spent in seconds.',
                     'required' => false,
                 ),
             ),
@@ -12137,30 +12041,6 @@ return array (
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/auditing/record',
             'method' => 'GET',
         ),
-        'addAuditingRecord' => array (
-            'dictionary' => array (
-                'jiraUsername' => 'jiraUsername',
-                'jiraPassword' => 'jiraPassword',
-                'jiraName' => 'jiraName',
-                'remoteAddress' => 'remoteAddress',
-                'authorKey' => 'authorKey',
-                'eventSource' => 'eventSource',
-                'description' => 'description',
-                'summary' => 'summary',
-                'created' => 'created',
-                'category' => 'category',
-                'objectItemId' => 'id',
-                'objectItemName' => 'name',
-                'objectItemTypeName' => 'typeName',
-                'objectItemParentId' => 'parentId',
-                'objectItemParentName' => 'parentName',
-                'changedValues' => 'changedValues',
-                'associatedItems' => 'associatedItems',
-            ),
-            'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/auditing/record',
-            'method' => 'POST',
-            'custom' => true,
-        ),
         'getAllSystemAvatars' => array (
             'dictionary' => array (
                 'jiraUsername' => 'jiraUsername',
@@ -12429,6 +12309,7 @@ return array (
                 'dashboardId' => 'dashboardId',
                 'itemId' => 'itemId',
                 'propertyKey' => 'propertyKey',
+                'propertyValue' => 'value',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/dashboard/{{dashboardId}}/items/{{itemId}}/properties/{{propertyKey}}',
             'method' => 'PUT',
@@ -12659,9 +12540,11 @@ return array (
                 'jiraPassword' => 'jiraPassword',
                 'jiraName' => 'jiraName',
                 'filterId' => 'filterId',
+                'columns' => 'columns',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/filter/{{filterId}}/columns',
             'method' => 'PUT',
+            'custom' => true,
         ),
         'resetFilterDefaultColumns' => array (
             'dictionary' => array (
