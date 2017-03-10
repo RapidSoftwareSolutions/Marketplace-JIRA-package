@@ -1,0 +1,2908 @@
+{
+	"name": "JIRA",
+	"description": "Jira is used for issue tracking and project management by over 25,000 customers in 122 countries around the globe.",
+	"connect": {
+		"username": "qa-project",
+		"password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+	},
+	"dependencies": {
+
+	},
+	"blocks": [
+		{
+			"name": "getScreenFieldsToAdd",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getAllScreenTabs",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "projectKey",
+					"value": "{{projectKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "addScreenTab",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-screen-tab"
+				}
+			]
+		}, 		
+		{
+			"name": "renameScreenTab",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-screen-tab"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteScreenTab",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "getAllScreenFields",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "projectKey",
+					"value": "{{projectKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "addScreenField",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				},
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				},
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				},
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				},
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				},
+				{
+					"key": "fieldId",
+					"value": "{{fieldId}}"
+				}
+			]
+		},
+		{
+			"name": "removeScreenField",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "fieldId",
+					"value": "{{fieldId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "moveScreenFieldByNeighbours",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "fieldId",
+					"value": "{{fieldId}}"
+				}, 			
+				{
+					"key": "after",
+					"value": "{{fieldId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "moveScreenFieldByPosition",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "fieldId",
+					"value": "{{fieldId}}"
+				}, 			
+				{
+					"key": "position",
+					"value": "Last"
+				}
+			]
+		}, 		
+		{
+			"name": "moveScreenTab",
+			"note": "From addScreenTab",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "screenId",
+					"value": "{{screenId}}"
+				}, 			
+				{
+					"key": "tabId",
+					"value": "{{tabId}}"
+				}, 			
+				{
+					"key": "position",
+					"value": "Last"
+				}
+			]
+		}, 		
+		{
+			"name": "addFieldToDefaultScreen",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldId",
+					"value": "{{fieldId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "search",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "jql",
+					"value": "type=task"
+				}, 			
+				{
+					"key": "fieldsByKeys",
+					"value": ""
+				}, 			
+				{
+					"key": "validateQuery",
+					"value": ""
+				}, 			
+				{
+					"key": "fields",
+					"value": ""
+				}, 			
+				{
+					"key": "properties",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getIssuesecuritylevel",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "securityLevelId",
+					"value": "{{securityLevelId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getServerInfo",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "doHealthCheck",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "setBaseURL",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "value",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueNavigatorDefaultColumns",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "setIssueNavigatorDefaultColumns",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "columns",
+					"value": "assignee"
+				}
+			]
+		}, 		
+		{
+			"name": "getStatuses",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleStatus",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "idOrName",
+					"value": "{{idOrName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getStatusCategories",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getStatusCategory",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "idOrKey",
+					"value": "{{idOrKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "createAvatar",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "type",
+					"value": "project"
+				}, 			
+				{
+					"key": "entityId",
+					"value": "{{entityId}}"
+				}, 			
+				{
+					"key": "image",
+					"value": "https://logo.clearbit.com/jira.atlassian.com?s=128"
+				}, 			
+				{
+					"key": "x",
+					"value": ""
+				}, 			
+				{
+					"key": "y",
+					"value": ""
+				}, 			
+				{
+					"key": "size",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getAvatars",
+			"note": "From createAvatar",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "type",
+					"value": "project"
+				}, 			
+				{
+					"key": "owningObjectId",
+					"value": "{{projectKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteAvatar",
+			"note": "500 From createAvatar",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "type",
+					"value": "project"
+				}, 			
+				{
+					"key": "owningObjectId",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "avatarId",
+					"value": "{{avatarId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getUser",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}, 			
+				{
+					"key": "key",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findBulkAssignableUsers",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "projectKeys",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "username",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findAssignableUsers",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "project",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "issueKey",
+					"value": ""
+				}, 			
+				{
+					"key": "username",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "actionDescriptorId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDefaultColumns",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "setColumns",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "columns",
+					"value": "assignee"
+				}
+			]
+		}, 		
+		{
+			"name": "resetDefaultColumns",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "findUsersWithAllPermissions",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "permissions",
+					"value": "ADMINISTER"
+				}, 			
+				{
+					"key": "projectKey",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "issueKey",
+					"value": ""
+				}, 			
+				{
+					"key": "username",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findUsersByProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "property",
+					"value": "name=admin"
+				}, 			
+				{
+					"key": "username",
+					"value": ""
+				}, 			
+				{
+					"key": "includeActive",
+					"value": ""
+				}, 			
+				{
+					"key": "includeInactive",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findUsersByUsername",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}, 			
+				{
+					"key": "property",
+					"value": ""
+				}, 			
+				{
+					"key": "includeActive",
+					"value": ""
+				}, 			
+				{
+					"key": "includeInactive",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findUsersWithBrowsePermission",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}, 			
+				{
+					"key": "projectKey",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "issueKey",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getUserPropertiesKeysByUserKey",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "userKey",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "getUserPropertiesKeysByUsername",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteUserPropertyByUserKey",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "1"
+				}, 			
+				{
+					"key": "userKey",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteUserPropertyByUsername",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "1"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "setUserPropertyByUserKey",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test-property-key"
+				}, 			
+				{
+					"key": "propertyValue",
+					"value": "test-property-key-value"
+				}, 			
+				{
+					"key": "userKey",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "setUserPropertyByUsername",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test-property-key"
+				}, 			
+				{
+					"key": "propertyValue",
+					"value": "test-property-key-value"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "getUserPropertyByUserKey",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test-property-key"
+				}, 			
+				{
+					"key": "userKey",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "getUserPropertyByUsername",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test-property-key"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "createVersion",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-version"
+				}, 			
+				{
+					"key": "project",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "archived",
+					"value": ""
+				}, 			
+				{
+					"key": "released",
+					"value": ""
+				}, 			
+				{
+					"key": "releaseDate",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "userStartDate",
+					"value": ""
+				}, 			
+				{
+					"key": "operations",
+					"value": ""
+				}, 			
+				{
+					"key": "remotelinks",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "moveVersionByNeighbours",
+			"note": "From createVersion",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "after",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "moveVersionByPosition",
+			"note": "From createVersion",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "position",
+					"value": "Last"
+				}
+			]
+		}, 		
+		{
+			"name": "getVersion",
+			"note": "From createVersion",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateVersion",
+			"note": "From createVersion",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-version"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "archived",
+					"value": ""
+				}, 			
+				{
+					"key": "released",
+					"value": ""
+				}, 			
+				{
+					"key": "releaseDate",
+					"value": ""
+				}, 			
+				{
+					"key": "overdue",
+					"value": ""
+				}, 			
+				{
+					"key": "project",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "userStartDate",
+					"value": ""
+				}, 			
+				{
+					"key": "userReleaseDate",
+					"value": ""
+				}, 			
+				{
+					"key": "moveUnfixedIssuesTo",
+					"value": ""
+				}, 			
+				{
+					"key": "operations",
+					"value": ""
+				}, 			
+				{
+					"key": "remotelinks",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteVersion",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "1"
+				}, 			
+				{
+					"key": "moveFixIssuesTo",
+					"value": ""
+				}, 			
+				{
+					"key": "moveAffectedIssuesTo",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "mergeVersion",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "moveIssuesTo",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getVersionRelatedIssues",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getVersionUnresolvedIssues",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getRemoteVersionLinksByVersionId",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "createRemoteVersionLink",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{globalId}}"
+				}, 			
+				{
+					"key": "myCustomLinkProperty",
+					"value": ""
+				}, 			
+				{
+					"key": "colors",
+					"value": ""
+				}, 			
+				{
+					"key": "notes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateRemoteVersionLink",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{globalId}}"
+				}, 			
+				{
+					"key": "myCustomLinkProperty",
+					"value": ""
+				}, 			
+				{
+					"key": "colors",
+					"value": ""
+				}, 			
+				{
+					"key": "notes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteRemoteVersionLinks",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getRemoteVersionLink",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{globalId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteSingleRemoteVersionLink",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "versionId",
+					"value": "{{versionId}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{globalId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getRemoteVersionLinks",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{globalId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getAllWorkflows",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "createWorkflowProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "transitionId",
+					"value": "{{transitionId}}"
+				}, 			
+				{
+					"key": "key",
+					"value": "test-workflow-property"
+				}, 			
+				{
+					"key": "value",
+					"value": "test-workflow-property-value"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "workflowMode",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateWorkflowProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "transitionId",
+					"value": "{{transitionId}}"
+				}, 			
+				{
+					"key": "key",
+					"value": "test-workflow-property"
+				}, 			
+				{
+					"key": "value",
+					"value": "test-workflow-property-value"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "workflowMode",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorkflowProperties",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "transitionId",
+					"value": "{{transitionId}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "key",
+					"value": "test-workflow-property"
+				}, 			
+				{
+					"key": "workflowMode",
+					"value": ""
+				}, 			
+				{
+					"key": "includeReservedKeys",
+					"value": ""
+				}
+			]
+		},
+		{
+			"name": "deleteWorkflowProperty",
+			"note": "",
+			"skip": false,
+			"params": [
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				},
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				},
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				},
+				{
+					"key": "transitionId",
+					"value": "{{transitionId}}"
+				},
+				{
+					"key": "key",
+					"value": "test-workflow-property"
+				},
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				},
+				{
+					"key": "workflowMode",
+					"value": ""
+				}
+			]
+		},
+		{
+			"name": "createWorkflowScheme",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-workflow-scheme"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "defaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "originalDefaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "originalIssueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "draft",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModified",
+					"value": ""
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModifiedUser",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteWorkflowScheme",
+			"note": "500",
+			"skip": false,
+			"params": [
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				},
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				},
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				},
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}
+			]
+		},
+		{
+			"name": "getWorkflowScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "returnDraftIfExists",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateWorkflowScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-workflow-scheme"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "defaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}, 			
+				{
+					"key": "originalDefaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "originalIssueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "draft",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModifiedUser",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModified",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "createDraftForScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDefaultWorkflowScheme",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateDefaultWorkflowScheme",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDefaultWorkflowScheme",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "returnDraftIfExists",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDraftWorkflowScheme",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDraftWorkflowScheme",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "updateDraftWorkflowScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test-draft-workflow-scheme"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "defaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}, 			
+				{
+					"key": "originalDefaultWorkflow",
+					"value": ""
+				}, 			
+				{
+					"key": "originalIssueTypeMappings",
+					"value": ""
+				}, 			
+				{
+					"key": "draft",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModified",
+					"value": ""
+				}, 			
+				{
+					"key": "lastModifiedUser",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDefaultDraftWorkflowScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDefaultDraftWorkflowScheme",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "updateDefaultDraftWorkflowScheme",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDraftSchemeIssueType",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "{{issueType}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDraftSchemeIssueType",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "setDraftSchemeIssueType",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getDraftWorkflow",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDraftWorkflowMapping",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "updateDraftWorkflowMapping",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "issueTypes",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}, 			
+				{
+					"key": "defaultMapping",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorkflowSchemeIssueType",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "returnDraftIfExists",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteWorkflowSchemeIssueType",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "setWorkflowSchemeIssueType",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "issueType",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorkflow",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "returnDraftIfExists",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteWorkflow",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "1"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "1"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateWorkflowMapping",
+			"note": "From createWorkflowScheme",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workflowSchemeId",
+					"value": "{{workflowSchemeId}}"
+				}, 			
+				{
+					"key": "workflowName",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "workflow",
+					"value": "{{workflowName}}"
+				}, 			
+				{
+					"key": "issueTypes",
+					"value": "{{issueType}}"
+				}, 			
+				{
+					"key": "updateDraftIfNeeded",
+					"value": ""
+				}, 			
+				{
+					"key": "defaultMapping",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorklogsDeletedSince",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "since",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorklogs",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "ids",
+					"value": "{{worklogId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getWorklogsModifiedSince",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "since",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}
+	]
+}

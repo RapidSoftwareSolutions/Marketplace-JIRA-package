@@ -9907,7 +9907,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'New version name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'description',

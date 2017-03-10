@@ -12260,7 +12260,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "New version name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
