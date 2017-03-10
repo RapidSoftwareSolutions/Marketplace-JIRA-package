@@ -1769,7 +1769,7 @@ Creates an issue type.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | name        | String     | Name.
-| type        | String     | Type.
+| type        | String     | Type, one of subtask, standard.
 | description | String     | Description.
 
 ## JIRA.getSingleIssueType

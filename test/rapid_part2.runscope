@@ -1,0 +1,3343 @@
+{
+  	"name": "JIRA Part 2",
+  	"description": "Jira is used for issue tracking and project management by over 25,000 customers in 122 countries around the globe.",
+  	"version": "1.0", 
+  	"steps": [  
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssuePropertiesKeys", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"propertyKey\": \"issue-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteIssueProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"propertyKey\": \"issue-property\",\r\n\t\"value\": \"issue-property-value\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setIssueProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"propertyKey\": \"issue-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"worklogId\": \"{{worklogId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getWorklogPropertiesKeys", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"worklogId\": \"{{worklogId}}\",\r\n\t\"propertyKey\": \"worklog-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteWorklogProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"worklogId\": \"{{worklogId}}\",\r\n\t\"propertyKey\": \"worklog-property\",\r\n\t\"value\": \"worklog-property-value\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setWorklogProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueIdOrKey\": \"{{issueIdOrKey}}\",\r\n\t\"worklogId\": \"{{worklogId}}\",\r\n\t\"propertyKey\": \"worklog-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getWorklogProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"typeName\": \"Duplicate\",\r\n\t\"typeId\": \"1\",\r\n\t\"typeInward\": \"\",\r\n\t\"typeOutward\": \"\",\r\n\t\"inwardIssue\": \"\",\r\n\t\"outwardIssue\": \"\",\r\n\t\"commentAuthor\": \"\",\r\n\t\"commentBody\": \"\",\r\n\t\"commentRenderedBody\": \"\",\r\n\t\"commentVisibilityType\": \"\",\r\n\t\"commentVisibilityValue\": \"\",\r\n\t\"commentProperties\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createIssueLink", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"linkId\": \"{{linkId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueLink", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"linkId\": \"{{linkId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteIssueLink", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueLinkTypes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"name\": \"issue-link-type\",\r\n\t\"inward\": \"{{issueIdOrKey}}\",\r\n\t\"outward\": \"{{issueIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createIssueLinkType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueLinkTypeId\": \"{{issueLinkTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleIssueLinkType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueLinkType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueLinkTypeId\": \"{{issueLinkTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteSingleIssueLinkType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueLinkType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueLinkTypeId\": \"{{issueLinkTypeId}}\",\r\n\t\"name\": \"issue-link-type\",\r\n\t\"inward\": \"\",\r\n\t\"outward\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateSingleIssueLinkType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueLinkType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueSecuritySchemes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueSecuritySchemesId\": \"{{issueSecuritySchemesId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueSingleSecurityScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getIssueSecuritySchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueAllTypes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"name\": \"test-issue-type\",\r\n\t\"type\": \"subtask\",\r\n\t\"description\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createIssueType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleIssueType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"alternativeIssueTypeId\": \"{{alternativeIssueTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteSingleIssueType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"name\": \"test-issue-type\",\r\n\t\"description\": \"\",\r\n\t\"avatarId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateSingleIssueType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAlternativeIssueTypes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"image\": \"https://logo.clearbit.com/jira.atlassian.com?s=128\",\r\n\t\"x\": \"\",\r\n\t\"y\": \"\",\r\n\t\"size\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createIssueTypeAvatar", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueTypePropertiesKeys", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"propertyKey\": \"issue-type-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteIssueTypeProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"propertyKey\": \"issue-type-property\",\r\n\t\"value\": \"issue-type-property-value\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setIssueTypeProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"issueTypeId\": \"{{issueTypeId}}\",\r\n\t\"propertyKey\": \"issue-type-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueTypeProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createIssueType", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAutoComplete", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"fieldName\": \"\",\r\n\t\"fieldValue\": \"\",\r\n\t\"predicateName\": \"\",\r\n\t\"predicateValue\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getFieldAutoComplete", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"key\": \"test-preference\",\r\n\t\"value\": \"test-preference-value\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setMyPreference", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"key\": \"test-preference\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getMyPreferences", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"key\": \"test-preference\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteMyPreference", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getMe", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"startAt\": \"\",\r\n\t\"maxResults\": \"\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getNotificationSchemes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"notificationSchemeId\": \"{{notificationSchemeId}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleNotificationScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getNotificationSchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"name\": \"test-permission-scheme\",\r\n\t\"permissions\": \"||'holder':|'type':'group','parameter':'administrators'|,'permission':'ADMINISTER_PROJECTS'||\",\r\n\t\"description\": \"\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createPermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "Need json", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getPermissionSchemes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"{{schemeId}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSinglePermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getPermissionSchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"{{schemeId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deletePermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getPermissionSchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"{{schemeId}}\",\r\n\t\"permissions\": \"||'holder':|'type':'group','parameter':'administrators'|,'permission':'ADMINISTER_PROJECTS'||\",\r\n\t\"name\": \"\",\r\n\t\"description\": \"\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updatePermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getPermissionSchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"{{schemeId}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getPermissionSchemeGrants", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getPermissionSchemes", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"1\",\r\n\t\"holderType\": \"group\",\r\n\t\"holderParameter\": \"administrators\",\r\n\t\"permission\": \"TEST_PREMISSION\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createPermissionGrant", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"1\",\r\n\t\"permissionId\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deletePermissionSchemeEntity", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"schemeId\": \"1\",\r\n\t\"permissionId\": \"1\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getPermissionSchemeGrant", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getPriorities", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"priorityId\": \"{{priorityId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSinglePriority", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getPriorities", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"expand\": \"\",\r\n\t\"recent\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAllProjects", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"key\": \"1\",\r\n\t\"name\": \"1\",\r\n\t\"projectTypeKey\": \"1\",\r\n\t\"projectTemplateKey\": \"\",\r\n\t\"description\": \"\",\r\n\t\"lead\": \"\",\r\n\t\"url\": \"\",\r\n\t\"assigneeType\": \"\",\r\n\t\"avatarId\": \"\",\r\n\t\"issueSecurityScheme\": \"\",\r\n\t\"permissionScheme\": \"\",\r\n\t\"notificationScheme\": \"\",\r\n\t\"categoryId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"name\": \"{{projectIdOrKey}}\",\r\n\t\"expand\": \"\",\r\n\t\"key\": \"\",\r\n\t\"projectTypeKey\": \"\",\r\n\t\"projectTemplateKey\": \"\",\r\n\t\"description\": \"\",\r\n\t\"lead\": \"\",\r\n\t\"url\": \"\",\r\n\t\"assigneeType\": \"\",\r\n\t\"avatarId\": \"\",\r\n\t\"issueSecurityScheme\": \"\",\r\n\t\"permissionScheme\": \"\",\r\n\t\"notificationScheme\": \"\",\r\n\t\"categoryId\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"avatarId\": \"{{avatarId}}\",\r\n\t\"owner\": \"\",\r\n\t\"isSystemAvatar\": \"\",\r\n\t\"isSelected\": \"\",\r\n\t\"isDeletable\": \"\",\r\n\t\"selected\": \"\",\r\n\t\"urls\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateProjectAvatar", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"avatarId\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteProjectAvatar", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"image\": \"https://logo.clearbit.com/jira.atlassian.com?s=128\",\r\n\t\"x\": \"\",\r\n\t\"y\": \"\",\r\n\t\"size\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createProjectAvatar", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectComponents", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAllProjectStatuses", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"newProjectTypeKey\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateProjectType", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"startAt\": \"\",\r\n\t\"maxResults\": \"\",\r\n\t\"orderBy\": \"\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectVersionsPaginated", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectPropertiesKeys", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"propertyKey\": \"project-property\",\r\n\t\"value\": \"project-property-value\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setProjectProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"propertyKey\": \"project-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleProjectRoles", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"propertyKey\": \"project-property\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteProjectProperty", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"roleId\": \"{{roleId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectSingleRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"categorisedActors\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/setRoleActors", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"actors\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/addActorToProjectRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectIdOrKey\": \"{{projectIdOrKey}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"user\": \"\",\r\n\t\"group\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteActorFromProjectRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectKeyOrId\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getIssueSecurityScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectKeyOrId\": \"{{projectIdOrKey}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getNotificationScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectKeyOrId\": \"{{projectIdOrKey}}\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAssignedPermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectKeyOrId\": \"{{projectIdOrKey}}\",\r\n\t\"permissionSchemeId\": \"1\",\r\n\t\"expand\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/assignPermissionScheme", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectKeyOrId\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSecurityLevelsForProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAllProjectTypes", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectTypeKey\": \"1\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectTypeByKey", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectTypeKey\": \"{{projectTypeKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAccessibleProjectTypeByKey", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getAllProjectCategories", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"name\": \"test-category\",\r\n\t\"description\": \"test-category-description\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createProjectCategory", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectCategoryId\": \"{{projectCategoryId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectCategoryById", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createProjectCategory", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectCategoryId\": \"{{projectCategoryId}}\",\r\n\t\"name\": \"test-category\",\r\n\t\"description\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateProjectCategory", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createProjectCategory", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"projectCategoryId\": \"{{projectCategoryId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteProjectCategory", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createProjectCategory", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"key\": \"{{projectIdOrKey}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/validateProject", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getResolutions", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"resolutionId\": \"{{resolutionId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getSingleResolution", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From getResolutions", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectRoles", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"name\": \"test-role\",\r\n\t\"description\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/createProjectRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"{{roleId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getProjectRolesById", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "From createProjectRole", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"name\": \"test-role\",\r\n\t\"description\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/updateProjectRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"1\",\r\n\t\"swap\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteProjectRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "500", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"{{roleId}}\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/getDefaultActorsForRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"user\": \"admin\",\r\n\t\"group\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/addDefaultActorsToRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        },     
+        {
+            "body": "{\r\n\t\"jiraUsername\": \"{{jiraUsername}}\",\r\n\t\"jiraPassword\": \"{{jiraPassword}}\",\r\n\t\"jiraName\": \"{{jiraName}}\",\r\n\t\"roleId\": \"{{roleId}}\",\r\n\t\"user\": \"admin\",\r\n\t\"group\": \"\"\r\n}", 
+            "form": {}, 
+            "url": "https://rapidapi.io/connect/JIRA/deleteDefaultActorFromRole", 
+            "variables": [],
+            "step_type": "request", 
+            "auth": {
+                "username": "qa-project", 
+                "auth_type": "basic", 
+                "password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+            }, 
+            "fragment": "", 
+            "note": "", 
+            "headers": {
+                "Content-Type": [
+                    "application/json"
+                ]
+            }, 
+            "assertions": [
+                {
+                    "comparison": "equal_number", 
+                    "value": 200, 
+                    "source": "response_status"
+                }, 
+                {
+                    "comparison": "equal", 
+                    "property": "outcome", 
+                    "value": "success", 
+                    "source": "response_json"
+                }
+            ], 
+            "scripts": [
+            ],
+            "before_scripts": [], 
+            "method": "POST"
+        }
+  	]
+}

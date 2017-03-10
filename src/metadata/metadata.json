@@ -6168,7 +6168,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "Name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "inward",
@@ -6472,7 +6472,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "Name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",
@@ -7459,22 +7459,22 @@
                     "required": true
                 },
                 {
+                    "name": "permission",
+                    "type": "String",
+                    "info": "Permission.",
+                    "required": true
+                },
+                {
                     "name": "holderType",
                     "type": "String",
                     "info": "Permission type.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "holderParameter",
                     "type": "String",
                     "info": "Permission parameter.",
-                    "required": false
-                },
-                {
-                    "name": "permission",
-                    "type": "String",
-                    "info": "Permission.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "expand",
@@ -7853,6 +7853,12 @@
                     "required": true
                 },
                 {
+                    "name": "name",
+                    "type": "String",
+                    "info": "Project name.",
+                    "required": true
+                },
+                {
                     "name": "expand",
                     "type": "String",
                     "info": "The parameters to expand in returned project.",
@@ -7862,12 +7868,6 @@
                     "name": "key",
                     "type": "String",
                     "info": "Project key.",
-                    "required": false
-                },
-                {
-                    "name": "name",
-                    "type": "String",
-                    "info": "Project name.",
                     "required": false
                 },
                 {
@@ -9252,7 +9252,7 @@
                     "name": "description",
                     "type": "String",
                     "info": "Project category description.",
-                    "required": false
+                    "required": true
                 }
             ],
             "callbacks": [
@@ -9378,7 +9378,7 @@
                     "name": "name",
                     "type": "String",
                     "info": "Project category name.",
-                    "required": false
+                    "required": true
                 },
                 {
                     "name": "description",

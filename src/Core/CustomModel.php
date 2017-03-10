@@ -346,6 +346,21 @@ class CustomModel
         ];
         return json_encode($result);
     }
+    public static function createPermissionGrant($param, &$blockCustom, $vendorUrl){
+        $result = [];
+        $result['schemeId'] = $param['schemeId'];
+        $result['holder']['type'] = $param['holderType'];
+        $result['permission'] = $param['permission'];
+
+        if(isset($param['holderParameter'])&&strlen($param['holderParameter'])>0){
+            $result['holder']['Parameter'] = $param['holderParameter'];
+        }
+        if(isset($param['expand'])&&strlen($param['expand'])>0) {
+            $result['expand'] = $param['expand'];
+        }
+
+        return json_encode($result);
+    }
     public static function setProjectProperty($param, &$blockCustom, $vendorUrl){
         return json_encode($param['value']);
     }

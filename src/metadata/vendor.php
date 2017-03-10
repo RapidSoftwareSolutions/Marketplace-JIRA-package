@@ -19,6 +19,7 @@ return array (
                 ),
         ),
     'blocks' => array (
+/* Part 1 */
         array (
             'name' => 'getMyPermissions',
             'description' => 'Returns all permissions in the system and whether the currently logged in user has them.',
@@ -5032,7 +5033,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'Name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'inward',
@@ -5266,7 +5267,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'Name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'description',
@@ -6043,22 +6044,22 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'permission',
+                    'type' => 'String',
+                    'info' => 'Permission.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'holderType',
                     'type' => 'String',
                     'info' => 'Permission type.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'holderParameter',
                     'type' => 'String',
                     'info' => 'Permission parameter.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'permission',
-                    'type' => 'String',
-                    'info' => 'Permission.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'expand',
@@ -6367,6 +6368,12 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'name',
+                    'type' => 'String',
+                    'info' => 'Project name.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'expand',
                     'type' => 'String',
                     'info' => 'The parameters to expand in returned project.',
@@ -6376,12 +6383,6 @@ return array (
                     'name' => 'key',
                     'type' => 'String',
                     'info' => 'Project key.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'name',
-                    'type' => 'String',
-                    'info' => 'Project name.',
                     'required' => false,
                 ),
                 array (
@@ -7517,7 +7518,7 @@ return array (
                     'name' => 'description',
                     'type' => 'String',
                     'info' => 'Project category description.',
-                    'required' => false,
+                    'required' => true,
                 ),
             ),
         ),
@@ -7613,7 +7614,7 @@ return array (
                     'name' => 'name',
                     'type' => 'String',
                     'info' => 'Project category name.',
-                    'required' => false,
+                    'required' => true,
                 ),
                 array (
                     'name' => 'description',
@@ -11914,6 +11915,7 @@ return array (
                 ),
             ),
         ),
+/* end */
     ),
     'custom' => array (
         'getMyPermissions' => array (
@@ -13860,6 +13862,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/permissionscheme/{{schemeId}}/permission',
             'method' => 'POST',
+            'custom' => true,
         ),
         'deletePermissionSchemeEntity' => array (
             'dictionary' => array (

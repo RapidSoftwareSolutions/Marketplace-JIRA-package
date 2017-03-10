@@ -1,0 +1,3234 @@
+{
+	"name": "JIRA",
+	"description": "Jira is used for issue tracking and project management by over 25,000 customers in 122 countries around the globe.",
+	"connect": {
+		"username": "qa-project",
+		"password": "481bab2d-e8fe-4214-8714-bab8157356e4"
+	},
+	"dependencies": {
+
+	},
+	"blocks": [
+		{
+			"name": "getMyPermissions",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "projectKey",
+					"value": "{{projectKey}}"
+				},
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "issueKey",
+					"value": ""
+				}, 			
+				{
+					"key": "issueId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getAllPermissions",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "key",
+					"value": "jira.home"
+				}, 			
+				{
+					"key": "permissionLevel",
+					"value": ""
+				}, 			
+				{
+					"key": "keyFilter",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "setProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "propertiesId",
+					"value": "jira.newsletter.tip.delay.days"
+				}, 			
+				{
+					"key": "value",
+					"value": "7"
+				}
+			]
+		}, 		
+		{
+			"name": "getAdvancedSettings",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getApplicationRoles",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleApplicationRole",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "roleKey",
+					"value": "jira-software"
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleAttachment",
+			"note": "From addIssueAttachment",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "attachmentId",
+					"value": "{{attachmentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "removeSingleAttachment",
+			"note": "From addIssueAttachment",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "attachmentId",
+					"value": "{{attachmentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getAuditingRecords",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filter",
+					"value": ""
+				}, 			
+				{
+					"key": "offset",
+					"value": ""
+				}, 			
+				{
+					"key": "limit",
+					"value": ""
+				}, 			
+				{
+					"key": "from",
+					"value": ""
+				}, 			
+				{
+					"key": "to",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getAllSystemAvatars",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "avatarType",
+					"value": "user"
+				}
+			]
+		}, 		
+		{
+			"name": "getCommentPropertiesKeys",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteCommentProperty",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "comment-prop"
+				}
+			]
+		}, 		
+		{
+			"name": "setCommentProperty",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "comment-prop"
+				}, 			
+				{
+					"key": "value",
+					"value": "comment-prop-val"
+				}
+			]
+		}, 		
+		{
+			"name": "getCommentProperty",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "comment-prop"
+				}
+			]
+		}, 		
+		{
+			"name": "createComponent",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "New component"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "leadUserName",
+					"value": ""
+				}, 			
+				{
+					"key": "assigneeType",
+					"value": ""
+				}, 			
+				{
+					"key": "isAssigneeTypeValid",
+					"value": ""
+				}, 			
+				{
+					"key": "project",
+					"value": "{{projectKey}}"
+				},
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "lead",
+					"value": ""
+				}, 			
+				{
+					"key": "assignee",
+					"value": ""
+				}, 			
+				{
+					"key": "realAssigneeType",
+					"value": ""
+				}, 			
+				{
+					"key": "realAssignee",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateComponent",
+			"note": "Form createComponent",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "componentId",
+					"value": "{{componentId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "New component"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "leadUserName",
+					"value": ""
+				}, 			
+				{
+					"key": "assigneeType",
+					"value": ""
+				}, 			
+				{
+					"key": "isAssigneeTypeValid",
+					"value": ""
+				}, 			
+				{
+					"key": "project",
+					"value": "{{projectKey}}"
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "lead",
+					"value": ""
+				}, 			
+				{
+					"key": "assignee",
+					"value": ""
+				}, 			
+				{
+					"key": "realAssigneeType",
+					"value": ""
+				}, 			
+				{
+					"key": "realAssignee",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getComponent",
+			"note": "Form createComponent",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "componentId",
+					"value": "{{componentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteComponent",
+			"note": "Form createComponent",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "componentId",
+					"value": "{{componentId}}"
+				}, 			
+				{
+					"key": "moveIssuesTo",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getComponentIssuesCounts",
+			"note": "Form createComponent",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "componentId",
+					"value": "{{componentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getConfiguration",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getSelectedTimeTracking",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "selectTimeTracking",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "key",
+					"value": "JIRA"
+				}, 			
+				{
+					"key": "name",
+					"value": ""
+				}, 			
+				{
+					"key": "url",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "disableTimeTracking",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getTimeTrackingList",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getTimeTrackingConfiguration",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "setTimeTrackingConfiguration",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "workingHoursPerDay",
+					"value": "8"
+				}, 			
+				{
+					"key": "workingDaysPerWeek",
+					"value": "5"
+				}, 			
+				{
+					"key": "timeFormat",
+					"value": "hours"
+				}, 			
+				{
+					"key": "defaultUnit",
+					"value": "hour"
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleCustomFieldOption",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "optionId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "getDashboards",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filter",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleDashboard",
+			"note": "From getDashboards",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "dashboardId",
+					"value": "{{dashboardId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getDashboardPropertiesKeys",
+			"note": "From getDashboards and Global",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "dashboardId",
+					"value": "{{dashboardId}}"
+				}, 			
+				{
+					"key": "itemId",
+					"value": "{{dashboardItemId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteDashboardProperty",
+			"note": "From getDashboards 500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "dashboardId",
+					"value": "{{dashboardId}}"
+				}, 			
+				{
+					"key": "itemId",
+					"value": "1"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "setDashboardProperty",
+			"note": "From getDashboards and Global",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "dashboardId",
+					"value": "{{dashboardId}}"
+				}, 			
+				{
+					"key": "itemId",
+					"value": "{{dashboardItemId}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test_prop"
+				},
+				{
+					"key": "propertyValue",
+					"value": "test prop value"
+				}
+			]
+		}, 		
+		{
+			"name": "getDashboardProperty",
+			"note": "From getDashboards and Global",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "dashboardId",
+					"value": "{{dashboardId}}"
+				}, 			
+				{
+					"key": "itemId",
+					"value": "{{dashboardItemId}}"
+				}, 			
+				{
+					"key": "propertyKey",
+					"value": "test_prop"
+				}
+			]
+		}, 		
+		{
+			"name": "createCustomField",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "custom field"
+				},
+				{
+					"key": "type",
+					"value": "datepicker"
+				},
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "searcherKey",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getFields",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "createSelectFieldOption",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "test_field"
+				}, 			
+				{
+					"key": "value",
+					"value": "test field value"
+				}
+			]
+		}, 		
+		{
+			"name": "getSelectFieldOptions",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "test_field"
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateSelectFieldOptions",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "description"
+				}, 			
+				{
+					"key": "optionId",
+					"value": "project"
+				}, 			
+				{
+					"key": "id",
+					"value": "1"
+				}, 			
+				{
+					"key": "value",
+					"value": "1"
+				}, 			
+				{
+					"key": "propertiesLeaderName",
+					"value": ""
+				}, 			
+				{
+					"key": "propertiesLeaderEmail",
+					"value": ""
+				}, 			
+				{
+					"key": "propertiesMembers",
+					"value": ""
+				}, 			
+				{
+					"key": "propertiesDescription",
+					"value": ""
+				}, 			
+				{
+					"key": "configScopeProjects",
+					"value": ""
+				}, 			
+				{
+					"key": "configAttributes",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getSelectFieldSingleOption",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "description"
+				}, 			
+				{
+					"key": "optionId",
+					"value": "project"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteSelectFieldSingleOption",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "description"
+				}, 			
+				{
+					"key": "optionId",
+					"value": "project"
+				}
+			]
+		}, 		
+		{
+			"name": "getAvailableSelectFieldOptions",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "description"
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "searchSelectFieldOptions",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "fieldKey",
+					"value": "description"
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}
+			]
+		},
+		{
+			"name": "createFilter",
+			"note": "",
+			"skip": false,
+			"params": [
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				},
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				},
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				},
+				{
+					"key": "name",
+					"value": "test filter"
+				},
+				{
+					"key": "jql",
+					"value": "type=Task"
+				},
+				{
+					"key": "description",
+					"value": ""
+				},
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "favourite",
+					"value": ""
+				}, 			
+				{
+					"key": "owner",
+					"value": ""
+				}, 			
+				{
+					"key": "viewUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "searchUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "sharePermissions",
+					"value": ""
+				}, 			
+				{
+					"key": "sharedUsers",
+					"value": ""
+				}, 			
+				{
+					"key": "subscriptions",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateFilter",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test filter1"
+				}, 			
+				{
+					"key": "description",
+					"value": ""
+				}, 			
+				{
+					"key": "jql",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "favourite",
+					"value": ""
+				}, 			
+				{
+					"key": "owner",
+					"value": ""
+				}, 			
+				{
+					"key": "viewUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "searchUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "sharePermissions",
+					"value": ""
+				}, 			
+				{
+					"key": "sharedUsers",
+					"value": ""
+				}, 			
+				{
+					"key": "subscriptions",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteFilter",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getFilter",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getFilterDefaultColumns",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "setFilterDefaultColumns",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				},
+				{
+					"key": "columns",
+					"value": "assignee"
+				}
+			]
+		}, 		
+		{
+			"name": "resetFilterDefaultColumns",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getFilterSharePermissions",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "addFilterSharePermissions",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}, 			
+				{
+					"key": "type",
+					"value": "PROJECT"
+				}, 			
+				{
+					"key": "groupname",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "projectRoleId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getFilterSingleSharePermission",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}, 			
+				{
+					"key": "permissionId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteFilterSingleSharePermission",
+			"note": "From createFilter",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "filterId",
+					"value": "{{filterId}}"
+				}, 			
+				{
+					"key": "permissionId",
+					"value": "1"
+				}
+			]
+		}, 		
+		{
+			"name": "getDefaultShareScope",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}
+			]
+		}, 		
+		{
+			"name": "setDefaultShareScope",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "scope",
+					"value": "PRIVATE"
+				}
+			]
+		}, 		
+		{
+			"name": "getFavouriteFilters",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getMyFilters",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "includeFavourites",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "createGroup",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "test group"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteGroup",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "groupname",
+					"value": "test group"
+				}, 			
+				{
+					"key": "swapGroup",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getUsersFromGroup",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "groupname",
+					"value": "test group"
+				}, 			
+				{
+					"key": "includeInactiveUsers",
+					"value": ""
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "addUserToGroup",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "groupname",
+					"value": "test group"
+				}, 			
+				{
+					"key": "name",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteUserFromGroup",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "groupname",
+					"value": "test group"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "findGroups",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "query",
+					"value": ""
+				}, 			
+				{
+					"key": "exclude",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "userName",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "findUsersAndGroups",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "query",
+					"value": "admin"
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "showAvatar",
+					"value": ""
+				}, 			
+				{
+					"key": "fieldId",
+					"value": ""
+				}, 			
+				{
+					"key": "projectId",
+					"value": ""
+				}, 			
+				{
+					"key": "issueTypeId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "createSingleIssue",
+			"note": "need json",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				},
+				{
+					"key": "fields",
+					"value": ""
+				},
+				{
+					"key": "update",
+					"value": ""
+				}, 			
+				{
+					"key": "transition",
+					"value": ""
+				}, 			
+				{
+					"key": "historyMetadata",
+					"value": ""
+				}, 			
+				{
+					"key": "properties",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "createIssues",
+			"note": "500 need JSON",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueUpdates",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getSingleIssue",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				},
+				{
+					"key": "fields",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "properties",
+					"value": ""
+				}, 			
+				{
+					"key": "fieldsByKeys",
+					"value": ""
+				}, 			
+				{
+					"key": "updateHistory",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteSingleIssue",
+			"note": "From createSingleIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "updateSingleIssue",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "notifyUsers",
+					"value": ""
+				}, 			
+				{
+					"key": "overrideScreenSecurity",
+					"value": ""
+				}, 			
+				{
+					"key": "overrideEditableFlag",
+					"value": ""
+				}, 			
+				{
+					"key": "transition",
+					"value": ""
+				}, 			
+				{
+					"key": "fields",
+					"value": ""
+				}, 			
+				{
+					"key": "update",
+					"value": "123"
+				}, 			
+				{
+					"key": "historyMetadata",
+					"value": ""
+				}, 			
+				{
+					"key": "properties",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "assignIssueToUser",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "name",
+					"value": "admin"
+				}, 			
+				{
+					"key": "key",
+					"value": ""
+				}, 			
+				{
+					"key": "accountId",
+					"value": ""
+				}, 			
+				{
+					"key": "emailAddress",
+					"value": ""
+				}, 			
+				{
+					"key": "avatarUrls",
+					"value": ""
+				}, 			
+				{
+					"key": "displayName",
+					"value": ""
+				}, 			
+				{
+					"key": "active",
+					"value": ""
+				}, 			
+				{
+					"key": "timeZone",
+					"value": ""
+				}, 			
+				{
+					"key": "locale",
+					"value": ""
+				}, 			
+				{
+					"key": "groups",
+					"value": ""
+				}, 			
+				{
+					"key": "applicationRoles",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueComments",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "startAt",
+					"value": ""
+				}, 			
+				{
+					"key": "maxResults",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "addCommentToIssue",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				},
+				{
+					"key": "body",
+					"value": "Comment body"
+				},
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityType",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityValue",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateIssueComment",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "body",
+					"value": "comment body"
+				}, 			
+				{
+					"key": "visibilityType",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityValue",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteIssueComment",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueSingleComment",
+			"note": "Form addCommentToIssue",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "commentId",
+					"value": "{{commentId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "sendIssueNotify",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "subject",
+					"value": "Test notify"
+				}, 			
+				{
+					"key": "textBody",
+					"value": ""
+				}, 			
+				{
+					"key": "htmlBody",
+					"value": ""
+				}, 			
+				{
+					"key": "showToReporter",
+					"value": ""
+				}, 			
+				{
+					"key": "showToAssignee",
+					"value": ""
+				}, 			
+				{
+					"key": "showToWatchers",
+					"value": ""
+				}, 			
+				{
+					"key": "showToVoters",
+					"value": ""
+				}, 			
+				{
+					"key": "showToUsers",
+					"value": ""
+				}, 			
+				{
+					"key": "showToGroups",
+					"value": ""
+				}, 			
+				{
+					"key": "restrictGroups",
+					"value": ""
+				}, 			
+				{
+					"key": "restrictPermissions",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getRemoteIssueLinks",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "createRemoteIssueLink",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "issueLinkUrl",
+					"value": "http://google.com"
+				}, 			
+				{
+					"key": "issueLinkTitle",
+					"value": "link to google"
+				}, 			
+				{
+					"key": "applicationType",
+					"value": ""
+				}, 			
+				{
+					"key": "applicationName",
+					"value": ""
+				}, 			
+				{
+					"key": "relationship",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkSummary",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkIconUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkIconTitle",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusResolved",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconTitle",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconLink",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteRemoteIssueLinkByGlobalId",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "10000"
+				}
+			]
+		}, 		
+		{
+			"name": "getRemoteIssueLinkById",
+			"note": "From createRemoteIssueLink",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "linkId",
+					"value": "{{linkId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "updateRemoteIssueLink",
+			"note": "From createRemoteIssueLink",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "linkId",
+					"value": "{{linkId}}"
+				}, 			
+				{
+					"key": "globalId",
+					"value": "{{linkId}}"
+				}, 			
+				{
+					"key": "applicationType",
+					"value": ""
+				}, 			
+				{
+					"key": "applicationName",
+					"value": ""
+				}, 			
+				{
+					"key": "relationship",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkTitle",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkSummary",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkIconUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkIconTitle",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusResolved",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconUrl",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconTitle",
+					"value": ""
+				}, 			
+				{
+					"key": "issueLinkStatusIconLink",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteRemoteIssueLinkById",
+			"note": "From createRemoteIssueLink",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "linkId",
+					"value": "{{linkId}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueTransitions",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "transitionId",
+					"value": ""
+				}, 			
+				{
+					"key": "skipRemoteOnlyCondition",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "makeIssueTransition",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "transition",
+					"value": "15"
+				}, 			
+				{
+					"key": "update",
+					"value": ""
+				}, 			
+				{
+					"key": "fields",
+					"value": ""
+				}, 			
+				{
+					"key": "historyMetadata",
+					"value": ""
+				}, 			
+				{
+					"key": "properties",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "deleteIssueVote",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "addIssueVote",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueVotes",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueWatchers",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}
+			]
+		}, 		
+		{
+			"name": "addIssueWatcher",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteIssueWatcher",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "username",
+					"value": "admin"
+				}
+			]
+		}, 		
+		{
+			"name": "getWorklogById",
+			"note": "From getIssueWorklog",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "worklogId",
+					"value": "{{worklogId}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "addIssueWorklog",
+			"note": "500",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "comment",
+					"value": "test worklog comment"
+				}, 			
+				{
+					"key": "started",
+					"value": "2017-02-21T01:03:28.187+0000"
+				}, 			
+				{
+					"key": "timeSpentSeconds",
+					"value": "3600"
+				}, 			
+				{
+					"key": "adjustEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "newEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "reduceBy",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityType",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityValue",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getIssueWorklog",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "updateIssueWorklog",
+			"note": "From getIssueWorklog",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "worklogId",
+					"value": "{{worklogId}}"
+				}, 			
+				{
+					"key": "adjustEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "newEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "reduceBy",
+					"value": ""
+				}, 			
+				{
+					"key": "expand",
+					"value": ""
+				}, 			
+				{
+					"key": "comment",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityType",
+					"value": ""
+				}, 			
+				{
+					"key": "visibilityValue",
+					"value": ""
+				}, 			
+				{
+					"key": "started",
+					"value": ""
+				}, 			
+				{
+					"key": "timeSpentSeconds",
+					"value": "3600"
+				}
+			]
+		}, 		
+		{
+			"name": "deleteIssueWorklog",
+			"note": "500",
+			"skip": true,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "worklogId",
+					"value": "11"
+				}, 			
+				{
+					"key": "adjustEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "newEstimate",
+					"value": ""
+				}, 			
+				{
+					"key": "increaseBy",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getCreatedIssueMeta",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "projectIds",
+					"value": ""
+				}, 			
+				{
+					"key": "projectKeys",
+					"value": ""
+				}, 			
+				{
+					"key": "issuetypeIds",
+					"value": ""
+				}, 			
+				{
+					"key": "issuetypeNames",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "getIssuesBasedOnQuery",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "query",
+					"value": "admin"
+				}, 			
+				{
+					"key": "currentJQL",
+					"value": ""
+				}, 			
+				{
+					"key": "currentIssueKey",
+					"value": ""
+				}, 			
+				{
+					"key": "currentProjectId",
+					"value": ""
+				}, 			
+				{
+					"key": "showSubTasks",
+					"value": ""
+				}, 			
+				{
+					"key": "showSubTaskParent",
+					"value": ""
+				}
+			]
+		}, 		
+		{
+			"name": "addIssueAttachment",
+			"note": "",
+			"skip": false,
+			"params": [			
+				{
+					"key": "jiraUsername",
+					"value": "{{jiraUsername}}"
+				}, 			
+				{
+					"key": "jiraPassword",
+					"value": "{{jiraPassword}}"
+				}, 			
+				{
+					"key": "jiraName",
+					"value": "{{jiraName}}"
+				}, 			
+				{
+					"key": "issueIdOrKey",
+					"value": "{{issueIdOrKey}}"
+				}, 			
+				{
+					"key": "Attachment",
+					"value": "https://logo.clearbit.com/jira.atlassian.com?s=128"
+				}
+			]
+		}
+	]
+}
