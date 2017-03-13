@@ -4359,6 +4359,18 @@
                     "required": true
                 },
                 {
+                    "name": "issueLinkUrl",
+                    "type": "String",
+                    "info": "Remote issue link Url.",
+                    "required": true
+                },
+                {
+                    "name": "issueLinkTitle",
+                    "type": "String",
+                    "info": "Remote issue link title.",
+                    "required": true
+                },
+                {
                     "name": "applicationType",
                     "type": "String",
                     "info": "Application type.",
@@ -4374,18 +4386,6 @@
                     "name": "relationship",
                     "type": "String",
                     "info": "Relationship.",
-                    "required": false
-                },
-                {
-                    "name": "issueLinkUrl",
-                    "type": "String",
-                    "info": "Remote issue link Url.",
-                    "required": false
-                },
-                {
-                    "name": "issueLinkTitle",
-                    "type": "String",
-                    "info": "Remote issue link title.",
                     "required": false
                 },
                 {
@@ -5816,7 +5816,7 @@
                     "name": "typeId",
                     "type": "String",
                     "info": "Type identifier.",
-                    "required": true
+                    "required": false
                 },
                 {
                     "name": "typeInward",
@@ -7759,15 +7759,15 @@
                     "required": true
                 },
                 {
-                    "name": "description",
-                    "type": "String",
-                    "info": "Project description.",
-                    "required": false
-                },
-                {
                     "name": "lead",
                     "type": "String",
                     "info": "Project lead.",
+                    "required": true
+                },
+                {
+                    "name": "description",
+                    "type": "String",
+                    "info": "Project description.",
                     "required": false
                 },
                 {
@@ -8774,8 +8774,8 @@
                 },
                 {
                     "name": "actors",
-                    "type": "String",
-                    "info": "Categorised actors.",
+                    "type": "JSON",
+                    "info": "JSON Object, of users or group.",
                     "required": true
                 }
             ],

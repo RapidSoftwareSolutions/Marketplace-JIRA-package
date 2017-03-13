@@ -3553,6 +3553,18 @@ return array (
                     'required' => true,
                 ),
                 array (
+                    'name' => 'issueLinkUrl',
+                    'type' => 'String',
+                    'info' => 'Remote issue link Url.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'issueLinkTitle',
+                    'type' => 'String',
+                    'info' => 'Remote issue link title.',
+                    'required' => true,
+                ),
+                array (
                     'name' => 'applicationType',
                     'type' => 'String',
                     'info' => 'Application type.',
@@ -3568,18 +3580,6 @@ return array (
                     'name' => 'relationship',
                     'type' => 'String',
                     'info' => 'Relationship.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'issueLinkUrl',
-                    'type' => 'String',
-                    'info' => 'Remote issue link Url.',
-                    'required' => false,
-                ),
-                array (
-                    'name' => 'issueLinkTitle',
-                    'type' => 'String',
-                    'info' => 'Remote issue link title.',
                     'required' => false,
                 ),
                 array (
@@ -4751,7 +4751,7 @@ return array (
                     'name' => 'typeId',
                     'type' => 'String',
                     'info' => 'Type identifier.',
-                    'required' => true,
+                    'required' => false,
                 ),
                 array (
                     'name' => 'typeInward',
@@ -6284,15 +6284,15 @@ return array (
                     'required' => true,
                 ),
                 array (
-                    'name' => 'description',
-                    'type' => 'String',
-                    'info' => 'Project description.',
-                    'required' => false,
-                ),
-                array (
                     'name' => 'lead',
                     'type' => 'String',
                     'info' => 'Project lead.',
+                    'required' => true,
+                ),
+                array (
+                    'name' => 'description',
+                    'type' => 'String',
+                    'info' => 'Project description.',
                     'required' => false,
                 ),
                 array (
@@ -7150,8 +7150,8 @@ return array (
                 ),
                 array (
                     'name' => 'actors',
-                    'type' => 'String',
-                    'info' => 'Categorised actors.',
+                    'type' => 'JSON',
+                    'info' => 'JSON Object, of users or group.',
                     'required' => true,
                 ),
             ),

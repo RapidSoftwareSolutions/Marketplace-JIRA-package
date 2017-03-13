@@ -6,7 +6,9 @@ Jira is used for issue tracking and project management by over 25,000 customers 
 * Credentials: jiraUsername, jiraPassword
 
 ## How to get credentials: 
-
+0. Navigate to page with choosing [pricing plan](https://www.atlassian.com/software/jira/try).
+1. Select plan and click "Try it free", fill all required fields.
+2. Use your login, password as credentials.
 
 ## JIRA.getMyPermissions
 Returns all permissions in the system and whether the currently logged in user has them.
@@ -2374,12 +2376,18 @@ Adds an actor (user or group) to a project role.
 | jiraName      | String     | Name of JIRA.
 | projectIdOrKey| String     | Project identifier or key.
 | roleId        | String     | Role identifier.
-| actors        | String     | Categorised actors.
+| actors        | JSON     | Categorised actors.
 
 #### Example of 'actors' field
 ```json
 {
 	"user": ["admin"]
+}
+```
+or
+```json
+{
+    "group": ["jira-developers"]
 }
 ```
 

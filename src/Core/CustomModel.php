@@ -348,7 +348,6 @@ class CustomModel
     }
     public static function createPermissionGrant($param, &$blockCustom, $vendorUrl){
         $result = [];
-        $result['schemeId'] = $param['schemeId'];
         $result['holder']['type'] = $param['holderType'];
         $result['permission'] = $param['permission'];
 
