@@ -448,6 +448,18 @@ class CustomModel
         return json_encode($result);
     }
 
+    public static function getWorklogById($param, $blockCustom, $vendorUrl) {
+        self::createStringFromList($param, 'expand');
+
+        return $param;
+    }
+
+    public static function getIssueWorklog($param, $blockCustom, $vendorUrl) {
+        self::createStringFromList($param, 'expand');
+
+        return $param;
+    }
+
     private static function checkJsonParam($paramNames, $param)
     {
         $return = [];
@@ -466,5 +478,13 @@ class CustomModel
         }
 
         return $return;
+    }
+
+    private static function createStringFromList(&$param, $name) {
+        if (!empty($param[$name])) {
+            if (is_array($param[$name])) {
+                $param[$name] = implode(',', $param[$name]);
+            }
+        }
     }
 }

@@ -436,13 +436,13 @@
         },
         {
           "name": "from",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Timestamp in past. 'from' must be less or equal 'to'",
           "required": false
         },
         {
           "name": "to",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Timestamp in past; 'from' must be less or equal 'to'.",
           "required": false
         }
@@ -724,7 +724,13 @@
         },
         {
           "name": "assigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "PROJECT_DEFAULT",
+            "COMPONENT_LEAD",
+            "PROJECT_LEAD",
+            "UNASSIGNED"
+          ],
           "info": "Component assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
           "required": false
         },
@@ -760,7 +766,13 @@
         },
         {
           "name": "realAssigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "PROJECT_DEFAULT",
+            "COMPONENT_LEAD",
+            "PROJECT_LEAD",
+            "UNASSIGNED"
+          ],
           "info": "Real assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\"",
           "required": false
         },
@@ -830,7 +842,13 @@
         },
         {
           "name": "assigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "PROJECT_DEFAULT",
+            "COMPONENT_LEAD",
+            "PROJECT_LEAD",
+            "UNASSIGNED"
+          ],
           "info": "Assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
           "required": false
         },
@@ -866,7 +884,13 @@
         },
         {
           "name": "realAssigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "PROJECT_DEFAULT",
+            "COMPONENT_LEAD",
+            "PROJECT_LEAD",
+            "UNASSIGNED"
+          ],
           "info": "Real assignee type. One of \"PROJECT_DEFAULT\",\"COMPONENT_LEAD\",\"PROJECT_LEAD\",\"UNASSIGNED\".",
           "required": false
         },
@@ -1272,13 +1296,15 @@
         },
         {
           "name": "timeFormat",
-          "type": "String",
+          "type": "Select",
+          "options": ["pretty","days","hours"],
           "info": "Time format. One of \"pretty\",\"days\",\"hours\".",
           "required": true
         },
         {
           "name": "defaultUnit",
-          "type": "String",
+          "type": "Select",
+          "options": ["minute","hour","day","week"],
           "info": "Default unit. One of \"minute\",\"hour\",\"day\",\"week\".",
           "required": true
         }
@@ -1896,15 +1922,27 @@
         },
         {
           "name": "configScopeProjects",
-          "type": "String",
+          "type": "List",
           "info": "Comma separated options config scope projects identifier.",
-          "required": false
+          "required": false,
+          "structure":{
+            "name": "option",
+            "type": "String",
+            "info": "Option config scope",
+            "required": false
+          }
         },
         {
           "name": "configAttributes",
-          "type": "Array",
-          "info": "Array of Strings, options config attributes.",
-          "required": false
+          "type": "List",
+          "info": "List of options config attributes.",
+          "required": false,
+          "structure": {
+            "name": "attribute",
+            "type": "String",
+            "info": "Config attribute",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2198,8 +2236,8 @@
         },
         {
           "name": "sharePermissions",
-          "type": "Array",
-          "info": "Array of JSON objects, filter Permission.",
+          "type": "JSON",
+          "info": "List of JSON objects, filter Permission.",
           "required": false
         },
         {
@@ -2304,8 +2342,8 @@
         },
         {
           "name": "sharePermissions",
-          "type": "Array",
-          "info": "Array of JSON objects, filter Permission.",
+          "type": "JSON",
+          "info": "List of JSON objects, filter Permission.",
           "required": false
         },
         {
@@ -2488,9 +2526,15 @@
         },
         {
           "name": "columns",
-          "type": "String",
-          "info": "Comma separated list of columns.",
-          "required": true
+          "type": "List",
+          "info": "List of columns.",
+          "required": true,
+          "structure":{
+            "name": "column",
+            "type": "String",
+            "info": "Columnt",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -2798,7 +2842,8 @@
         },
         {
           "name": "scope",
-          "type": "String",
+          "type": "Select",
+          "options": ["GLOBAL","AUTHENTICATED","PRIVATE"],
           "info": "Share scope. One of \"GLOBAL\",\"AUTHENTICATED\",\"PRIVATE\".",
           "required": true
         }
@@ -3312,8 +3357,8 @@
         },
         {
           "name": "properties",
-          "type": "Array",
-          "info": "Array of JSON objects, entity properties.",
+          "type": "List",
+          "info": "List of JSON objects, entity properties.",
           "required": false
         }
       ],
@@ -3550,9 +3595,15 @@
         },
         {
           "name": "properties",
-          "type": "Array",
-          "info": "Array of JSON objects, issue properties.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects, issue properties.",
+          "required": false,
+          "structure":{
+            "name": "property",
+            "type": "JSON",
+            "info": "Property",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3772,7 +3823,8 @@
         },
         {
           "name": "visibilityType",
-          "type": "String",
+          "type": "Select",
+          "options": ["group", "role"],
           "info": "Visibility type. One of \"group\",\"role\".",
           "required": false
         },
@@ -3842,7 +3894,8 @@
         },
         {
           "name": "visibilityType",
-          "type": "String",
+          "type": "Select",
+          "options": ["group", "role"],
           "info": "Visibility type. One of \"group\",\"role\".",
           "required": false
         },
@@ -4034,27 +4087,41 @@
         },
         {
           "name": "showToUsers",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects, show to users.",
           "required": false
         },
         {
           "name": "showToGroups",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects, show to groups.",
           "required": false
         },
         {
           "name": "restrictGroups",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects, restrict groups.",
           "required": false
         },
         {
           "name": "restrictPermissions",
           "type": "Array",
-          "info": "Array of JSON objects, restrict groups.",
-          "required": false
+          "info": "Restrict groups.",
+          "required": false,
+          "structure": [
+            {
+              "name": "id",
+              "type": "String",
+              "info": "ID",
+              "required": true
+            },
+            {
+              "name": "key",
+              "type": "String",
+              "info": "Key",
+              "required": true
+            }
+          ]
         }
       ],
       "callbacks": [
@@ -4594,8 +4661,8 @@
         },
         {
           "name": "properties",
-          "type": "Array",
-          "info": "Array of JSON objects, issue properties.",
+          "type": "JSON",
+          "info": "JSON objects, issue properties.",
           "required": false
         }
       ],
@@ -4898,9 +4965,15 @@
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Comma separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "list of parameters to expand.",
+          "required": false,
+          "structure": {
+            "name": "paramName",
+            "type": "String",
+            "info": "Param name",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -4950,7 +5023,7 @@
         },
         {
           "name": "started",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Started. Example \"2017-02-21T01:03:28.187+0000\".",
           "required": true
         },
@@ -4980,13 +5053,20 @@
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Comma separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "List of parameters to expand.",
+          "required": false,
+          "structure":{
+            "name": "param",
+            "type": "String",
+            "info": "Param",
+            "required": false
+          }
         },
         {
           "name": "visibilityType",
-          "type": "String",
+          "type": "Select",
+          "options": ["group", "role"],
           "info": "Visibility type. One of \"group\",\"role\".",
           "required": false
         },
@@ -5038,9 +5118,15 @@
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Comma separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "List of parameters to expand.",
+          "required": false,
+          "structure":{
+            "name": "param",
+            "type": "String",
+            "info": "Param",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -5114,9 +5200,15 @@
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Comma separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "List of parameters to expand.",
+          "required": false,
+          "structure":{
+            "name": "param",
+            "type": "String",
+            "info": "Param",
+            "required": false
+          }
         },
         {
           "name": "comment",
@@ -5126,7 +5218,8 @@
         },
         {
           "name": "visibilityType",
-          "type": "String",
+          "type": "Select",
+          "options": ["group", "role"],
           "info": "Visibility type. One of \"group\",\"role\".",
           "required": false
         },
@@ -5138,7 +5231,7 @@
         },
         {
           "name": "started",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Started. Example \"2017-02-21T01:03:28.187+0000\".",
           "required": false
         }

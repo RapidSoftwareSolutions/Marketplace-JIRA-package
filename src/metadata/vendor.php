@@ -13171,6 +13171,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/{{issueIdOrKey}}/worklog',
             'method' => 'GET',
+            'custom' => true
         ),
         'getWorklogById' => array (
             'dictionary' => array (
@@ -13186,6 +13187,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/{{issueIdOrKey}}/worklog/{{worklogId}}',
             'method' => 'GET',
+            'custom' => true
         ),
         'addIssueWorklog' => array (
             'dictionary' => array (
