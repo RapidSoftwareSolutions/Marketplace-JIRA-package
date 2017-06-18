@@ -13278,6 +13278,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/issue/createmeta',
             'method' => 'GET',
+            'custom' => true
         ),
         'getIssuesBasedOnQuery' => array (
             'dictionary' => array (
@@ -14820,6 +14821,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/user/assignable/multiProjectSearch',
             'method' => 'GET',
+            'custom' => true
         ),
         'findAssignableUsers' => array (
             'dictionary' => array (
@@ -14903,6 +14905,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/user/permission/search',
             'method' => 'GET',
+            'custom' => true
         ),
         'findUsersByProperty' => array (
             'dictionary' => array (
@@ -15169,6 +15172,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/version/{{versionId}}',
             'method' => 'PUT',
+            'custom' => true
         ),
         'deleteVersion' => array (
             'dictionary' => array (
@@ -15255,6 +15259,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/version/{{versionId}}/remotelink',
             'method' => 'POST',
+            'custom' => true
         ),
         'deleteRemoteVersionLinks' => array (
             'dictionary' => array (
@@ -15657,7 +15662,7 @@ return array (
                 'workflowName',
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/workflowscheme/{{workflowSchemeId}}/draft/workflow',
-            'method' => 'PUT',
+            'method' => 'PUT'
         ),
         'getWorkflowSchemeIssueType' => array (
             'dictionary' => array (
@@ -15764,6 +15769,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/worklog/deleted',
             'method' => 'GET',
+            'custom' => true
         ),
         'getWorklogs' => array (
             'dictionary' => array (
@@ -15794,6 +15800,7 @@ return array (
             ),
             'vendorUrl' => 'https://{{jiraName}}.atlassian.net/rest/api/2/worklog/updated',
             'method' => 'GET',
+            'custom' => true
         ),
     ),
 );

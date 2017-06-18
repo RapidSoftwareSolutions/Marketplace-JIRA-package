@@ -5335,27 +5335,51 @@
         },
         {
           "name": "projectIds",
-          "type": "String",
-          "info": "Comma-separated list, combined with the projectKeys param, lists the projects with which to filter the results.",
-          "required": false
+          "type": "List",
+          "info": "List, combined with the projectKeys param, lists the projects with which to filter the results.",
+          "required": false,
+          "structure": {
+            "name": "projectId",
+            "type": "String",
+            "info": "Project ID",
+            "required": false
+          }
         },
         {
-          "name": "projectKeys",
-          "type": "String",
-          "info": "Comma-separated list, combined with the projectIds param, lists the projects with which to filter the results.",
-          "required": false
+            "name": "projectKeys",
+          "type": "List",
+          "info": "List, combined with the projectIds param, lists the projects with which to filter the results.",
+          "required": false,
+          "structure": {
+            "name": "projectKey",
+            "type": "String",
+            "info": "Project Key",
+            "required": false
+          }
         },
         {
           "name": "issuetypeIds",
-          "type": "String",
-          "info": "Comma-separated list, combinded with issuetypeNames, lists the issue types with which to filter the results.",
-          "required": false
+          "type": "List",
+          "info": "List, combinded with issuetypeNames, lists the issue types with which to filter the results.",
+          "required": false,
+          "structure": {
+            "name": "isueTypeId",
+            "type": "String",
+            "info": "Issue type ID",
+            "required": false
+          }
         },
         {
           "name": "issuetypeNames",
-          "type": "String",
-          "info": "Comma-separated list, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.",
-          "required": false
+          "type": "List",
+          "info": "List, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.",
+          "required": false,
+          "structure": {
+            "name": "issueTypeName",
+            "type": "String",
+            "info": "Issue type name",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -5955,7 +5979,8 @@
         },
         {
           "name": "commentVisibilityType",
-          "type": "String",
+          "type": "Select",
+          "options": ["group", "role"],
           "info": "Comment visibility type. One of \"group\", \"role\".",
           "required": false
         },
@@ -5967,9 +5992,15 @@
         },
         {
           "name": "commentProperties",
-          "type": "Array",
-          "info": "Array of JSON objects, comment entity property.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects, comment entity property.",
+          "required": false,
+          "structure": {
+            "name": "commentProperty",
+            "type": "JSON",
+            "info": "Comment property",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -7299,9 +7330,15 @@
         },
         {
           "name": "permissions",
-          "type": "Array",
+          "type": "List",
           "info": "Array of JSON objects, permissions.",
-          "required": true
+          "required": true,
+          "structure": {
+            "name": "permission",
+            "type": "JSON",
+            "info": "Permission",
+            "required": true
+          }
         },
         {
           "name": "description",
@@ -7443,9 +7480,15 @@
         },
         {
           "name": "permissions",
-          "type": "Array",
-          "info": "Array of JSON objects, permissions.",
-          "required": true
+          "type": "List",
+          "info": "List of JSON objects, permissions.",
+          "required": true,
+          "structure": {
+            "name": "permission",
+            "type": "JSON",
+            "info": "Permission",
+            "required": true
+          }
         },
         {
           "name": "name",
@@ -7871,7 +7914,8 @@
         },
         {
           "name": "assigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": ["PROJECT_LEAD", "UNASSIGNED"],
           "info": "Assignee type. One of \"PROJECT_LEAD\", \"UNASSIGNED\".",
           "required": false
         },
@@ -7995,7 +8039,8 @@
         },
         {
           "name": "assigneeType",
-          "type": "String",
+          "type": "Select",
+          "options": ["PROJECT_LEAD", "UNASSIGNED"],
           "info": "Assignee type. One of \"PROJECT_LEAD\", \"UNASSIGNED\".",
           "required": false
         },
@@ -9893,15 +9938,27 @@
         },
         {
           "name": "user",
-          "type": "String",
-          "info": "Comma separated list of users.",
-          "required": false
+          "type": "List",
+          "info": "List of users.",
+          "required": false,
+          "structure": {
+            "name": "user",
+            "type": "String",
+            "info": "user",
+            "required": false
+          }
         },
         {
           "name": "group",
           "type": "String",
-          "info": "Comma separated list of groups.  ",
-          "required": false
+          "info": "List of groups.  ",
+          "required": false,
+          "structure": {
+            "name": "group",
+            "type": "String",
+            "info": "user",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -10453,7 +10510,8 @@
         },
         {
           "name": "position",
-          "type": "String",
+          "type": "Select",
+          "options": ["Earlier", "Later", "First", "Last"],
           "info": "An absolute position, one of \"Earlier\", \"Later\", \"First\", \"Last\".",
           "required": true
         }
@@ -10603,15 +10661,27 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields.",
-          "required": false
+          "type": "List",
+          "info": "List of fields.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         },
         {
           "name": "properties",
-          "type": "String",
-          "info": "Comma-separated list of properties.",
-          "required": false
+          "type": "List",
+          "info": "List of properties.",
+          "required": false,
+          "structure": {
+            "name": "property",
+            "type": "String",
+            "info": "Property",
+            "required": false
+          }
         },
         {
           "name": "startAt",
@@ -10815,9 +10885,15 @@
         },
         {
           "name": "columns",
-          "type": "String",
-          "info": "Comma separated list of columns.",
-          "required": true
+          "type": "List",
+          "info": "List of columns.",
+          "required": true,
+          "structure": {
+            "name": "column",
+            "type": "String",
+            "info": "Column",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -11223,9 +11299,15 @@
         },
         {
           "name": "projectKeys",
-          "type": "String",
-          "info": "Comma-separated list of the projects keys we are finding assignable users for.",
-          "required": true
+          "type": "List",
+          "info": "List of the projects keys we are finding assignable users for.",
+          "required": true,
+          "structure": {
+            "name": "projectKey",
+            "type": "String",
+            "info": "Project key",
+            "required": true
+          }
         },
         {
           "name": "username",
@@ -11391,9 +11473,15 @@
         },
         {
           "name": "columns",
-          "type": "String",
-          "info": "Comma separated list of columns.",
-          "required": true
+          "type": "List",
+          "info": "List of columns.",
+          "required": true,
+          "structure": {
+            "name": "column",
+            "type": "String",
+            "info": "Column",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -11472,8 +11560,14 @@
         {
           "name": "permissions",
           "type": "String",
-          "info": "Comma-separated list of permissions for project or issue returned users must have.",
-          "required": true
+          "info": "List of permissions for project or issue returned users must have.",
+          "required": true,
+          "structure": {
+            "name": "permission",
+            "type": "String",
+            "info": "Permission",
+            "required": true
+          }
         },
         {
           "name": "projectKey",
@@ -12143,7 +12237,7 @@
         },
         {
           "name": "releaseDate",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Release date. Example \"2017-06-07\".",
           "required": false
         },
@@ -12161,15 +12255,27 @@
         },
         {
           "name": "operations",
-          "type": "Array",
-          "info": "Array of JSON objects, simple Links.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects, simple Links.",
+          "required": false,
+          "structure": {
+            "name": "operation",
+            "type": "JSON",
+            "info": "Operation",
+            "required": false
+          }
         },
         {
           "name": "remotelinks",
-          "type": "Array",
+          "type": "List",
           "info": "Array of JSON objects, remote Entity Links.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "remoteLink",
+            "type": "JSON",
+            "info": "Remote Link",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -12259,7 +12365,8 @@
         },
         {
           "name": "position",
-          "type": "String",
+          "type": "Select",
+          "options": ["Earlier","Later","First","Last"],
           "info": "An absolute position, one of \"Earlier\",\"Later\",\"First\",\"Last\".",
           "required": true
         }
@@ -12375,7 +12482,7 @@
         },
         {
           "name": "releaseDate",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Release date. Example \"2010-07-06\".",
           "required": false
         },
@@ -12405,7 +12512,7 @@
         },
         {
           "name": "userReleaseDate",
-          "type": "String",
+          "type": "DatePicker",
           "info": "User release date. Example \"6/Jul/2010\".",
           "required": false
         },
@@ -12417,15 +12524,27 @@
         },
         {
           "name": "operations",
-          "type": "Array",
+          "type": "List",
           "info": "Array of JSON objects, simple Links.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "operation",
+            "type": "JSON",
+            "info": "Operation",
+            "required": false
+          }
         },
         {
           "name": "remotelinks",
-          "type": "Array",
+          "type": "List",
           "info": "Array of JSON objects, remote Entity Links.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "remoteLink",
+            "type": "JSON",
+            "info": "Remote link",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -12699,15 +12818,27 @@
         },
         {
           "name": "colors",
-          "type": "String",
-          "info": "Comma-separated list of colors.",
-          "required": false
+          "type": "List",
+          "info": "List of colors.",
+          "required": false,
+          "structure": {
+            "name": "color",
+            "type": "String",
+            "info": "Color",
+            "required": false
+          }
         },
         {
           "name": "notes",
-          "type": "Array",
-          "info": "Array of Strings, notes.",
-          "required": false
+          "type": "List",
+          "info": "List of Strings, notes.",
+          "required": false,
+          "structure": {
+            "name": "note",
+            "type": "String",
+            "info": "Note",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -12763,15 +12894,27 @@
         },
         {
           "name": "colors",
-          "type": "String",
-          "info": "Comma-separated list of colors.",
-          "required": false
+          "type": "List",
+          "info": "List of colors.",
+          "required": false,
+          "structure": {
+            "name": "color",
+            "type": "String",
+            "info": "Color",
+            "required": false
+          }
         },
         {
           "name": "notes",
-          "type": "Array",
-          "info": "Array of Strings, notes.",
-          "required": false
+          "type": "List",
+          "info": "List of Strings, notes.",
+          "required": false,
+          "structure": {
+            "name": "note",
+            "type": "String",
+            "info": "Note",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -13039,7 +13182,8 @@
         },
         {
           "name": "workflowMode",
-          "type": "String",
+          "type": "Select",
+          "options": ["live", "draft"],
           "info": "The type of workflow to use. One of \"live\", \"draft\".",
           "required": false
         }
@@ -13103,7 +13247,8 @@
         },
         {
           "name": "workflowMode",
-          "type": "String",
+          "type": "Select",
+          "options": ["live", "draft"],
           "info": "The type of workflow to use. One of \"live\", \"draft\".",
           "required": false
         }
@@ -13167,7 +13312,8 @@
         },
         {
           "name": "workflowMode",
-          "type": "String",
+          "type": "Select",
+          "options": ["live", "draft"],
           "info": "The type of workflow to use. One of \"live\", \"draft\".",
           "required": false
         }
@@ -13225,7 +13371,8 @@
         },
         {
           "name": "workflowMode",
-          "type": "String",
+          "type": "Select",
+          "options": ["live", "draft"],
           "info": "The type of workflow to use. One of \"live\", \"draft\".",
           "required": false
         },
@@ -14325,9 +14472,15 @@
         },
         {
           "name": "issueTypes",
-          "type": "Array",
-          "info": "Array of Strings, issue types array.",
-          "required": false
+          "type": "List",
+          "info": "List of Strings, issue types array.",
+          "required": false,
+          "structure": {
+            "name": "issueType",
+            "type": "String",
+            "info": "Issue type",
+            "required": false
+          }
         },
         {
           "name": "updateDraftIfNeeded",
@@ -14661,9 +14814,15 @@
         },
         {
           "name": "issueTypes",
-          "type": "Array",
-          "info": "Array of Strings, issue types.",
-          "required": false
+          "type": "List",
+          "info": "List of Strings, issue types.",
+          "required": false,
+          "structure": {
+            "name": "issueType",
+            "type": "String",
+            "info": "Issue type",
+            "required": false
+          }
         },
         {
           "name": "updateDraftIfNeeded",
@@ -14713,7 +14872,7 @@
         },
         {
           "name": "since",
-          "type": "Number",
+          "type": "DatePicker",
           "info": "A date time in unix timestamp format since when deleted worklogs will be returned.",
           "required": false
         }
@@ -14753,15 +14912,27 @@
         },
         {
           "name": "ids",
-          "type": "String",
-          "info": "Comma-separated list of identifiers.",
-          "required": true
+          "type": "List",
+          "info": "List of identifiers.",
+          "required": true,
+          "structure": {
+            "name": "id",
+            "type": "Number",
+            "info": "ID",
+            "required": true
+          }
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Comma-separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "List of parameters to expand.",
+          "required": false,
+          "structure": {
+            "name": "expand",
+            "type": "String",
+            "info": "Expand",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -14799,15 +14970,21 @@
         },
         {
           "name": "since",
-          "type": "Number",
+          "type": "DatePicker",
           "info": "A date time in unix timestamp format since when updated worklogs will be returned.",
           "required": false
         },
         {
           "name": "expand",
-          "type": "String",
-          "info": "Optional comma-separated list of parameters to expand.",
-          "required": false
+          "type": "List",
+          "info": "List of parameters to expand.",
+          "required": false,
+          "structure": {
+            "name": "expand",
+            "type": "String",
+            "info": "Expand",
+            "required": false
+          }
         }
       ],
       "callbacks": [
