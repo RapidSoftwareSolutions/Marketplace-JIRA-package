@@ -114,8 +114,8 @@ Returns auditing records filtered using provided parameters.
 | filter      | String     | Text query, each record that will be returned must contain the provided text in one of its fields.
 | offset      | Number     | The number of record from which search starts.
 | limit       | Number     | Maximum number of returned results (if is limit is <= 0 or > 1000, it will be set do default value: 1000).
-| from        | String     | Timestamp in past. 'from' must be less or equal 'to'
-| to          | String     | Timestamp in past; 'from' must be less or equal 'to'.
+| from        | DatePicker | Timestamp in past. 'from' must be less or equal 'to'
+| to          | DatePicker | Timestamp in past; 'from' must be less or equal 'to'.
 
 #### Example of 'changedValues' field
 ```json
@@ -201,13 +201,13 @@ Create a component.
 | name               | String     | Component name.
 | description        | String     | Component description.
 | leadUserName       | String     | Component lead user name.
-| assigneeType       | String     | Component assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
+| assigneeType       | Select     | Component assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
 | isAssigneeTypeValid| Boolean    | Component is assignee type valid.
 | project            | String     | Project key.
 | projectId          | Number     | Project identifier.
 | lead               | String     | Component lead.
 | assignee           | String     | Component assignee.
-| realAssigneeType   | String     | Real assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED"
+| realAssigneeType   | Select     | Real assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED"
 | realAssignee       | String     | Component real assignee.
 
 ## JIRA.updateComponent
@@ -222,13 +222,13 @@ Modify a component.
 | name               | String     | Component name.
 | description        | String     | Component description.
 | leadUserName       | String     | Component lead user name.
-| assigneeType       | String     | Assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
+| assigneeType       | Select     | Assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
 | isAssigneeTypeValid| Boolean    | Is assignee type valid.
 | project            | String     | Component project.
 | projectId          | Number     | Component project identifier.
 | lead               | String     | Component lead.
 | assignee           | String     | Component assignee.
-| realAssigneeType   | String     | Real assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
+| realAssigneeType   | Select     | Real assignee type. One of "PROJECT_DEFAULT","COMPONENT_LEAD","PROJECT_LEAD","UNASSIGNED".
 | realAssignee       | String     | Real assignee.
 
 ## JIRA.getComponent
@@ -329,8 +329,8 @@ Sets the options for time tracking.
 | jiraName          | String     | Name of JIRA.
 | workingHoursPerDay| Number     | Working hours per day.
 | workingDaysPerWeek| Number     | Working days per week.
-| timeFormat        | String     | Time format. One of "pretty","days","hours".
-| defaultUnit       | String     | Default unit. One of "minute","hour","day","week".
+| timeFormat        | Select     | Time format. One of "pretty","days","hours".
+| defaultUnit       | Select     | Default unit. One of "minute","hour","day","week".
 
 ## JIRA.getSingleCustomFieldOption
 Returns a full representation of the Custom Field Option that has the given id.
@@ -472,8 +472,8 @@ Updates an option for a select list issue field, for a given field key and optio
 | propertiesLeaderEmail| String     | Options leader email.
 | propertiesMembers    | String     | Options members.
 | propertiesDescription| String     | Options description.
-| configScopeProjects  | String     | Comma separated options config scope projects identifier.
-| configAttributes     | Array      | Array of Strings, options config attributes.
+| configScopeProjects  | List       | List options config scope projects identifier.
+| configAttributes     | List       | List of Strings, options config attributes.
 
 ## JIRA.getSelectFieldSingleOption
 Returns an option for a select list issue field, for a given field key and option Id.
@@ -539,7 +539,7 @@ Creates a new filter, and returns newly created filter.
 | owner           | String     | Owner.
 | viewUrl         | String     | View Url.
 | searchUrl       | String     | Search Url.
-| sharePermissions| Array      | Array of JSON objects, filter Permission.
+| sharePermissions| List       | List of JSON objects, filter Permission.
 | sharedUsers     | JSON       | JSON Object, user Bean List Wrapper.
 | subscriptions   | JSON       | JSON Object, filter Subscription Bean List Wrapper.
 
@@ -560,7 +560,7 @@ Updates an existing filter, and returns its new value.
 | owner           | String     | Owner.
 | viewUrl         | String     | View Url.
 | searchUrl       | String     | Search Url.
-| sharePermissions| Array      | Array of JSON objects, filter Permission.
+| sharePermissions| List       | List of JSON objects, filter Permission.
 | sharedUsers     | JSON       | JSON Object, user Bean List Wrapper.
 | subscriptions   | JSON       | JSON Object, filter Subscription Bean List Wrapper.
 
@@ -604,6 +604,7 @@ Sets the default columns for the given filter.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | filterId    | String     | Filter identifier.
+| columns     | List       | List of columns
 
 ## JIRA.resetFilterDefaultColumns
 Resets the columns for the given filter such that the filter no longer has its own column config.
@@ -678,7 +679,7 @@ Sets the default share scope of the logged-in user.
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| scope       | String     | Share scope. One of "GLOBAL","AUTHENTICATED","PRIVATE".
+| scope       | Select     | Share scope. One of "GLOBAL","AUTHENTICATED","PRIVATE".
 
 ## JIRA.getFavouriteFilters
 Returns the favourite filters of the logged-in user.
@@ -797,7 +798,7 @@ Creates an issue or a sub-task from a JSON representation.
 | fields         | JSON       | JSON Object, new issue fields.
 | transition     | JSON       | JSON Object, new issue transition.
 | historyMetadata| JSON       | JSON Object, new issue history metadata.
-| properties     | Array      | Array of JSON objects, entity properties.
+| properties     | List       | Array of JSON objects, entity properties.
 
 #### Example of 'update' field
 ```json
@@ -1017,7 +1018,7 @@ Edits an issue from a JSON representation.
 | fields                | JSON       | JSON Object, fields properties.
 | update                | JSON       | JSON Object, update properties.
 | historyMetadata       | JSON       | JSON Object, history metadata properties.
-| properties            | Array      | Array of JSON objects, issue properties.
+| properties            | List       | Array of JSON objects, issue properties.
 
 ## JIRA.assignIssueToUser
 Assigns an issue to a user.
@@ -1064,7 +1065,7 @@ Adds a new comment to an issue.
 | issueIdOrKey   | String     | Issue identifier or key.
 | expand         | String     | Optional flags: renderedBody (provides body rendered in HTML).
 | body           | String     | Comment body.
-| visibilityType | String     | Visibility type. One of "group","role".
+| visibilityType | Select     | Visibility type. One of "group","role".
 | visibilityValue| String     | Visibility value.
 
 ## JIRA.updateIssueComment
@@ -1079,7 +1080,7 @@ Updates an existing comment using its JSON representation.
 | commentId      | String     | Comment identifier.
 | expand         | String     | Optional flags: renderedBody (provides body rendered in HTML).
 | body           | String     | Comment body.
-| visibilityType | String     | Visibility type. One of "group","role".
+| visibilityType | Select     | Visibility type. One of "group","role".
 | visibilityValue| String     | Visibility value.
 
 ## JIRA.deleteIssueComment
@@ -1121,9 +1122,9 @@ Sends a notification (email) to the list or recipients defined in the request.
 | showToAssignee     | Boolean    | Show to assignee.
 | showToWatchers     | Boolean    | Show to watchers.
 | showToVoters       | Boolean    | Show to voters.
-| showToUsers        | Array      | Array of JSON objects, show to users.
-| showToGroups       | Array      | Array of JSON objects, show to groups.
-| restrictGroups     | Array      | Array of JSON objects, restrict groups.
+| showToUsers        | JSON       | Array of JSON objects, show to users.
+| showToGroups       | JSON       | Array of JSON objects, show to groups.
+| restrictGroups     | JSON       | Array of JSON objects, restrict groups.
 | restrictPermissions| Array      | Array of JSON objects, restrict groups.
 
 #### Example of 'showToUsers' field
@@ -1273,7 +1274,7 @@ Perform a transition on an issue.When performing the transition you can update o
 | update         | JSON       | JSON Object, issue update parameters.
 | fields         | JSON       | JSON Object, issue fields.
 | historyMetadata| JSON       | JSON Object, issue history metadata.
-| properties     | Array      | Array of JSON objects, issue properties.
+| properties     | List       | List of JSON objects, issue properties.
 
 ## JIRA.deleteIssueVote
 Remove your vote from an issue. (i.e. "unvote").
@@ -1347,7 +1348,7 @@ Returns a specific worklog.
 | jiraName    | String     | Name of JIRA.
 | issueIdOrKey| String     | Issue identifier or key.
 | worklogId   | String     | Worklog identifier.
-| expand      | String     | Comma separated list of parameters to expand.
+| expand      | List       | List of parameters to expand.
 
 ## JIRA.addIssueWorklog
 Adds a new worklog entry to an issue.
@@ -1361,11 +1362,11 @@ Adds a new worklog entry to an issue.
 | adjustEstimate  | String     | Allows you to provide specific instructions to update the remaining time estimate of the issue.
 | newEstimate     | String     | The new value for the remaining estimate field.
 | reduceBy        | String     | The amount to reduce the remaining estimate by.
-| expand          | String     | Comma separated list of parameters to expand.
+| expand          | List       | List of parameters to expand.
 | comment         | String     | Worklog comment.
-| visibilityType  | String     | Visibility type. One of "group","role".
+| visibilityType  | Select     | Visibility type. One of "group","role".
 | visibilityValue | String     | Visibility value.
-| started         | String     | Started. Example "2017-02-21T01:03:28.187+0000".
+| started         | DatePicker | Started. Example "2017-02-21T01:03:28.187+0000".
 | timeSpentSeconds| Number     | Time spent in seconds.
 
 ## JIRA.getIssueWorklog
@@ -1377,7 +1378,7 @@ Returns a specific worklog.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | issueIdOrKey| String     | Issue identifier or key.
-| expand      | String     | Comma separated list of parameters to expand.
+| expand      | List       | List of parameters to expand.
 
 ## JIRA.updateIssueWorklog
 Updates an existing worklog entry.
@@ -1392,11 +1393,11 @@ Updates an existing worklog entry.
 | adjustEstimate  | String     | Allows you to provide specific instructions to update the remaining time estimate of the issue.
 | newEstimate     | String     | The new value for the remaining estimate field.
 | reduceBy        | String     | The amount to reduce the remaining estimate by.
-| expand          | String     | Comma separated list of parameters to expand.
+| expand          | List       | List of parameters to expand.
 | comment         | String     | Worklog comment.
-| visibilityType  | String     | Visibility type. One of "group","role".
+| visibilityType  | Select     | Visibility type. One of "group","role".
 | visibilityValue | String     | Visibility value.
-| started         | String     | Started. Example "2017-02-21T01:03:28.187+0000".
+| started         | DatePicker | Started. Example "2017-02-21T01:03:28.187+0000".
 | timeSpentSeconds| Number     | Time spent in seconds.
 
 ## JIRA.deleteIssueWorklog
@@ -1421,10 +1422,10 @@ Returns the meta data for creating issues.
 | jiraUsername  | credentials| Username in JIRA.
 | jiraPassword  | credentials| Password in JIRA.
 | jiraName      | String     | Name of JIRA.
-| projectIds    | String     | Comma-separated list, combined with the projectKeys param, lists the projects with which to filter the results.
-| projectKeys   | String     | Comma-separated list, combined with the projectIds param, lists the projects with which to filter the results.
-| issuetypeIds  | String     | Comma-separated list, combinded with issuetypeNames, lists the issue types with which to filter the results.
-| issuetypeNames| String     | Comma-separated list, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.
+| projectIds    | List       | List, combined with the projectKeys param, lists the projects with which to filter the results.
+| projectKeys   | List       | List, combined with the projectIds param, lists the projects with which to filter the results.
+| issuetypeIds  | List       | List, combinded with issuetypeNames, lists the issue types with which to filter the results.
+| issuetypeNames| List       | List, Combinded with issuetypeIds, lists the issue types with which to filter the results. If null, all issue types are returned.
 
 ## JIRA.getIssuesBasedOnQuery
 Returns suggested issues which match the auto-completion query for the user which executes this request.
@@ -1561,9 +1562,9 @@ Creates an issue link between two issues.
 | commentAuthor         | JSON       | JSON Object, comment author.
 | commentBody           | String     | Comment body.
 | commentRenderedBody   | String     | Comment rendered body.
-| commentVisibilityType | String     | Comment visibility type. One of "group", "role".
+| commentVisibilityType | Select     | Comment visibility type. One of "group", "role".
 | commentVisibilityValue| String     | Comment visibility value.
-| commentProperties     | Array      | Array of JSON objects, comment entity property.
+| commentProperties     | List       | List of JSON objects, comment entity property.
 
 #### Example of 'inwardIssue' field
 ```json
@@ -1980,7 +1981,7 @@ Create a new permission scheme.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | name        | String     | Permission scheme name.
-| permissions | Array      | Array of JSON objects, permissions.
+| permissions | List       | List of JSON objects, permissions.
 | description | String     | Permission scheme description.
 | expand      | String     | The parameters to expand.
 
@@ -2025,7 +2026,7 @@ Updates a permission scheme.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | schemeId    | String     | Permission scheme identifier.
-| permissions | Array      | Array of JSON objects, permissions.
+| permissions | List       | List of JSON objects, permissions.
 | name        | String     | Permission scheme name.
 | description | String     | Permission scheme description.
 | expand      | String     | The parameters to expand.
@@ -2134,7 +2135,7 @@ Creates a new project.
 | description        | String     | Project description.
 | lead               | String     | Project lead.
 | url                | String     | Project Url.
-| assigneeType       | String     | Assignee type. One of "PROJECT_LEAD", "UNASSIGNED".
+| assigneeType       | Select     | Assignee type. One of "PROJECT_LEAD", "UNASSIGNED".
 | avatarId           | Number     | Avatar identifier.
 | issueSecurityScheme| Number     | Issue security scheme.
 | permissionScheme   | Number     | Permission scheme.
@@ -2158,7 +2159,7 @@ Updates a project.
 | description        | String     | Project description.
 | lead               | String     | Project lead.
 | url                | String     | Project Url.
-| assigneeType       | String     | Assignee type. One of "PROJECT_LEAD", "UNASSIGNED".
+| assigneeType       | Select     | Assignee type. One of "PROJECT_LEAD", "UNASSIGNED".
 | avatarId           | Number     | Avatar identifier.
 | issueSecurityScheme| Number     | Issue security scheme.
 | permissionScheme   | Number     | Permission scheme.
@@ -2640,8 +2641,8 @@ Adds default actors to the given role. The request data should contain a list of
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | roleId      | String     | Role identifier.
-| user        | String     | Comma separated list of users.
-| group       | String     | Comma separated list of groups.  
+| user        | List       | List of users.
+| group       | List       | List of groups.  
 
 ## JIRA.deleteDefaultActorFromRole
 Removes default actor from the given role.
@@ -2770,7 +2771,7 @@ Moves field on the given tab.
 | screenId    | String     | Screen identifier.
 | tabId       | String     | Tab identifier.
 | fieldId     | String     | Field identifier.
-| position    | String     | An absolute position, one of "Earlier", "Later", "First", "Last".
+| position    | Select     | An absolute position, one of "Earlier", "Later", "First", "Last".
 
 ## JIRA.moveScreenTab
 Moves tab position.
@@ -2805,8 +2806,8 @@ Performs a search using JQL.
 | jql          | String     | JQL expression.
 | fieldsByKeys | Boolean    | Fields by keys.
 | validateQuery| String     | Validate query.
-| fields       | String     | Comma-separated list of fields.
-| properties   | String     | Comma-separated list of properties.
+| fields       | List       | List of fields.
+| properties   | List       | List of properties.
 | startAt      | Number     | Start at element.
 | maxResults   | Number     | Max retrieving results.
 
@@ -2857,7 +2858,7 @@ Sets the default system columns for issue navigator.
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| columns     | String     | Comma separated list of columns.
+| columns     | List       | List of columns.
 
 ## JIRA.getStatuses
 Returns a list of all statuses.
@@ -2955,7 +2956,7 @@ Returns a list of users that match the search string and can be assigned issues 
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| projectKeys | String     | Comma-separated list of the projects keys we are finding assignable users for.
+| projectKeys | List       | List of the projects keys we are finding assignable users for.
 | username    | String     | The username.
 | startAt     | Number     | The index of the first user to return.
 | maxResults  | Number     | The maximum number of users to return.
@@ -2993,7 +2994,7 @@ Sets the default columns for the given user.
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| columns     | String     | Comma separated list of columns.
+| columns     | List       | List of columns.
 
 ## JIRA.resetDefaultColumns
 Reset the default columns for the given user to the system default.
@@ -3013,7 +3014,7 @@ Returns a list of active users that match the search string and have all specifi
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| permissions | String     | Comma-separated list of permissions for project or issue returned users must have.
+| permissions | List       | List of permissions for project or issue returned users must have.
 | projectKey  | String     | The optional project key to search for users with if no issueKey is supplied.
 | issueKey    | String     | The issue key for the issue for which returned users have specified permissions.
 | username    | String     | The username filter, list includes all users if unspecified.
@@ -3165,11 +3166,11 @@ Create a version.
 | description  | String     | New version description.
 | archived     | Boolean    | is archived.
 | released     | Boolean    | Is released.
-| releaseDate  | String     | Release date. Example "2017-06-07".
+| releaseDate  | DatePicker | Release date. Example "2017-06-07".
 | projectId    | Number     | Project identifier.
 | userStartDate| String     | User start date.
-| operations   | Array      | Array of JSON objects, simple Links.
-| remotelinks  | Array      | Array of JSON objects, remote Entity Links.
+| operations   | List       | List of JSON objects, simple Links.
+| remotelinks  | List       | List of JSON objects, remote Entity Links.
 
 #### Example of 'operations' field
 ```json
@@ -3211,7 +3212,7 @@ Modify a version's sequence within a project.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
 | versionId   | String     | Version identifier.
-| position    | String     | An absolute position, one of "Earlier","Later","First","Last".
+| position    | Select     | An absolute position, one of "Earlier","Later","First","Last".
 
 ## JIRA.getVersion
 Returns a project version.
@@ -3237,15 +3238,15 @@ Modify a version.
 | description        | String     | New version description.
 | archived           | Boolean    | is archived.
 | released           | Boolean    | Is released.
-| releaseDate        | String     | Release date. Example "2010-07-06".
+| releaseDate        | DatePicker | Release date. Example "2010-07-06".
 | overdue            | Boolean    | Is overdue.
 | project            | String     | Project name.
 | projectId          | Number     | Project identifier.
 | userStartDate      | String     | User start date.
-| userReleaseDate    | String     | User release date. Example "6/Jul/2010".
+| userReleaseDate    | DatePicker | User release date. Example "6/Jul/2010".
 | moveUnfixedIssuesTo| String     | Move unfixed issues to. The value should be the link.
-| operations         | Array      | Array of JSON objects, simple Links.
-| remotelinks        | Array      | Array of JSON objects, remote Entity Links.
+| operations         | List       | List of JSON objects, simple Links.
+| remotelinks        | List       | List of JSON objects, remote Entity Links.
 
 #### Example of 'operations' field
 ```json
@@ -3331,8 +3332,8 @@ Create a remote version link.
 | versionId           | String     | Version identifier.
 | globalId            | String     | Link global identifier.
 | myCustomLinkProperty| String     | Custom link property.
-| colors              | String     | Comma-separated list of colors.
-| notes               | Array      | Array of Strings, notes.
+| colors              | List       | List of colors.
+| notes               | Lit        | List of notes.
 
 ## JIRA.updateRemoteVersionLink
 Update a remote version link.
@@ -3345,8 +3346,8 @@ Update a remote version link.
 | versionId           | String     | Version identifier.
 | globalId            | String     | Remote link global identifier.
 | myCustomLinkProperty| String     | Custom link property.
-| colors              | String     | Comma-separated list of colors.
-| notes               | Array      | Array of Strings, notes.
+| colors              | List       | List of colors.
+| notes               | List       | List of notes.
 
 ## JIRA.deleteRemoteVersionLinks
 Delete all remote version links for a given version ID.
@@ -3411,7 +3412,7 @@ Delete a property from the passed transition on the passed workflow.
 | transitionId| String     | Transition identifier.
 | key         | String     | The name of the property to add.
 | workflowName| String     | The name of the workflow to use.
-| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+| workflowMode| Select     | The type of workflow to use. One of "live", "draft".
 
 ## JIRA.createWorkflowProperty
 Add a new property to a transition.
@@ -3425,7 +3426,7 @@ Add a new property to a transition.
 | key         | String     | The name of the property to add.
 | value       | String     | Value.
 | workflowName| String     | The name of the workflow to use.
-| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+| workflowMode| Select     | The type of workflow to use. One of "live", "draft".
 
 ## JIRA.updateWorkflowProperty
 Update property to a transition.
@@ -3439,7 +3440,7 @@ Update property to a transition.
 | key         | String     | The name of the property to add.
 | value       | String     | The value of the property to add.
 | workflowName| String     | The name of the workflow to use.
-| workflowMode| String     | The type of workflow to use. One of "live", "draft".
+| workflowMode| Select     | The type of workflow to use. One of "live", "draft".
 
 ## JIRA.getWorkflowProperties
 Return the property or properties associated with a transition.
@@ -3452,7 +3453,7 @@ Return the property or properties associated with a transition.
 | transitionId       | String     | Transition identifier.
 | workflowName       | String     | The name of the workflow to use.
 | key                | String     | The name of the property key to query.
-| workflowMode       | String     | The type of workflow to use. One of "live", "draft".
+| workflowMode       | Select     | The type of workflow to use. One of "live", "draft".
 | includeReservedKeys| Boolean    | Set this to true in order to include the non-editable keys in the response.
 
 ## JIRA.createWorkflowScheme
@@ -3876,7 +3877,7 @@ Update the draft scheme to include the passed mapping.
 | workflowSchemeId   | String     | Workflow scheme identifier.
 | workflowName       | String     | The name of the workflow mapping to update.
 | workflow           | String     | Workflow name.
-| issueTypes         | Array      | Array of Strings, issue types array.
+| issueTypes         | List       | List of issue types.
 | updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
 | defaultMapping     | Boolean    | Use default mapping.
 
@@ -3959,7 +3960,7 @@ Update the scheme to include the passed mapping.
 | workflowSchemeId   | String     | Workflow scheme identifier.
 | workflowName       | String     | The name of the workflow mapping to update.
 | workflow           | String     | Workflow name.
-| issueTypes         | Array      | Array of Strings, issue types.
+| issueTypes         | List       | List of issue types.
 | updateDraftIfNeeded| Boolean    | If set to true, indicate that the draft should be created/updated when the actual scheme cannot be edited.
 | defaultMapping     | Boolean    | Default mapping.
 
@@ -3971,7 +3972,7 @@ Returns worklogs id and delete time of worklogs that was deleted since given tim
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| since       | Number     | A date time in unix timestamp format since when deleted worklogs will be returned.
+| since       | DatePicker | A date time in unix timestamp format since when deleted worklogs will be returned.
 
 ## JIRA.getWorklogs
 Returns worklogs for given worklog ids. Only worklogs to which the calling user has permissions, will be included in the result.
@@ -3981,8 +3982,8 @@ Returns worklogs for given worklog ids. Only worklogs to which the calling user 
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| ids         | String     | Comma-separated list of identifiers.
-| expand      | String     | Comma-separated list of parameters to expand.
+| ids         | List       | List of identifiers.
+| expand      | List       | List of parameters to expand.
 
 ## JIRA.getWorklogsModifiedSince
 Returns worklogs id and update time of worklogs that was updated since given time.
@@ -3992,5 +3993,5 @@ Returns worklogs id and update time of worklogs that was updated since given tim
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| since       | Number     | A date time in unix timestamp format since when updated worklogs will be returned.
-| expand      | String     | Optional comma-separated list of parameters to expand.
+| since       | DatePicker | A date time in unix timestamp format since when updated worklogs will be returned.
+| expand      | List       | List of parameters to expand.

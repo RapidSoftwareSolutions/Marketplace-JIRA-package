@@ -2236,9 +2236,15 @@
         },
         {
           "name": "sharePermissions",
-          "type": "JSON",
+          "type": "List",
           "info": "List of JSON objects, filter Permission.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "permission",
+            "type": "JSON",
+            "info": "Share permission",
+            "required": false
+          }
         },
         {
           "name": "sharedUsers",
@@ -2342,9 +2348,15 @@
         },
         {
           "name": "sharePermissions",
-          "type": "JSON",
+          "type": "List",
           "info": "List of JSON objects, filter Permission.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "permission",
+            "type": "JSON",
+            "info": "Share permission",
+            "required": false
+          }
         },
         {
           "name": "sharedUsers",
