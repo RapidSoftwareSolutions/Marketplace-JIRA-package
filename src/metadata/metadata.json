@@ -3359,7 +3359,13 @@
           "name": "properties",
           "type": "List",
           "info": "List of JSON objects, entity properties.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "property",
+            "type": "JSON",
+            "info": "Property",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -4661,9 +4667,15 @@
         },
         {
           "name": "properties",
-          "type": "JSON",
+          "type": "List",
           "info": "JSON objects, issue properties.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "property",
+            "type": "JSON",
+            "info": "Property",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -5346,7 +5358,7 @@
           }
         },
         {
-            "name": "projectKeys",
+          "name": "projectKeys",
           "type": "List",
           "info": "List, combined with the projectIds param, lists the projects with which to filter the results.",
           "required": false,
@@ -9950,7 +9962,7 @@
         },
         {
           "name": "group",
-          "type": "String",
+          "type": "List",
           "info": "List of groups.  ",
           "required": false,
           "structure": {
@@ -11559,7 +11571,7 @@
         },
         {
           "name": "permissions",
-          "type": "String",
+          "type": "List",
           "info": "List of permissions for project or issue returned users must have.",
           "required": true,
           "structure": {
