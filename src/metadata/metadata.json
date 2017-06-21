@@ -3415,9 +3415,15 @@
         },
         {
           "name": "issueUpdates",
-          "type": "Array",
-          "info": "Array of JSON objects, issue updates Object.",
-          "required": true
+          "type": "List",
+          "info": "List of JSON objects, issue updates Object.",
+          "required": true,
+          "structure": {
+            "name": "issueUpdate",
+            "type": "JSON",
+            "info": "Issue update",
+            "required": true
+          }
         }
       ],
       "callbacks": [
@@ -5387,7 +5393,7 @@
           "info": "List, combinded with issuetypeNames, lists the issue types with which to filter the results.",
           "required": false,
           "structure": {
-            "name": "isueTypeId",
+            "name": "issueTypeId",
             "type": "String",
             "info": "Issue type ID",
             "required": false

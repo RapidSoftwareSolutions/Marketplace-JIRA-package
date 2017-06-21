@@ -863,7 +863,7 @@ Creates issues or sub-tasks from a JSON representation. Creates many issues in o
 | jiraUsername| credentials| Username in JIRA.
 | jiraPassword| credentials| Password in JIRA.
 | jiraName    | String     | Name of JIRA.
-| issueUpdates| Array      | Array of JSON objects, issue updates Object.
+| issueUpdates| List       | List of JSON objects, issue updates Object.
 
 #### Example of 'issueUpdates' field
 ```json
