@@ -15,6 +15,10 @@
       "jiraPassword"
     ]
   },
+  "steps": [
+    "Navigate to page with choosing pricing plan",
+    "Use your login and password as credentials to call getMyPermissions"
+  ],
   "blocks": [
     {
       "name": "getMyPermissions",
