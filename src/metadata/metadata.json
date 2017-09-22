@@ -16,8 +16,8 @@
     ]
   },
   "steps": [
-    "Navigate to page with choosing pricing plan",
-    "Use your login and password as credentials to call getMyPermissions"
+    "Navigate to page with choosing pricing plan (https://www.atlassian.com/software/jira/try)",
+    "Use your login and password as credentials to call getMyPermissions (https://rapidapi.com/package/JIRA/functions)"
   ],
   "blocks": [
     {
